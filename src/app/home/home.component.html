@@ -1,10 +1,19 @@
 <section
   id="home"
-  class="full-page bg-dark text-light d-flex align-items-center justify-content-center"
+  class="d-flex justify-content-center align-items-center vh-100"
 >
   <div class="container text-center">
-    <h1>Welcome to My Portfolio</h1>
-    <!-- <p>A Software Developer with 8 years of experience</p> -->
+    <p id="home-name">Pai Nuñeza</p>
+    <p class="lead">Fullstack Developer at Unient</p>
+    <div class="mb-5">
+      <ngx-typed-js
+        [strings]="strings"
+        [loop]="true"
+        [typeSpeed]="10"
+        [shuffle]="true"
+      >
+        <p id="home-typing" class="typing"></p>
+      </ngx-typed-js>
+    </div>
   </div>
-
 </section>

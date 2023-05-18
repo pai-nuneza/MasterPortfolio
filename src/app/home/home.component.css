@@ -2,3 +2,15 @@
   min-height: 100vh;
   padding: 50px;
 }
+
+#home-name {
+font-size: 100px;
+}
+
+#home-position {
+  font-size: 30px;
+}
+
+#home-typing {
+  font-size: 20px;
+}
