@@ -8,11 +8,12 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   strings = [
     'Application Development',
-    'Frontend Angular',
+    'Frontend Development',
     'Database Structure',
-    'Cloud Computing',
+    'Cloud Computing Azure/AWS',
     'Web Development',
     'Git Source Control',
     'IIS Deployments',
+    'Web Design',
   ];
 }

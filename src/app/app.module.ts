@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ContactMeComponent } from './contact-me/contact-me.component';
-import { HomeComponent } from './home/home.component';
+import { AboutMeComponent } from './resume/about-me/about-me.component';
+import { ProjectsComponent } from './resume/projects/projects.component';
+import { ContactMeComponent } from './resume/contact-me/contact-me.component';
+import { HomeComponent } from './resume/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 
@@ -20,7 +20,7 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
+    AppRoutingModule,
     NgxTypedJsModule
   ],
   providers: [],
