@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  showContent = false;
+  showContent = true;
 
   ngOnInit() {
-    setTimeout(() => {
-      this.showContent = true;
-    }, 1500); // Adjust the delay time according to your needs
+    // setTimeout(() => {
+    //   this.showContent = true;
+    // }, 1500); // Adjust the delay time according to your needs
   }
 }

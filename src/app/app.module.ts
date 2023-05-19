@@ -9,6 +9,8 @@ import { HomeComponent } from './resume/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { LoaderComponent } from './loader/loader.component';
+import { SkillsComponent } from './resume/skills/skills.component';
+import { ExperienceComponent } from './resume/experience/experience.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { LoaderComponent } from './loader/loader.component';
     ProjectsComponent,
     ContactMeComponent,
     HomeComponent,
-    LoaderComponent
+    LoaderComponent,
+    SkillsComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
