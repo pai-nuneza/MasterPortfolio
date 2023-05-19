@@ -31,3 +31,13 @@
 .navbar-nav a:hover {
   color:red !important;
 }
+
+
+.container-fluid {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.container-fluid.show {
+  opacity: 1;
+}

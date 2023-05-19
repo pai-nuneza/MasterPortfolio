@@ -8,6 +8,7 @@ import { ContactMeComponent } from './resume/contact-me/contact-me.component';
 import { HomeComponent } from './resume/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgxTypedJsModule } from 'ngx-typed-js';
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
     AboutMeComponent,
     ProjectsComponent,
     ContactMeComponent,
-    HomeComponent
+    HomeComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
