@@ -5,7 +5,7 @@
 #home-name {
   font-weight: 800;
   line-height: 1em;
-  font-size: 100px;
+  font-size: 80px;
   color: #fff;
 }
 
@@ -21,4 +21,14 @@
 #home-typing::after {
   /* Hide the blinking cursor */
   content:none;
+}
+
+.home-img img {
+  max-width:450px;
+}
+
+.social-media a:hover i {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+  color: #f8f9fa;
 }

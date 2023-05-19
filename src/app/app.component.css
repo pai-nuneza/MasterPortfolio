@@ -12,12 +12,22 @@
   overflow-y: auto;
 }
 
-
-
 .logo {
   font-size:25px;
   color: #fff;
   text-decoration:none;
   font-weight:600;
   cursor:default;
+}
+
+.nav-link {
+  margin-left:15px;
+  font-size:18px;
+  text-decoration:none;
+  font-weight:500;
+  transition: .3s;
+}
+
+.navbar-nav a:hover {
+  color:red !important;
 }
