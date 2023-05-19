@@ -27,6 +27,21 @@
   max-width:450px;
 }
 
+.social-media a {
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+  width:40px;
+  height:40px;
+  background: transparent;
+  border:2px solid #0ef;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #0ef;
+  text-decoration: none;
+
+}
+
 .social-media a:hover i {
   transform: scale(1.2);
   transition: transform 0.2s ease-in-out;
