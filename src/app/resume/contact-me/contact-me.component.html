@@ -1,33 +1,90 @@
-<section id="contact" class="full-page py-5 ">
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact full-page">
   <div class="container">
-    <h2>Contact Me</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p class="lead">
+        If you're interested in creating something great, feel free to reach out
+        to me. I'd be happy to collaborate!
+      </p>
+    </div>
+
+    <div class="row mt-5" data-aos="fade-in">
+      <div class="col-lg-5 d-flex align-items-stretch">
+        <div class="info">
+          <div class="address">
+            <i class="bi bi-geo-alt"></i>
+            <h4>Location:</h4>
+            <p>Cebu, Philippines</p>
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+
+          <div class="email">
+            <i class="bi bi-envelope"></i>
+            <h4>Email:</h4>
+            <p>pai.nuneza@gmail.com</p>
           </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+
+          <div class="phone">
+            <i class="bi bi-phone"></i>
+            <h4>Call:</h4>
+            <p>+63 908 634 5307</p>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </div>
       </div>
-      <div class="col-md-6">
-        <h4>Contact Information</h4>
-        <p><strong>Email:</strong> yourname@example.com</p>
-        <p><strong>Phone:</strong> +1 234 56789</p>
-        <p><strong>Location:</strong> City, Country</p>
+
+      <div class="col-lg-7">
+        <form
+          action="forms/contact.php"
+          method="post"
+          role="form"
+          class="php-email-form"
+        >
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                id="name"
+                required
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="name">Your Email</label>
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                id="email"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name">Subject</label>
+            <input
+              type="text"
+              class="form-control"
+              name="subject"
+              id="subject"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Message</label>
+            <textarea
+              class="form-control"
+              name="message"
+              rows="10"
+              required
+            ></textarea>
+          </div>
+          <div class="mt-2">
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
-
-
-
 </section>

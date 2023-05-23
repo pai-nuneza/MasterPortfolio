@@ -1,98 +1,26 @@
-<section id="experience">
+<section id="experience" class="full-page my-5">
   <div class="container">
-    <h2 class="text-center mb-4">Experience</h2>
-    <div class="main-timeline">
-      <!-- start experience section-->
-      <div class="timeline">
-        <div class="icon"></div>
-        <div class="date-content">
-          <div class="date-outer">
-            <span class="date">
-              <span class="month">2 Years</span>
-              <span class="year">2013</span>
-            </span>
-          </div>
-        </div>
-        <div class="timeline-content">
-          <h5 class="title">Visual Art &amp; Design</h5>
-          <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat
-            volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor
-            felis, eu ultrices elit molestie.
-          </p>
-        </div>
-      </div>
-      <!-- end experience section-->
-
-      <!-- start experience section-->
-      <div class="timeline">
-        <div class="icon"></div>
-        <div class="date-content">
-          <div class="date-outer">
-            <span class="date">
-              <span class="month">1 Years</span>
-              <span class="year">2015</span>
-            </span>
-          </div>
-        </div>
-        <div class="timeline-content">
-          <h5 class="title">Product Designer</h5>
-          <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat
-            volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor
-            felis, eu ultrices elit molestie.
-          </p>
-        </div>
-      </div>
-      <!-- end experience section-->
-
-      <!-- start experience section-->
-      <div class="timeline">
-        <div class="icon"></div>
-        <div class="date-content">
-          <div class="date-outer">
-            <span class="date">
-              <span class="month">2 Years</span>
-              <span class="year">2016</span>
-            </span>
-          </div>
-        </div>
-        <div class="timeline-content">
-          <h5 class="title">Web Designer</h5>
-          <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat
-            volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor
-            felis, eu ultrices elit molestie.
-          </p>
-        </div>
-      </div>
-      <!-- end experience section-->
-
-      <!-- start experience section-->
-      <div class="timeline">
-        <div class="icon"></div>
-        <div class="date-content">
-          <div class="date-outer">
-            <span class="date">
-              <span class="month">2 Years</span>
-              <span class="year">2018</span>
-            </span>
-          </div>
-        </div>
-        <div class="timeline-content">
-          <h5 class="title">Graphic Designer</h5>
-          <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat
-            volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor
-            felis, eu ultrices elit molestie.
-          </p>
-        </div>
-      </div>
-      <!-- end experience section-->
+    <div class="section-title">
+      <h2>Experiences</h2>
     </div>
+
+
+    <div class="row" *ngFor="let a of experiences; let i = index">
+      <!-- timeline item 1 event content -->
+      <div class="col py-2">
+        <div class="card bg-secondary">
+          <div class="card-body">
+            <div class="float-end">{{a.date}}</div>
+            <h5 class="card-title">{{a.position}}</h5>
+            <p> at {{a.company}}</p>
+            <p class="card-text">{{a.description}}</p>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--/row-->
   </div>
 </section>
+

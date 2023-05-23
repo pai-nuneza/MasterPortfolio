@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.css'],
 })
 export class AboutMeComponent {
+  shortAboutMe = "Experienced software professional skilled in C#, Angular, AWS, Azure, Git, and MSSQL. Passionate about leveraging technology to drive innovation. Let's create remarkable solutions together!"
   aboutMe =
-    "Welcome to my About Me page! I'm thrilled to share my journey and experiences with you. My name is Pai, and I have been working in the software industry since 2015. With a total of 8 years of experience, I have had the opportunity to work on diverse projects and expand my knowledge in various technologies.";
+    "I'm Pai, a software professional with 8 years of experience. My expertise lies in C# and Angular technologies, where I excel in creating robust and efficient software solutions. I also have hands-on experience with AWS, Azure, Git, and MSSQL, which allows me to tackle complex challenges effectively. I'm constantly staying updated with the latest advancements in the industry, as I believe in leveraging technology to drive innovation and solve real-world problems. If you're seeking a dedicated and knowledgeable software professional who can bring your ideas to life, I'm here to help. Let's collaborate and create remarkable solutions together!";
   coreExpertise =
     'One of my core areas of expertise is in C# and Angular technologies. I have a strong command over these languages and enjoy creating robust and efficient software solutions using them. Additionally, I have hands-on experience with AWS and Azure cloud platforms, Git for version control, and MSSQL for database management. This diverse skill set allows me to tackle complex challenges and deliver high-quality results.';
   outsideProfessionalWorld =
@@ -20,6 +21,4 @@ export class AboutMeComponent {
     'Lastly, I am a proud parent to an amazing child. Being a parent has been an incredible journey filled with joy, love, and constant learning. It has taught me patience, responsibility, and the importance of nurturing young minds.';
   end =
     "As you browse through my website, you'll discover more about my professional achievements, projects I have worked on, and my passion for technology. Don't hesitate to reach out if you have any questions or if you would like to collaborate on exciting opportunities. Thank you for visiting my About Me page, and I hope you enjoy exploring my world!";
-
-
 }
