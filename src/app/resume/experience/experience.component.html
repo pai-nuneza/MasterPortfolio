@@ -17,6 +17,8 @@
 
             <p class="card-text">{{a.description}}</p>
             <hr>
+            Technologies:
+            <span *ngFor="let n of a.technologies; let i = index" class="badge mx-1 bg-primary">{{n}}</span>
           </div>
         </div>
       </div>
