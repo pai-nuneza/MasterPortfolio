@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
+declare var particlesJS: any;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   showContent = true;
 
-  ngOnInit() {
-    // setTimeout(() => {
-    //   this.showContent = true;
-    // }, 1500); // Adjust the delay time according to your needs
+  ngOnInit(): void {
+    particlesJS.load('particles-js', '/assets/particles.json', null);
   }
 }
