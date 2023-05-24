@@ -11,7 +11,8 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
 import { LoaderComponent } from './loader/loader.component';
 import { SkillsComponent } from './resume/skills/skills.component';
 import { ExperienceComponent } from './resume/experience/experience.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { ExperienceComponent } from './resume/experience/experience.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxTypedJsModule
+    NgxTypedJsModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
