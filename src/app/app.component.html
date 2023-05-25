@@ -1,4 +1,4 @@
-<div class="container-fluid" *ngIf="showContent" [ngClass]="{'show': showContent}"  id="particles-js">
+<div *ngIf="showContent" id="particles-js">
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand logo" href="#">Portfolio</a>
@@ -40,4 +40,4 @@
   <app-experience></app-experience>
   <app-contact-me></app-contact-me>
 </div>
-<app-loader *ngIf="!showContent"></app-loader>
+

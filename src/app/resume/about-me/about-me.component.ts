@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.css'],
 })
 export class AboutMeComponent {
-  shortAboutMe = "Experienced software professional skilled in C#, Angular, AWS, Azure, Git, and MSSQL. Passionate about leveraging technology to drive innovation. Let's create remarkable solutions together!"
+  shortAboutMe = "Experienced software professional skilled in C#, Angular, Git, and MSSQL. Passionate about leveraging technology to drive innovation. Let's create remarkable solutions together!"
   aboutMe =
     "I'm Pai, a software professional with 8 years of experience. My expertise lies in C# and Angular technologies, where I excel in creating robust and efficient software solutions. I also have hands-on experience with AWS, Azure, Git, and MSSQL, which allows me to tackle complex challenges effectively. I'm constantly staying updated with the latest advancements in the industry, as I believe in leveraging technology to drive innovation and solve real-world problems. If you're seeking a dedicated and knowledgeable software professional who can bring your ideas to life, I'm here to help. Let's collaborate and create remarkable solutions together!";
   coreExpertise =

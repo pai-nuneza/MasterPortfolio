@@ -1,13 +1,12 @@
-<section id="experience" class="full-page my-5">
+<section id="experience" class="page-75 my-5">
   <div class="container">
     <div class="section-title">
       <h2>Experiences</h2>
     </div>
 
 
-    <div class="row" *ngFor="let a of experiences; let i = index" data-aos="flip-up" data-aos-delay="200">
-      <!-- timeline item 1 event content -->
-      <div class="col py-2">
+    <div class="row" *ngFor="let a of experiences; let i = index">
+      <div class="col my-3">
         <div class="card bg-secondary">
           <div class="card-body">
             <div class="float-end">{{a.date}}</div>
@@ -23,7 +22,6 @@
         </div>
       </div>
     </div>
-    <!--/row-->
   </div>
 </section>
 
