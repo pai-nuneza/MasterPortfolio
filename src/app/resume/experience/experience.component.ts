@@ -16,7 +16,7 @@ export class ExperienceComponent {
       imageUrl: 'assets/images/companies/unient.svg',
       companyWebsite: 'https://www.unient.biz/',
       technologies: [
-        'C#', 'Jira', 'Git', 'Angular', 'Octopos Deploy', 'Azure DevOps', 'Navis N4', 'ASP.NET MVC', 'DevExpress'
+        'C#', 'Jira', 'Git', 'Angular', 'Octopos Deploy', 'Azure DevOps', 'Java Groovy', 'ASP.NET MVC'
       ],
     },
     {
@@ -38,7 +38,7 @@ export class ExperienceComponent {
       imageUrl: 'assets/images/companies/deg.jpg',
       companyWebsite: 'http://digitalexcellencegroup.com/',
       technologies: [
-        'C#', 'ASP.NET WebForms', 'jQuery', 'Bootstrap 3.3', ''
+        'C#', 'ASP.NET WebForms', 'jQuery', 'Bootstrap 3.3', 'DeployHQ'
       ],
     },
     {
@@ -49,7 +49,7 @@ export class ExperienceComponent {
       imageUrl: 'assets/images/companies/alliance.svg',
       companyWebsite: 'https://www.alliance.com.ph/index.html',
       technologies: [
-        'C#', 'AngularJs', 'jQuery', 'Bootstrap 4', 'ASP.NET MVC', 'Team Foundation Server'
+        'C#', 'AngularJs', 'jQuery', 'Bootstrap 4', 'ASP.NET MVC', 'Team Foundation Server','MSSQL'
       ],
     },
     {
@@ -60,8 +60,22 @@ export class ExperienceComponent {
       imageUrl: 'assets/images/companies/mlhuillier.jpg',
       companyWebsite: 'https://mlhuillier.com/',
       technologies: [
-        'C#', 'ASP.NET MVC 4.5', 'WebForms', ''
+        'C#', 'ASP.NET MVC 4.5', 'WebForms', 'jQuery', 'MSSQL', 'IIS'
       ],
     }
   ]
+
+  ngOnInit() {
+    this.experiences.forEach(experience => {
+      this.shuffleArray(experience.technologies);
+    });
+  }
+
+  shuffleArray(array: any[]): any[] {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
 }
