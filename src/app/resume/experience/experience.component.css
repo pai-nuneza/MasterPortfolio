@@ -18,7 +18,6 @@ p:not(:last-child) {
 }
 
 
-
 .card {
   min-height: 150px;
   display: flex;
@@ -30,4 +29,12 @@ p:not(:last-child) {
 .card-footer {
   font-size: 0.65em;
   color: #446;
+}
+
+.glassy-effect {
+  background: linear-gradient(to top, rgb(255 255 255 / 12%), rgb(200 200 200 / 12%));
+}
+
+.glassy-effect:hover {
+  background: linear-gradient(to top, rgb(255 255 255 / 12%), rgb(200 200 200 / 12%));
 }
