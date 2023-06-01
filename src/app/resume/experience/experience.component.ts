@@ -11,19 +11,19 @@ export class ExperienceComponent {
     {
       company: 'Unient',
       position: 'Fullstack Developer',
-      date: 'Feb 2021 - May 2023',
-      description: 'Involved in fixing issues and developing enhancements using technologies such as C#, Angular, and MSSQL Queries. Working closely with my team, we collaborated to ensure efficient and high-quality solutions. Additionally, I participated in code reviews, contributing to the overall codebase quality and promoting best practices within the organization.',
+      date: 'Feb 2021 - June 2023',
+      description: 'Develop enhancements and fixed issues. Worked closely with my team to deliver efficient and high-quality solutions. Conducted code reviews and promoted best practices.',
       imageUrl: 'assets/images/companies/unient.svg',
       companyWebsite: 'https://www.unient.biz/',
       technologies: [
-        'C#', 'Jira', 'Git', 'Angular', 'Octopos Deploy', 'Azure DevOps', 'Navis N4', 'ASP.NET MVC', 'DevExpress'
+        'C#', 'Jira', 'Git', 'Angular', 'Octopos Deploy', 'Azure DevOps', 'Java Groovy', 'ASP.NET MVC'
       ],
     },
     {
       company: 'Symon Systems',
       position: 'Senior Developer',
       date: 'Feb 2021 - May 2023',
-      description: 'I led the planning, development, and troubleshooting of new features, conducted comprehensive code reviews and testing, and maintained direct client communication to ensure the successful delivery of high-quality software.',
+      description: 'I led feature development, conducted code reviews and testing, and maintained client communication for successful software delivery.',
       imageUrl: 'assets/images/companies/symon.png',
       companyWebsite: 'http://3.0.204.178/#url',
       technologies: [
@@ -31,37 +31,51 @@ export class ExperienceComponent {
       ],
     },
     {
-      company: 'Digital Excellence Group',
+      company: 'Digital Excellence',
       position: 'Fullstack Developer',
       date: 'June 2020 - Jan 2021',
-      description: 'I spearheaded dynamic collaboration with cross-functional development teams, leveraging my expertise in in-depth software requirement analysis and meticulous documentation, while ensuring seamless communication with clients to promptly address concerns, verify incidents, and deliver exceptional results that exceed expectations.',
+      description: 'Facilitated collaboration with cross-functional teams, analyzed requirements, documented meticulously, and ensured effective client communication for exceptional results.',
       imageUrl: 'assets/images/companies/deg.jpg',
       companyWebsite: 'http://digitalexcellencegroup.com/',
       technologies: [
-        'C#', 'ASP.NET WebForms', 'jQuery', 'Bootstrap 3.3', ''
+        'C#', 'ASP.NET WebForms', 'jQuery', 'Bootstrap 3.3', 'DeployHQ'
       ],
     },
     {
       company: 'Alliance Software',
-      position: 'Technical Specialist II Developer',
+      position: 'Software Engineer II',
       date: 'Nov 2018 - May 2020',
-      description: 'I collaborated with development teams to implement new features, resolve software issues, and ensured effective communication with clients to address concerns, verify incidents, and achieve high customer satisfaction through detailed documentation and analysis of software requirements.',
+      description: 'Collaborated with teams to implement features, resolve issues, and ensure client satisfaction. Communicated effectively, addressed concerns, and documented requirements for successful software development.',
       imageUrl: 'assets/images/companies/alliance.svg',
       companyWebsite: 'https://www.alliance.com.ph/index.html',
       technologies: [
-        'C#', 'AngularJs', 'jQuery', 'Bootstrap 4', 'ASP.NET MVC', 'Team Foundation Server'
+        'C#', 'AngularJs', 'jQuery', 'Bootstrap 4', 'ASP.NET MVC', 'Team Foundation Server','MSSQL'
       ],
     },
     {
       company: 'Mlhuillier Financial Services',
-      position: 'Programmer II',
+      position: 'Programmer',
       date: 'Sep 2015 - Nov. 2018',
-      description: 'I played a key role in the end-to-end development and support of web application systems, encompassing UI/UX planning, database design, and back-end structuring patterns, while actively participating in the testing phase and ensuring successful deployment.',
+      description: 'Played key role in end-to-end development and support of web apps. Led UI/UX planning, database design, back-end structuring, and testing. Ensured successful deployment.',
       imageUrl: 'assets/images/companies/mlhuillier.jpg',
       companyWebsite: 'https://mlhuillier.com/',
       technologies: [
-        'C#', 'ASP.NET MVC 4.5', 'WebForms', ''
+        'C#', 'ASP.NET MVC 4.5', 'WebForms', 'jQuery', 'MSSQL', 'IIS'
       ],
     }
   ]
+
+  ngOnInit() {
+    this.experiences.forEach(experience => {
+      this.shuffleArray(experience.technologies);
+    });
+  }
+
+  shuffleArray(array: any[]): any[] {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
 }

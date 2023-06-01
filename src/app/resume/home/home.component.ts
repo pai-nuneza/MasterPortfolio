@@ -7,14 +7,14 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class HomeComponent {
   strings = [
-    'Application Development',
-    'Frontend Development',
-    'Database Structure',
-    'Cloud Computing Azure/AWS',
+    'C# Development',
+    '.NET Web API',
+    'Angular Development',
+    'Responsive Web Design',
+    'Azure DevOps',
     'Web Development',
     'Git Source Control',
     'IIS Deployments',
-    'Web Design',
   ];
 
   openPDF(){
