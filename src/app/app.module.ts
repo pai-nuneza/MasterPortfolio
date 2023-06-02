@@ -13,6 +13,8 @@ import { SkillsComponent } from './resume/skills/skills.component';
 import { ExperienceComponent } from './resume/experience/experience.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ChartsComponent } from './projects/charts/charts.component';
+import { TodoComponent } from './projects/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     LoaderComponent,
     SkillsComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    ChartsComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,

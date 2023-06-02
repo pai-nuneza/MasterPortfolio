@@ -47,3 +47,49 @@
   transition: transform 0.2s ease-in-out;
   color: #f8f9fa;
 }
+
+
+.left-column {
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.right-column {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  overflow-y: auto;
+}
+
+.logo {
+  font-size:25px;
+  color: #fff;
+  text-decoration:none;
+  font-weight:600;
+  cursor:default;
+}
+
+.nav-link {
+  margin-left:15px;
+  font-size:18px;
+  text-decoration:none;
+  font-weight:500;
+  transition: .3s;
+}
+
+.navbar-nav a:hover {
+  color:red !important;
+}
+
+
+.container-fluid {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.container-fluid.show {
+  opacity: 1;
+}
+

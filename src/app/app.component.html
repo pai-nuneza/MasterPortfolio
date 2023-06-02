@@ -1,4 +1,5 @@
-<div *ngIf="showContent" id="particles-js">
+
+<div id="particles-js">
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand logo" href="#">Portfolio</a>
@@ -16,13 +17,10 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#skills-page">Skills</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#experience">Experience</a>
@@ -37,11 +35,6 @@
       </div>
     </div>
   </nav>
-  <app-home></app-home>
-  <app-about-me></app-about-me>
-  <app-skills></app-skills>
-  <app-experience></app-experience>
-  <app-projects></app-projects>
-  <app-contact-me></app-contact-me>
+  <router-outlet></router-outlet>
 </div>
 

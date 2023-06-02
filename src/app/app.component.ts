@@ -7,8 +7,6 @@ declare var particlesJS: any;
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  showContent = true;
-
   ngOnInit(): void {
     particlesJS.load('particles-js', '/assets/particles.json', null);
   }
