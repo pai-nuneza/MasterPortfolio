@@ -1,11 +1,11 @@
-<section id="experience" class="page-85 glassy">
+<section id="experience" class="page-85 glassy py-5">
   <div class="container">
     <div class="section-title">
       <h2>Experiences</h2>
     </div>
 
     <div class="row" *ngFor="let a of experiences; let i = index">
-      <div class="col my-3" >
+      <div class="col my-2" >
         <div class="card border-0 bg-transparent glassy cardHolder">
           <div class="card-body">
             <h5 class="blue-color"><b>{{ a.position }}</b></h5>
@@ -14,9 +14,9 @@
             <div>{{a.date}}</div>
            
             <div class="card-text my-2" >{{ a.description }}</div>
-            Tech: 
+            <!-- Tech: 
             <span *ngFor="let n of a.technologies; let i = index" class="badge bg-secondary"
-              style="margin-right:4px;">{{ n }}</span>
+              style="margin-right:4px;">{{ n }}</span> -->
           </div>
         </div>
       </div>

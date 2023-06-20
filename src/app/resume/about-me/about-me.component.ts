@@ -12,7 +12,7 @@ export class AboutMeComponent {
   coreExpertise =
     'One of my core areas of expertise is in C# and Angular technologies. I have a strong command over these languages and enjoy creating robust and efficient software solutions using them. Additionally, I have hands-on experience with AWS and Azure cloud platforms, Git for version control, and MSSQL for database management. This diverse skill set allows me to tackle complex challenges and deliver high-quality results.';
   outsideProfessionalWorld =
-    "Outside of work, I'm passionate about exploring nature. Whether it's camping, hiking in forests, or enjoying beaches, being in the great outdoors helps me unwind, recharge, and connect with the beauty of our planet. It's a way to challenge myself, find tranquility, and foster personal growth.";
+    "Outside of work, Pai is passionate about exploring nature. Whether it's camping, hiking in forests, or enjoying beaches, being in the great outdoors helps him unwind, recharge, and connect with the beauty of our planet. It's a way to challenge himself, find tranquility, and foster personal growth.";
   digitalRealm =
     "While I'm engrossed in the digital realm, I also value physical fitness. You'll often find me hitting the gym, pushing my limits, and striving for a healthier lifestyle. I believe that maintaining a balance between mental and physical well-being is essential for overall success and happiness.";
   music =

@@ -9,7 +9,7 @@ export class ExperienceComponent {
 
   experiences = [
     {
-      company: 'Unient',
+      company: 'Unient - Remote',
       position: 'Fullstack Developer',
       date: 'Feb 2021 - Present',
       description: 'Develop enhancements and fixed issues. Worked closely with my team to deliver efficient and high-quality solutions. Conducted code reviews and promoted best practices.',
@@ -20,7 +20,7 @@ export class ExperienceComponent {
       ],
     },
     {
-      company: 'Symon Systems',
+      company: 'Symon Systems - Remote',
       position: 'Senior Developer',
       date: 'Feb 2021 - May 2023',
       description: 'I led feature development, conducted code reviews and testing, and maintained client communication for successful software delivery.',
@@ -31,7 +31,7 @@ export class ExperienceComponent {
       ],
     },
     {
-      company: 'Digital Excellence',
+      company: 'Digital Excellence - Remote',
       position: 'Fullstack Developer',
       date: 'June 2020 - Jan 2021',
       description: 'Facilitated collaboration with cross-functional teams, analyzed requirements, documented meticulously, and ensured effective client communication for exceptional results.',
@@ -42,7 +42,7 @@ export class ExperienceComponent {
       ],
     },
     {
-      company: 'Alliance Software',
+      company: 'Alliance Software - Onsite',
       position: 'Software Engineer',
       date: 'Nov 2018 - May 2020',
       description: 'Collaborated with teams to implement features, resolve issues, and ensure client satisfaction. Communicated effectively, addressed concerns, and documented requirements for successful software development.',
@@ -53,7 +53,7 @@ export class ExperienceComponent {
       ],
     },
     {
-      company: 'Mlhuillier Financial Services',
+      company: 'Mlhuillier Financial Services - Onsite',
       position: 'Programmer',
       date: 'Sep 2015 - Nov. 2018',
       description: 'Contributed to financial system projects as a junior developer. Involved in web app development, including UI/UX planning, database design, back-end structuring, testing, and successful deployment support.',

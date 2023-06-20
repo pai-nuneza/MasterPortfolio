@@ -1,0 +1,16 @@
+.box {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    flex-shrink: 0;
+    /* Prevent icon from shrinking */
+    margin-right: 10px;
+    /* Adjust the spacing between the icon and content */
+}
+
+.content {
+    flex-grow: 1;
+    /* Allow content to grow and occupy remaining space */
+}
