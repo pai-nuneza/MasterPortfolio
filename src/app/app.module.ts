@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ChartsComponent } from './projects/charts/charts.component';
 import { TodoComponent } from './projects/todo/todo.component';
+import { ServicesComponent } from './resume/services/services.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TodoComponent } from './projects/todo/todo.component';
     SkillsComponent,
     ExperienceComponent,
     ChartsComponent,
-    TodoComponent
+    TodoComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

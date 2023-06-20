@@ -38,3 +38,12 @@ p:not(:last-child) {
 .glassy-effect:hover {
   background: linear-gradient(to top, rgb(255 255 255 / 12%), rgb(200 200 200 / 12%));
 }
+
+.cardHolder {
+  width: 70%;
+}
+@media (max-width: 767px) {
+  .cardHolder {
+    width: 100%;
+  }
+}

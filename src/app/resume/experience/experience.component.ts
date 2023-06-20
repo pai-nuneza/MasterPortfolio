@@ -11,12 +11,12 @@ export class ExperienceComponent {
     {
       company: 'Unient',
       position: 'Fullstack Developer',
-      date: 'Feb 2021 - June 2023',
+      date: 'Feb 2021 - Present',
       description: 'Develop enhancements and fixed issues. Worked closely with my team to deliver efficient and high-quality solutions. Conducted code reviews and promoted best practices.',
       imageUrl: 'assets/images/companies/unient.svg',
       companyWebsite: 'https://www.unient.biz/',
       technologies: [
-        'C#', 'Jira', 'Git', 'Angular', 'Octopos Deploy', 'Azure DevOps', 'Java Groovy', 'ASP.NET MVC'
+        'C#', '.NET Core', 'Git', 'Angular', 'Azure DevOps', 'Java', 'ASP.NET MVC'
       ],
     },
     {
@@ -27,7 +27,7 @@ export class ExperienceComponent {
       imageUrl: 'assets/images/companies/symon.png',
       companyWebsite: 'http://3.0.204.178/#url',
       technologies: [
-        'C#', 'WebAPI', 'Trello', 'AWS EC2', 'Elastic Beanstalk', 'Angular 14', 'Git', 'Bootstrap 3.3', 'IIS'
+        'C#', '.NET Core', 'AWS', 'Angular', 'Git', 'Bootstrap', 'IIS', 'Windows Forms'
       ],
     },
     {
@@ -43,24 +43,24 @@ export class ExperienceComponent {
     },
     {
       company: 'Alliance Software',
-      position: 'Software Engineer II',
+      position: 'Software Engineer',
       date: 'Nov 2018 - May 2020',
       description: 'Collaborated with teams to implement features, resolve issues, and ensure client satisfaction. Communicated effectively, addressed concerns, and documented requirements for successful software development.',
       imageUrl: 'assets/images/companies/alliance.svg',
       companyWebsite: 'https://www.alliance.com.ph/index.html',
       technologies: [
-        'C#', 'AngularJs', 'jQuery', 'Bootstrap 4', 'ASP.NET MVC', 'Team Foundation Server','MSSQL'
+        'C#', 'AngularJs', 'jQuery', 'ASP.NET MVC', 'TFS', 'MSSQL'
       ],
     },
     {
       company: 'Mlhuillier Financial Services',
       position: 'Programmer',
       date: 'Sep 2015 - Nov. 2018',
-      description: 'Played key role in end-to-end development and support of web apps. Led UI/UX planning, database design, back-end structuring, and testing. Ensured successful deployment.',
+      description: 'Contributed to financial system projects as a junior developer. Involved in web app development, including UI/UX planning, database design, back-end structuring, testing, and successful deployment support.',
       imageUrl: 'assets/images/companies/mlhuillier.jpg',
       companyWebsite: 'https://mlhuillier.com/',
       technologies: [
-        'C#', 'ASP.NET MVC 4.5', 'WebForms', 'jQuery', 'MSSQL', 'IIS'
+        'C#', 'ASP.NET MVC 4.5', '.NET Framework', 'WebForms', 'jQuery', 'MSSQL', 'IIS'
       ],
     }
   ]

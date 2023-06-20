@@ -6,13 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.css'],
 })
 export class AboutMeComponent {
-  shortAboutMe = "I'm Pai, an experienced software professional with a passion for innovation and problem-solving. With 8 years of expertise, I craft robust software solutions. Let's collaborate and create remarkable solutions together."
+  shortAboutMe = "Meet Pai, an experienced software professional with a passion for innovation. With 8 years of expertise, Pai crafts robust software solutions, collaborating to create remarkable results. Their dedication and attention to detail ensure high-quality products and a cutting-edge approach to problem-solving. Join forces with Pai for innovative solutions that surpass expectations. "
   aboutMe =
     "I'm Pai, a software professional with 8 years of experience. My expertise lies in C# and Angular technologies, where I excel in creating robust and efficient software solutions. I also have hands-on experience with AWS, Azure, Git, and MSSQL, which allows me to tackle complex challenges effectively. I'm constantly staying updated with the latest advancements in the industry, as I believe in leveraging technology to drive innovation and solve real-world problems. If you're seeking a dedicated and knowledgeable software professional who can bring your ideas to life, I'm here to help. Let's collaborate and create remarkable solutions together!";
   coreExpertise =
     'One of my core areas of expertise is in C# and Angular technologies. I have a strong command over these languages and enjoy creating robust and efficient software solutions using them. Additionally, I have hands-on experience with AWS and Azure cloud platforms, Git for version control, and MSSQL for database management. This diverse skill set allows me to tackle complex challenges and deliver high-quality results.';
   outsideProfessionalWorld =
-    "Outside of the professional world, I have a few passions that keep me energized and well-rounded. I am an avid video gamer and love exploring virtual worlds and engaging in immersive gameplay experiences. It's a fantastic way to unwind and challenge my problem-solving skills.";
+    "Outside of work, I'm passionate about exploring nature. Whether it's camping, hiking in forests, or enjoying beaches, being in the great outdoors helps me unwind, recharge, and connect with the beauty of our planet. It's a way to challenge myself, find tranquility, and foster personal growth.";
   digitalRealm =
     "While I'm engrossed in the digital realm, I also value physical fitness. You'll often find me hitting the gym, pushing my limits, and striving for a healthier lifestyle. I believe that maintaining a balance between mental and physical well-being is essential for overall success and happiness.";
   music =

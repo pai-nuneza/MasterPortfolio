@@ -1,5 +1,5 @@
-<section id="about" class="about page-60">
-  <div class="container">
+<section id="about" class="about glassy page-60">
+  <div class="container ">
 
     <div class="section-title">
       <h2>About</h2>
@@ -7,20 +7,41 @@
 
     <div class="row mb-3">
       <div class="col-lg-4">
-        <div class="d-flex justify-content-center align-items-center"> <!-- Added align-items-center class -->
-          <img src="assets/painuneza.jpg" class="shadow rounded-circle myimage mx-auto image-cover" alt=""> <!-- Added rounded-circle class -->
+        <div class="d-flex justify-content-center align-items-center">
+          <div id="carouselExampleInterval" class="carousel slide myimage " data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="assets/pai/mountain.jpg" class="d-block w-100 mx-auto" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="assets/pai/beach.jpg" class="d-block w-100 mx-auto" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="assets/pai/beach2.jpg" class="d-block w-100 mx-auto" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
       </div>
       <div class="col-lg-8 pt-4 pt-lg-0 content">
-        <p class="mb-4">
+        <p class="mb-4 lead">
           {{shortAboutMe}}
         </p>
         <hr>
-        <p>
+        <p class="lead">
           {{outsideProfessionalWorld}}
         </p>
       </div>
     </div>
   </div>
 </section>
-
