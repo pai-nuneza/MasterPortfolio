@@ -8,9 +8,9 @@ declare var particlesJS: any;
 })
 export class AppComponent {
   constructor(private renderer: Renderer2) {}
-  
+
   ngOnInit(): void {
-    particlesJS.load('particles-js', '/assets/particles.json', null);
+    // particlesJS.load('particles-js', '/assets/particles.json', null);
   }
 
   @HostListener('window:scroll', [])

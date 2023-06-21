@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { ChartsComponent } from './projects/charts/charts.component';
 import { TodoComponent } from './projects/todo/todo.component';
 import { ServicesComponent } from './resume/services/services.component';
+import { BookACallComponent } from './resume/book-a-call/book-a-call.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ServicesComponent } from './resume/services/services.component';
     ExperienceComponent,
     ChartsComponent,
     TodoComponent,
-    ServicesComponent
+    ServicesComponent,
+    BookACallComponent
   ],
   imports: [
     BrowserModule,
