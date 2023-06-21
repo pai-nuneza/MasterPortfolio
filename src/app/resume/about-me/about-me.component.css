@@ -18,3 +18,14 @@
 .caro-image {
   box-shadow: 0 10px 10px rgb(0 0 0 / 0.4);
 }
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.ab-carousel {
+  height:50%;
+}
