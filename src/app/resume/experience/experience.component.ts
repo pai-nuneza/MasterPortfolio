@@ -45,7 +45,7 @@ export class ExperienceComponent {
       company: 'Alliance Software - Onsite',
       position: 'Software Engineer',
       date: 'Nov 2018 - May 2020',
-      description: 'Collaborated with teams to implement features, resolve issues, and ensure client satisfaction. Communicated effectively, addressed concerns, and documented requirements for successful software development.',
+      description: 'Collaborated, implemented, resolved, ensured client satisfaction. Communicated, documented for software development.',
       imageUrl: 'assets/images/companies/alliance.svg',
       companyWebsite: 'https://www.alliance.com.ph/index.html',
       technologies: [

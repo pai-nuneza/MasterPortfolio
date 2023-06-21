@@ -13,13 +13,14 @@ export class AppComponent {
     // particlesJS.load('particles-js', '/assets/particles.json', null);
   }
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const navbar = document.querySelector('.navbar');
-    if (window.pageYOffset > 0) {
-      this.renderer.addClass(navbar, 'bg-dark');
-    } else {
-      this.renderer.removeClass(navbar, 'bg-dark');
-    }
-  }
+  // This code will put glassy when scrolling down
+  // @HostListener('window:scroll', [])
+  // onWindowScroll() {
+  //   const navbar = document.querySelector('.navbar');
+  //   if (window.pageYOffset > 0) {
+  //     this.renderer.addClass(navbar, 'glassy');
+  //   } else {
+  //     this.renderer.removeClass(navbar, 'glassy');
+  //   }
+  // }
 }
