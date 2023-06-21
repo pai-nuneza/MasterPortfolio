@@ -8,57 +8,17 @@
         to me. I'd be happy to collaborate!
       </p>
     </div>
-
-    <!-- <div class="row mt-5" data-aos="fade-in">
-      <div class="col-lg-5 d-flex align-items-stretch">
-        <div class="info">
-          <div class="address">
-            <i class="bi bi-geo-alt"></i>
-            <h4>Location:</h4>
-            <p>Cebu, Philippines</p>
-          </div>
-
-          <div class="email">
-            <i class="bi bi-envelope"></i>
-            <h4>Email:</h4>
-            <p>pai.nuneza@gmail.com</p>
-          </div>
-
-          <div class="phone">
-            <i class="bi bi-phone"></i>
-            <h4>Call:</h4>
-            <p>+63 908 634 5307</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-7">
-        <form (ngSubmit)="submitForm()" role="form" class="php-email-form">
-          <div class="row">
-            <div class="form-group col-md-6">
-              <label for="name">Your Name</label>
-              <input type="text" name="name" class="form-control" id="name" [(ngModel)]="name" required />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="email">Your Email</label>
-              <input type="email" class="form-control" name="email" id="email" [(ngModel)]="email" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea class="form-control" name="message" rows="10" [(ngModel)]="message" required></textarea>
-          </div>
-          <div class="mt-2">
-            <button class="btn btn-primary" type="submit">Send Message</button>
-          </div>
-        </form>
-
-      </div>
-    </div>-->
     <div>
-      <a class="form control btn btn-success" href="mailto:pai.nuneza@gmail.com?subject=HelloWorld;">Send Email</a>
+      <button class="pbutton" style="margin-right: 10px" [routerLink]="['book']">Book A Call</button>
+
+      <button class="pbutton">
+        <a
+          class="text-decoration-none"
+          style="color: white"
+          href="mailto:pai.nuneza@gmail.com?;"
+          >Send An Email</a
+        >
+      </button>
     </div>
   </div>
-
-
 </section>

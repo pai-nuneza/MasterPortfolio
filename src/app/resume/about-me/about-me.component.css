@@ -3,7 +3,6 @@
 }
 
 .image-cover {
-
   border-radius: 50%;
   margin: 20px;
 
@@ -16,3 +15,6 @@
   /* Add a subtle shadow effect */
 }
 
+.caro-image {
+  box-shadow: 0 10px 10px rgb(0 0 0 / 0.4);
+}

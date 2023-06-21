@@ -7,14 +7,14 @@
     <div class="row" *ngFor="let a of experiences; let i = index">
       <div class="col my-2" >
         <div class="card border-0 bg-transparent glassy cardHolder">
-          <div class="card-body">
-            <h5 class="blue-color"><b>{{ a.position }}</b></h5>
+          <div class="card-body ">
+            <h5 class="blue-color t-shadow"><b>{{ a.position }}</b></h5>
             <!-- <p class="card-title">{{ a.company }}</p> -->
             <div>{{a.company}}</div>
             <div>{{a.date}}</div>
-           
-            <div class="card-text my-2" >{{ a.description }}</div>
-            <!-- Tech: 
+
+            <div class="my-2" >{{ a.description }}</div>
+            <!-- Tech:
             <span *ngFor="let n of a.technologies; let i = index" class="badge bg-secondary"
               style="margin-right:4px;">{{ n }}</span> -->
           </div>

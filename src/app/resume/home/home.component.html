@@ -1,13 +1,24 @@
-<div >
-
-  <section id="home" class="d-flex justify-content-center align-items-center">
+<div>
+  <section id="home" class="d-flex justify-content-center align-items-center background-svg">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <h3>Hello, It's Me</h3>
-          <p id="home-name">Pai Nuñeza</p>
-          <p class="lead">Fullstack .NET/Angular Developer</p>
-          <div>
+        <div class="t-shadow">
+          <div class="landing-name">Hello, Call me Pai</div>
+          <div class="landing-header">I'm a Web Developer</div>
+
+          <div class="mt-3">
+            <button class="pbutton" style="margin-right: 10px" [routerLink]="['book']">Book A Call</button>
+
+            <button class="pbutton">
+              <a
+                class="text-decoration-none"
+                style="color: white"
+                href="mailto:pai.nuneza@gmail.com?;"
+                >Send An Email</a
+              >
+            </button>
+          </div>
+          <!-- <div>
             <div
               id="typedjs"
               style="height: 30px; width: 330px; background-color: #b30a0a"
@@ -21,9 +32,9 @@
                 <p id="home-typing" class="typing"></p>
               </ngx-typed-js>
             </div>
-          </div>
+          </div> -->
           <div style="margin-top: 50px"></div>
-          <div class="social-media">
+          <!-- <div class="social-media">
             <a href="https://www.linkedin.com/in/pailoununeza/" class="me-2"
               ><i class="bx bxl-linkedin-square text-light"></i
             ></a>
@@ -33,17 +44,56 @@
             <a href="https://github.com/pai-nuneza" class="me-2"
               ><i class="bx bxl-github text-light"></i
             ></a>
-          </div>
-          <a
+          </div> -->
+          <!-- <a
             href="assets/resume.pdf"
             target="_blank"
             class="btn btn-outline-info my-3"
             >Download CV</a
-          >
+          > -->
         </div>
-        <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <div
+          style="background: url('/assets/pai/beach.jpg')"
+          class="col-md-6 d-flex justify-content-center align-items-center"
+        >
           <div class="home-img"></div>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="glassy">
+    <div class="container">
+      <figure class="text-center my-5">
+        <blockquote class="blockquote" style="font-size: 40px">
+          <p class="t-shadow">
+            "Websites should look good from the
+            <span class="blue-color">inside</span> and
+            <span class="blue-color">out</span>."
+          </p>
+        </blockquote>
+        <figcaption class="blockquote-footer" style="font-size: 30px">
+          Paul Cookson
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="page-60 my-5 d-flex justify-content-center align-items-center">
+    <div class="container ">
+      <div class="row ">
+        <div class="col-md-6 col-sm-12 ">
+          <h1 class="fw-bold t-shadow">Save <span class="green-color">time</span>.</h1>
+          <h1 class="fw-bold t-shadow ">
+            Get a <span class="green-color">stunning</span> website.
+          </h1>
+          <h1 class="fw-bold italic">
+            I'll handle the backend and frontend, so you don't have to.
+          </h1>
+          <p class="mt-5 lead t-justify">
+            Unleash your website's potential. Captivating design. Seamless
+            functionality. Your online success starts here. Contact me now.
+          </p>
+        </div>
+        <div class="col-md-5 col-sm-12 offset-1 code-background "></div>
       </div>
     </div>
   </section>

@@ -33,7 +33,7 @@ export class ExperienceComponent {
     {
       company: 'Digital Excellence - Remote',
       position: 'Fullstack Developer',
-      date: 'June 2020 - Jan 2021',
+      date: 'Jun 2020 - Jan 2021',
       description: 'Facilitated collaboration with cross-functional teams, analyzed requirements, documented meticulously, and ensured effective client communication for exceptional results.',
       imageUrl: 'assets/images/companies/deg.jpg',
       companyWebsite: 'http://digitalexcellencegroup.com/',

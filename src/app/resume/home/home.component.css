@@ -15,31 +15,30 @@
 
 #home-typing {
   font-size: 20px;
-  padding-left:5px;
+  padding-left: 5px;
 }
 
 #home-typing::after {
   /* Hide the blinking cursor */
-  content:none;
+  content: none;
 }
 
 .home-img img {
-  max-width:450px;
+  max-width: 450px;
 }
 
 .social-media a {
-  display:inline-flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  width:40px;
-  height:40px;
+  width: 40px;
+  height: 40px;
   background: transparent;
-  border:2px solid #0ef;
+  border: 2px solid #0ef;
   border-radius: 50%;
   font-size: 20px;
   color: #0ef;
   text-decoration: none;
-
 }
 
 .social-media a:hover i {
@@ -47,7 +46,6 @@
   transition: transform 0.2s ease-in-out;
   color: #f8f9fa;
 }
-
 
 .left-column {
   overflow-y: auto;
@@ -64,25 +62,24 @@
 }
 
 .logo {
-  font-size:25px;
+  font-size: 25px;
   color: #fff;
-  text-decoration:none;
-  font-weight:600;
-  cursor:default;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
 }
 
 .nav-link {
-  margin-left:15px;
-  font-size:18px;
-  text-decoration:none;
-  font-weight:500;
-  transition: .3s;
+  margin-left: 15px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 .navbar-nav a:hover {
-  color:red !important;
+  color: red !important;
 }
-
 
 .container-fluid {
   transition: opacity 0.5s ease-in-out;
@@ -93,3 +90,22 @@
   opacity: 1;
 }
 
+.landing-header {
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.landing-name {
+  font-size: 50px;
+}
+
+.code-background {
+  background: url("/assets/images/technologies/code-small.jpg");
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+/*
+.background-svg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 200'%3E%3Cpath d='M 0 50 C 150 150 300 0 500 80 L 500 0 L 0 0' fill='rgb(57, 27, 112)'/%3E%3Cpath d='M 0 50 C 150 150 330 -30 500 50 L 500 0 L 0 0' fill='%230E7452' opacity='0.8'/%3E%3Cpath d='M 0 50 C 215 150 250 0 500 100 L 500 0 L 0 0' fill='%230E7452' opacity='0.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
