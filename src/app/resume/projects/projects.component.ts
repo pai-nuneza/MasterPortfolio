@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   items: any[] = [
     {
-      title: 'E-Commerce',
-      text: 'E-Commerce Frontend made with Angular',
+      title: 'Digital Store',
+      text: 'A store website for toys made with Angular',
       buttonText: 'Go to site'
     },
     {
@@ -23,7 +23,7 @@ export class ProjectsComponent {
       buttonText: 'Go to site'
     },
     {
-      title: 'Job Board',
+      title: 'Jobs App',
       text: 'Post jobs and apply',
       buttonText: 'Go to site'
     },
