@@ -15,7 +15,7 @@ export class ServicesComponent {
     },
     {
       title: 'Front-end Development',
-      description: 'Building interactive user interfaces with HTML, CSS, and JavaScript',
+      description: 'Building interactive user interfaces with HTML, CSS, JavaScript and Angular',
       icon: 'fas fa-check-square',
       delay: 200
     },
@@ -30,12 +30,6 @@ export class ServicesComponent {
       description: 'Providing ongoing support and updates for existing websites',
       icon: 'fas fa-binoculars',
       delay: 200
-    },
-    {
-      title: 'E-commerce Solutions',
-      description: 'Building online stores with payment integration and product management',
-      icon: 'fas fa-calendar-alt',
-      delay: 400
     },
     {
       title: 'Cloud Deployments',
