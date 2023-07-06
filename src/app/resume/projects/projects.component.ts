@@ -10,22 +10,26 @@ export class ProjectsComponent {
     {
       title: 'Digital Store',
       text: 'A store website for toys made with Angular',
-      buttonText: 'Go to site'
+      buttonText: 'Go to site',
+      link: '#'
     },
     {
       title: 'Team Website',
       text: 'Website for team of software developers',
-      buttonText: 'Go to site'
+      buttonText: 'Go to site',
+      link: 'https://pai-teamweb.netlify.app/#/'
     },
     {
       title: 'Weather Application',
       text: 'Shows weather data requested from third party API',
-      buttonText: 'Go to site'
+      buttonText: 'Go to site',
+      link: '#'
     },
     {
       title: 'Jobs App',
       text: 'Post jobs and apply',
-      buttonText: 'Go to site'
+      buttonText: 'Go to site',
+      link: '#'
     },
     // Add more objects as needed
   ];
