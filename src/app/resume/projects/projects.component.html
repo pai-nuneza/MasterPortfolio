@@ -6,11 +6,12 @@
     <div >
       <div class="row">
         <div class="col-sm-6" *ngFor="let item of items">
-          <div class="card bg-transparent glassy my-2" data-aos="fade-up">
+          <div class="card bg-transparent border my-3 " data-aos="fade-up" >
             <div class="card-body">
               <h5 class="card-title t-shadow">{{ item.title }}</h5>
               <p class="card-text">{{ item.text }}</p>
-              <a href="#" class="darker-pbutton">{{ item.buttonText }}</a>
+              <a href="#" style="color: white" class="pbutton text-decoration-none">{{ item.buttonText }}</a>
+
             </div>
           </div>
         </div>
