@@ -20,7 +20,7 @@ export class ProjectsComponent {
       link: 'https://pai-teamweb.netlify.app/#/'
     },
     {
-      title: 'Weather Application',
+      title: 'Travel Application',
       text: 'Shows weather data requested from third party API',
       buttonText: 'Go to site',
       link: '#'

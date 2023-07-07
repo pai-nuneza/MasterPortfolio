@@ -1,3 +1,19 @@
 .ongoing-text {
   font-family: consolas;
 }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.socmed-icon {
+  font-size: 30px;
+  color: #fff;
+  width: 50px;
+  text-decoration: none;
+}
+
+

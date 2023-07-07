@@ -1,31 +1,14 @@
-.myimage {
-  width: 330px;
+
+.about-image {
+  width: 70%;
+  border-radius: 50% !important;
+  max-width:100%;
 }
 
-.image-cover {
-  border-radius: 50%;
-  margin: 20px;
-
-  object-fit: cover;
-  object-position: center right;
-
-  /* Add border styles */
-  border: 2px solid #ccc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Add a subtle shadow effect */
-}
-
-.caro-image {
-  box-shadow: 0 10px 10px rgb(0 0 0 / 0.4);
-}
-
-.carousel-indicators {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin-bottom: 0;
-}
-
-.ab-carousel {
-  height:50%;
+@media all and (max-width: 480px) {
+  .about-image {
+    width:80%;
+    height:50%;
+    border-radius: 0% !important;
+  }
 }
