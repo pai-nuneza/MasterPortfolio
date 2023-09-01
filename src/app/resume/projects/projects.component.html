@@ -3,15 +3,22 @@
     <div class="section-title">
       <h2>My Projects</h2>
     </div>
-    <div >
+    <div>
       <div class="row">
         <div class="col-sm-6" *ngFor="let item of items">
           <div class="card bg-transparent border my-3">
             <div class="card-body">
-              <h5 class="card-title t-shadow">{{ item.title }}</h5>
-              <p class="card-text">{{ item.text }}</p>
-              <a target="_blank" href="{{item.link}}" style="color: white" class="pbutton text-decoration-none">{{ item.buttonText }}</a>
-
+              <div class="row">
+                <div class="col-md-8">
+                  <h5 class="card-title t-shadow">{{ item.title }}</h5>
+                  <p class="card-text">{{ item.text }}</p>
+                  <a target="_blank" href="{{item.link}}" class="btn btn-sm btn-success">View application</a>
+                  <p class="mt-3"> <span class="badge bg-default">{{item.tech}}</span></p>
+                </div>
+                <div class="col-md-4 d-flex align-items-center">
+                  <img src="{{ item.imgLink }}" alt="Project Image" class="mx-auto" style="max-width: 100%; height: auto;">
+                </div>
+              </div>
             </div>
           </div>
         </div>

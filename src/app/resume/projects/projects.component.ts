@@ -8,28 +8,36 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   items: any[] = [
     {
-      title: 'Digital Store',
-      text: 'A store website for toys made with Angular',
+      title: 'Task Master',
+      text: 'Track your tasks',
       buttonText: 'Go to site',
-      link: '#'
+      link: '#',
+      tech: '.NET Core Blazor',
+      imgLink: 'https://images.unsplash.com/photo-1595013694368-aab1b4f70dcd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2001&q=80', 
     },
     {
-      title: 'Team Website',
-      text: 'Website for team of software developers',
+      title: 'Inventory System',
+      text: 'For small business',
       buttonText: 'Go to site',
-      link: 'https://pai-teamweb.netlify.app/#/'
+      link: '#',
+      tech: 'ASP.NET',
+      imgLink: 'https://images.unsplash.com/photo-1616401784845-180882ba9ba8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
     },
     {
-      title: 'Travel Application',
-      text: 'Shows weather data requested from third party API',
+      title: 'Online Quiz Game',
+      text: 'Have fun',
       buttonText: 'Go to site',
-      link: '#'
+      link: '#',
+      tech: 'Javascript',
+      imgLink: 'https://images.unsplash.com/photo-1509869175650-a1d97972541a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     },
     {
-      title: 'Jobs App',
-      text: 'Post jobs and apply',
+      title: 'Social Media',
+      text: 'Show it',
       buttonText: 'Go to site',
-      link: '#'
+      link: '#',
+      tech: '.NET and Angular',
+      imgLink: 'https://plus.unsplash.com/premium_photo-1664100194847-f38903f9cfdf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     },
     // Add more objects as needed
   ];
