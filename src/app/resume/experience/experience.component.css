@@ -17,7 +17,6 @@ p:not(:last-child) {
   margin-bottom: 1.5em;
 }
 
-
 .card {
   min-height: 150px;
   display: flex;
