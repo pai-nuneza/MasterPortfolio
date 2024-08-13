@@ -11,7 +11,7 @@ export class ProjectsComponent {
       title: 'Sydney Boat Rentals',
       text: 'Booking/Boat Hiring',
       buttonText: 'Go to site',
-      link: 'https://sydney-boats.netlify.app/home',
+      link: 'https://sydney-boats.netlify.app',
       tech: 'Angular, Bootstrap',
       imgLink: 'https://images.unsplash.com/photo-1595013694368-aab1b4f70dcd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2001&q=80', 
     },
