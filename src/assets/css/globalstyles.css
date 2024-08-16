@@ -56,8 +56,8 @@
 }
 
 .pbutton {
-  --c: #229091; /* the color*/
-
+  --c: #229091;
+  /* the color*/
   box-shadow: 0 0 0 0.1em inset var(--c);
   --_g: linear-gradient(var(--c) 0 0) no-repeat;
   background: var(--_g) calc(var(--_p, 0%) - 100%) 0%,
@@ -68,10 +68,12 @@
   outline-offset: 0.1em;
   transition: background-size 0.4s, background-position 0s 0.4s;
 }
+
 .pbutton:hover {
   --_p: 100%;
   transition: background-position 0.4s, background-size 0s;
 }
+
 .pbutton:active {
   box-shadow: 0 0 9e9Q inset #0009;
   background-color: var(--c);
@@ -88,7 +90,8 @@
 }
 
 .darker-pbutton {
-  --c: white; /* the darker color*/
+  --c: white;
+  /* the darker color*/
   text-decoration: none;
   box-shadow: 0 0 0 0.1em inset var(--c);
   --_g: linear-gradient(var(--c) 0 0) no-repeat;
@@ -123,7 +126,7 @@
 
 .background-svg {
 
- background-repeat: no-repeat;
+  background-repeat: no-repeat;
 
 }
 
@@ -146,5 +149,3 @@
   width: 50px;
   text-decoration: none;
 }
-
-

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.css'],
 })
 export class ProjectsComponent {
   items: any[] = [
@@ -12,8 +12,9 @@ export class ProjectsComponent {
       text: 'Booking/Boat Hiring',
       buttonText: 'Go to site',
       link: 'https://sydney-boats.netlify.app',
-      tech: 'Angular 17, Bootstrap 5',
-      imgLink: 'https://images.unsplash.com/photo-1562281302-809108fd533c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+      tech: 'Angular 17, Tailwind CSS',
+      imgLink:
+        'https://images.unsplash.com/photo-1562281302-809108fd533c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       title: 'Gamevault',
@@ -21,16 +22,19 @@ export class ProjectsComponent {
       buttonText: 'Site - In Progress',
       link: '#',
       tech: 'Vue 3, Steam API',
-      imgLink: 'https://www.91-cdn.com/hub/wp-content/uploads/2021/12/ar88u.jpg'
+      imgLink:
+        'https://www.91-cdn.com/hub/wp-content/uploads/2021/12/ar88u.jpg',
     },
-    // {
-    //   title: 'Online Quiz Game',
-    //   text: 'Have fun',
-    //   buttonText: 'Go to site',
-    //   link: '#',
-    //   tech: 'Javascript',
-    //   imgLink: 'https://images.unsplash.com/photo-1509869175650-a1d97972541a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    // },
+    {
+      title: 'Unient',
+      text: 'Have fun',
+      buttonText: 'Go to site',
+      link: 'https://unient.biz',
+      tech: 'C# .NET, Umbraco CMS',
+      imgLink:
+        'https://media.licdn.com/dms/image/D560BAQFDKjohBAGwZQ/company-logo_200_200/0/1682578036360/unient_biz_logo?e=2147483647&v=beta&t=4mcaMsqG0h1ikLllNSt2gcSYqJsAFNawLfpG5TLFzAk',
+    },
+
     // {
     //   title: 'Social Media',
     //   text: 'Show it',

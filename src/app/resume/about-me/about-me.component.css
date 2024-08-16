@@ -1,14 +1,50 @@
-
 .about-image {
   width: 70%;
   border-radius: 10% !important;
-  max-width:100%;
+  max-width: 100%;
 }
 
 @media all and (max-width: 480px) {
   .about-image {
-    width:80%;
-    height:50%;
+    width: 80%;
+    height: 50%;
     border-radius: 0% !important;
   }
+}
+
+swiper-container {
+  width: 240px;
+  height: 320px;
+}
+
+swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+swiper-slide:nth-child(1n) {
+  background-color: rgb(206, 17, 17);
+  background-image: url('https://blog.clickandboat.com/en/wp-content/uploads/2022/09/blog-featured-image-min.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+swiper-slide:nth-child(2n) {
+  background-image: url('https://brooksgroup.com/wp-content/uploads/2022/12/AdobeStock_325107629.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+swiper-slide:nth-child(3n) {
+  background-image: url('https://www.sydneyharbouryachtcharter.com.au/wp-content/uploads/2022/02/CHAOS-10.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

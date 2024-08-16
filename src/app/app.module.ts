@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -18,6 +18,11 @@ import { TodoComponent } from './projects/todo/todo.component';
 import { ServicesComponent } from './resume/services/services.component';
 import { BookACallComponent } from './resume/book-a-call/book-a-call.component';
 
+// import function to register Swiper custom elements
+import { register } from 'swiper/element/bundle';
+// register Swiper custom elements
+register();
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,16 +36,17 @@ import { BookACallComponent } from './resume/book-a-call/book-a-call.component';
     ChartsComponent,
     TodoComponent,
     ServicesComponent,
-    BookACallComponent
+    BookACallComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgxTypedJsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule {}
