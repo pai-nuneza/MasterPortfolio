@@ -1,5 +1,11 @@
 #home {
   min-height: 50vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: repeat;
+  background-size: cover;
+  /* Fallback color */
+  overflow: hidden;
 }
 
 #home-name {
@@ -91,7 +97,7 @@
 }
 
 .landing-header {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
 }
 
@@ -142,7 +148,6 @@ body {
   justify-content: center;
 }
 
-
 swiper-container {
   width: 100%;
   padding-top: 50px;
@@ -159,4 +164,76 @@ swiper-slide {
 swiper-slide img {
   display: block;
   width: 100%;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.area {
+  width: 200px;
+  transform-origin: top;
+  -moz-transform-origin: top;
+  -webkit-transform-origin: top;
+}
+
+.wire {
+  position: relative;
+  left: 98px;
+  height: 0px;
+  width: 4px;
+  background-color: black;
+}
+
+.fixture {
+  position: relative;
+  background-color: grey;
+  width: 16px;
+  height: 20px;
+  left: 92px;
+}
+
+.strip {
+  position: relative;
+  width: 18px;
+  height: 2px;
+  right: 1px;
+  top: 4px;
+  background-color: darkgrey;
+}
+
+.strip:nth-of-type(2) {
+  top: 7px;
+}
+
+.strip:nth-of-type(3) {
+  top: 10px;
+}
+
+.bulb {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  left: 80px;
+  bottom: 2px;
+  z-index: -1;
+  background-color: rgba(226, 211, 161, 0.85);
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 300px 77px rgba(235, 209, 164, 1);
+  -moz-box-shadow: 0px 0px 300px 77px rgba(235, 209, 164, 1);
+  box-shadow: 0px 0px 300px 77px rgba(235, 209, 164, 1);
+}
+
+.zig:nth-of-type(2) {
+  top: -3px;
+}
+
+.zig:nth-of-type(3) {
+  top: -6px;
 }

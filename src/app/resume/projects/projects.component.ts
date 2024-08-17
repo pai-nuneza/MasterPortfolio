@@ -34,15 +34,5 @@ export class ProjectsComponent {
       imgLink:
         'https://media.licdn.com/dms/image/D560BAQFDKjohBAGwZQ/company-logo_200_200/0/1682578036360/unient_biz_logo?e=2147483647&v=beta&t=4mcaMsqG0h1ikLllNSt2gcSYqJsAFNawLfpG5TLFzAk',
     },
-
-    // {
-    //   title: 'Social Media',
-    //   text: 'Show it',
-    //   buttonText: 'Go to site',
-    //   link: '#',
-    //   tech: '.NET and Angular',
-    //   imgLink: 'https://plus.unsplash.com/premium_photo-1664100194847-f38903f9cfdf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    // },
-    // Add more objects as needed
   ];
 }
