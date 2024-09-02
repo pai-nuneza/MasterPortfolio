@@ -14,15 +14,22 @@
       <span class="block w-6 h-1 bg-white"></span>
     </button>
     <div class="lg:flex lg:items-center lg:space-x-6 hidden" id="navbarNav">
-      <ul class="flex space-x-6">
+      <ul class="flex space-x-10">
+        <li>
+          <a class="hover:text-gray-400" href="#about">Home</a>
+        </li>
+
+        <li>
+          <a class="hover:text-gray-400" routerLink="/all-projects">Worked Projects</a>
+        </li>
+        <li>
+          <a class="hover:text-gray-400" routerLink="/experience">Employment History</a>
+        </li>
         <li>
           <a class="hover:text-gray-400" href="#about">About</a>
         </li>
         <li>
-          <a class="hover:text-gray-400" routerLink="/experience">Work History</a>
-        </li>
-        <li>
-          <a class="hover:text-gray-400" href="#contact">Contact</a>
+          <a class="hover:text-gray-400" href="#contact">Contact Me</a>
         </li>
       </ul>
     </div>
@@ -30,23 +37,61 @@
 </nav>
 <router-outlet></router-outlet>
 
-<footer class="py-4">
+<footer class="py-5 bg-dark text-white">
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
-        <h3>Information</h3>
-        <p>Pai Nuñeza</p>
-        <p>Email: pai.nuneza&#64;gmail.com</p>
-        <p>Phone: +63 908 634 5307</p>
+      <!-- Information Section -->
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">Information</h4>
+        <p class="mb-1"><i class="bi bi-person-circle"></i> Pai Nuñeza</p>
+        <p class="mb-1">
+          <i class="bi bi-envelope-fill"></i>
+          <a href="mailto:pai.nuneza@gmail.com" class="text-white text-decoration-none">pai.nuneza&#64;gmail.com</a>
+        </p>
+        <p class="mb-1">
+          <i class="bi bi-telephone-fill"></i>
+          <a href="tel:+639086345307" class="text-white text-decoration-none">+63 908 634 5307</a>
+        </p>
       </div>
 
-      <div class="col-md-4">
-        <h3>Connect with Me</h3>
+      <!-- Connect with Me Section -->
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">Connect with Me</h4>
         <ul class="list-unstyled">
-          <li>pai.nuneza&#64;gmail.com</li>
-          <li>+63 908 634 5307</li>
+          <li class="mb-2">
+            <i class="bi bi-envelope-fill"></i>
+            <a href="mailto:pai.nuneza@gmail.com" class="text-white text-decoration-none">pai.nuneza&#64;gmail.com</a>
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-telephone-fill"></i>
+            <a href="tel:+639086345307" class="text-white text-decoration-none">+63 908 634 5307</a>
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-linkedin"></i>
+            <a href="https://www.linkedin.com/in/pai-nuneza" class="text-white text-decoration-none"
+              target="_blank">LinkedIn</a>
+          </li>
+          <li>
+            <i class="bi bi-github"></i>
+            <a href="https://github.com/painu" class="text-white text-decoration-none" target="_blank">GitHub</a>
+          </li>
         </ul>
       </div>
+
+      <!-- Optional Third Section -->
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">Quick Links</h4>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+          <li class="mb-2"><a href="#" class="text-white text-decoration-none">About</a></li>
+          <li class="mb-2"><a href="#" class="text-white text-decoration-none">Projects</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-top border-light">
+    <div class="text-center">
+      <p class="mb-0">© 2024 Pai Nuñeza. All rights reserved.</p>
     </div>
   </div>
 </footer>

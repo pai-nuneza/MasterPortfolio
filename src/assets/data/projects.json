@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Sydney Harbour Fleet",
+    "text": "Boat Rentals",
+    "buttonText": "Go to site",
+    "link": "https://sydney-boats.netlify.app",
+    "tech": "Angular 17, Tailwind CSS",
+    "imgLink": "https://www.yachtsinternational.com/.image/t_share/MTUxMDQ2ODg4OTQ1Mjk3MzQ5/sahana-1.jpg"
+  },
+  {
+    "title": "Gamevault",
+    "text": "Video games store",
+    "buttonText": "Site - In Progress",
+    "link": "#",
+    "tech": "Vue 3, Steam API",
+    "imgLink": "https://www.91-cdn.com/hub/wp-content/uploads/2021/12/ar88u.jpg"
+  },
+  {
+    "title": "Marvel",
+    "text": "All marvel news",
+    "buttonText": "Site - In Progress",
+    "link": "#",
+    "tech": "Vue 3, Steam API",
+    "imgLink": "https://cdn.marvel.com/u/prod/marvel/images/OpenGraph-TW-1200x630.jpg"
+  },
+  {
+    "title": "Unient",
+    "text": "Company website",
+    "buttonText": "Go to site",
+    "link": "https://unient.biz",
+    "tech": "C# .NET, Umbraco CMS",
+    "imgLink": "https://media.licdn.com/dms/image/D560BAQFDKjohBAGwZQ/company-logo_200_200/0/1682578036360/unient_biz_logo?e=2147483647&v=beta&t=4mcaMsqG0h1ikLllNSt2gcSYqJsAFNawLfpG5TLFzAk"
+  }
+]

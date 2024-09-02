@@ -13,13 +13,12 @@ import { SkillsComponent } from './resume/skills/skills.component';
 import { ExperienceComponent } from './resume/experience/experience.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { ChartsComponent } from './projects/charts/charts.component';
-import { TodoComponent } from './projects/todo/todo.component';
 import { ServicesComponent } from './resume/services/services.component';
 import { BookACallComponent } from './resume/book-a-call/book-a-call.component';
 
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
+import { AllProjectsComponent } from './all-projects/all-projects.component';
 // register Swiper custom elements
 register();
 
@@ -33,10 +32,9 @@ register();
     LoaderComponent,
     SkillsComponent,
     ExperienceComponent,
-    ChartsComponent,
-    TodoComponent,
     ServicesComponent,
     BookACallComponent,
+    AllProjectsComponent,
   ],
   imports: [
     BrowserModule,
