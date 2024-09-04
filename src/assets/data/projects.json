@@ -12,15 +12,15 @@
     "text": "Video games store",
     "buttonText": "Site - In Progress",
     "link": "#",
-    "tech": "Vue 3, Steam API",
+    "tech": "Vue 3, ",
     "imgLink": "https://www.91-cdn.com/hub/wp-content/uploads/2021/12/ar88u.jpg"
   },
   {
     "title": "Marvel",
-    "text": "All marvel news",
+    "text": "Comics",
     "buttonText": "Site - In Progress",
     "link": "#",
-    "tech": "Vue 3, Steam API",
+    "tech": "React, Marvel API",
     "imgLink": "https://cdn.marvel.com/u/prod/marvel/images/OpenGraph-TW-1200x630.jpg"
   },
   {
