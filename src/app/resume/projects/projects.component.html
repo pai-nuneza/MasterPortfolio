@@ -12,12 +12,13 @@
                         'clickable': true
                       }" breakpoints='{
                         "640": { "slidesPerView": 2, "spaceBetween": 20 },
-                        "768": { "slidesPerView": 3, "spaceBetween": 40 },
-                        "1024": { "slidesPerView": 4, "spaceBetween": 60 }
+                        "768": { "slidesPerView": 3, "spaceBetween": 30 },
+                        "1024": { "slidesPerView": 4, "spaceBetween": 30 }
                       }'>
 
-      <swiper-slide *ngFor="let item of items">
-        <a target="_blank" href="{{ item.link }}" class="card border-0 rounded-3 overflow-hidden shadow-sm text-dark">
+      <swiper-slide class="pb-12 transform transition-transform duration-300 hover:scale-105"
+        *ngFor="let item of items">
+        <a target="_blank" href="{{ item.link }}" class="card border-0 rounded-3 overflow-hidden shadow-sm text-dark ">
           <div class="position-relative">
             <img src="{{ item.imgLink }}" alt="Card image" class="card-img" />
             <div class="card-img-overlay d-flex flex-column justify-content-between bg-black bg-opacity-50 p-3">

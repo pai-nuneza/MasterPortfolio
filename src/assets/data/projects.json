@@ -8,27 +8,35 @@
     "imgLink": "https://www.yachtsinternational.com/.image/t_share/MTUxMDQ2ODg4OTQ1Mjk3MzQ5/sahana-1.jpg"
   },
   {
+    "title": "Marvel Comicverse",
+    "text": "Character stories, events and etc.",
+    "buttonText": "Site - In Progress",
+    "link": "https://pai-marvelcomics.netlify.app/",
+    "tech": "React/Vite, Marvel API, Tailwind",
+    "imgLink": "https://cdn.marvel.com/u/prod/marvel/images/OpenGraph-TW-1200x630.jpg"
+  },
+  {
     "title": "Gamevault",
     "text": "Video games store",
     "buttonText": "Site - In Progress",
     "link": "#",
-    "tech": "Vue 3, ",
+    "tech": "Vue 3",
     "imgLink": "https://www.91-cdn.com/hub/wp-content/uploads/2021/12/ar88u.jpg"
-  },
-  {
-    "title": "Marvel",
-    "text": "Comics",
-    "buttonText": "Site - In Progress",
-    "link": "#",
-    "tech": "React, Marvel API",
-    "imgLink": "https://cdn.marvel.com/u/prod/marvel/images/OpenGraph-TW-1200x630.jpg"
   },
   {
     "title": "Unient",
     "text": "Company website",
     "buttonText": "Go to site",
     "link": "https://unient.biz",
-    "tech": "C# .NET, Umbraco CMS",
+    "tech": ".NET, Umbraco",
     "imgLink": "https://media.licdn.com/dms/image/D560BAQFDKjohBAGwZQ/company-logo_200_200/0/1682578036360/unient_biz_logo?e=2147483647&v=beta&t=4mcaMsqG0h1ikLllNSt2gcSYqJsAFNawLfpG5TLFzAk"
+  },
+  {
+    "title": "PPSTA",
+    "text": "Company website",
+    "buttonText": "Go to site",
+    "link": "https://dev-ppsta.ubivelox.com.ph/dashboard/users/login",
+    "tech": "CakePHP, Bootstrap",
+    "imgLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOOU_A_d-xokDcmz__Y1vcq-Kg0WUv8EZqYw&s"
   }
 ]
