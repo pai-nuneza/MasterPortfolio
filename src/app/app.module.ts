@@ -10,7 +10,7 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
 import { LoaderComponent } from './loader/loader.component';
 import { SkillsComponent } from './resume/skills/skills.component';
 import { ExperienceComponent } from './resume/experience/experience.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 // import function to register Swiper custom elements
@@ -19,26 +19,19 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
 // register Swiper custom elements
 register();
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    ProjectsComponent,
-    ContactMeComponent,
-    HomeComponent,
-    LoaderComponent,
-    SkillsComponent,
-    ExperienceComponent,
-    ProjectDetailComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgxTypedJsModule,
-    HttpClientModule,
-    FormsModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        ProjectsComponent,
+        ContactMeComponent,
+        HomeComponent,
+        LoaderComponent,
+        SkillsComponent,
+        ExperienceComponent,
+        ProjectDetailComponent,
+    ],
+    bootstrap: [AppComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA], imports: [BrowserModule,
+        AppRoutingModule,
+        NgxTypedJsModule,
+        FormsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
