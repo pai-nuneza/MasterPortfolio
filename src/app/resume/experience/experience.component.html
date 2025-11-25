@@ -1,17 +1,45 @@
-<section id="experience" class="page-85 py-5">
+<section id="experience" class="py-5">
   <div class="container">
-    <div class="section-title">
-      <h2>Work History</h2>
-    </div>
+    <div class="styled-section">
+      <div class="section-title text-center">
+        <h2 style="color: #00cba9;"><i class="fas fa-briefcase me-2"></i>Work Experience</h2>
+        <p class="text-white-50 mb-4">8+ years of professional software development experience</p>
+      </div>
 
-    <div class="row" *ngFor="let a of experiences; let i = index">
-      <div class="col my-2">
-        <div class="card border-0 bg-transparent cardHolder">
-          <div class="card-body border rounded">
-            <h5 class="blue-color t-shadow"><b>{{ a.position }}</b></h5>
-            <div>{{a.company}}</div>
-            <div>{{a.date}}</div>
-            <!-- <div class="my-2" >{{ a.description  }}</div> -->
+      <div class="timeline">
+        <div class="timeline-item" *ngFor="let exp of experiences; let i = index" [class.timeline-item-left]="i % 2 === 0" [class.timeline-item-right]="i % 2 !== 0">
+          <div class="timeline-marker"></div>
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
+                <div>
+                  <h4 class="position-title">{{ exp.position }}</h4>
+                  <h5 class="company-name">
+                    <a [href]="exp.companyWebsite" target="_blank" class="company-link" *ngIf="exp.companyWebsite">
+                      <i class="fas fa-building me-2"></i>{{ exp.company }}
+                    </a>
+                    <span *ngIf="!exp.companyWebsite">
+                      <i class="fas fa-building me-2"></i>{{ exp.company }}
+                    </span>
+                  </h5>
+                </div>
+                <div class="date-badge">
+                  <i class="fas fa-calendar-alt me-1"></i>{{ exp.date }}
+                </div>
+              </div>
+            </div>
+            
+            <div class="experience-description">
+              <p>{{ exp.description }}</p>
+            </div>
+
+            <div class="experience-skills" *ngIf="exp.skills && exp.skills.length > 0">
+              <div class="d-flex flex-wrap gap-2">
+                <span class="skill-chip" *ngFor="let skill of exp.skills">
+                  {{ skill }}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

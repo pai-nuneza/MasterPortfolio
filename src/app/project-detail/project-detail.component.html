@@ -1,0 +1,207 @@
+<div class="project-detail-container py-5" *ngIf="project">
+  <div class="container">
+    <div class="styled-section">
+    <!-- Back Button -->
+    <div class="mb-4">
+      <button class="btn btn-outline-light" (click)="goBack()">
+        <i class="fas fa-arrow-left me-2"></i> Back to Home
+      </button>
+    </div>
+
+    <!-- Project Header -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <h1 class="display-5 fw-bold mb-3" style="color: #00cba9;">{{ project.title }}</h1>
+        <p class="lead mb-3">{{ project.text }}</p>
+        <div class="d-flex gap-2 flex-wrap mb-3">
+          <span class="badge-custom {{ getStatusClass(project.status) }}">
+            <i class="fas fa-circle me-1" style="font-size: 0.5rem;"></i>{{ getStatusText(project.status) }}
+          </span>
+          <span class="badge-custom badge-category">
+            <i class="fas fa-folder me-1"></i>{{ project.category }}
+          </span>
+          <span class="badge-custom badge-date">
+            <i class="fas fa-calendar me-1"></i>{{ project.date }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="row mb-5">
+      <div class="col-lg-8 mb-4 mb-lg-0">
+        <!-- Main Image -->
+        <div class="image-container mb-3">
+          <img 
+            [src]="project.images[selectedImageIndex]" 
+            [alt]="project.title" 
+            class="img-fluid rounded-3 w-100"
+            style="max-height: 500px; object-fit: cover;"
+          />
+        </div>
+        <!-- Thumbnail Gallery -->
+        <div class="thumbnails-container d-flex gap-2 overflow-auto" *ngIf="project.images.length > 1">
+          <img 
+            *ngFor="let image of project.images; let i = index"
+            [src]="image" 
+            [alt]="project.title + ' - Image ' + (i + 1)"
+            class="thumbnail rounded"
+            [class.active]="i === selectedImageIndex"
+            (click)="selectImage(i)"
+          />
+        </div>
+      </div>
+
+      <!-- Project Info Sidebar -->
+      <div class="col-lg-4">
+        <div class="info-card">
+          <h4 class="mb-4" style="color: #00cba9;"><i class="fas fa-info-circle me-2"></i>Project Details</h4>
+          
+          <!-- Description -->
+          <div class="mb-4">
+            <h6 class="text-white-50 mb-2">Description</h6>
+            <p class="text-white">{{ project.description }}</p>
+          </div>
+
+          <!-- Technologies -->
+          <div class="mb-4">
+            <h6 class="text-white-50 mb-2">Technologies Used</h6>
+            <div class="d-flex flex-wrap gap-2">
+              <span 
+                *ngFor="let tech of project.technologies" 
+                class="tech-badge"
+              >
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Links or Private Badge -->
+          <div class="mb-3">
+            <h6 class="text-white-50 mb-2">{{ project.isPrivate ? 'Availability' : 'Links' }}</h6>
+            <div class="d-grid gap-2" *ngIf="!project.isPrivate">
+              <a 
+                *ngIf="project.liveLink && project.liveLink !== '#'" 
+                [href]="project.liveLink" 
+                target="_blank"
+                class="btn btn-custom btn-primary-custom"
+              >
+                <i class="fas fa-external-link-alt me-2"></i> View Live Site
+              </a>
+              <a 
+                *ngIf="project.githubLink" 
+                [href]="project.githubLink" 
+                target="_blank"
+                class="btn btn-custom btn-secondary-custom"
+              >
+                <i class="fab fa-github me-2"></i> View on GitHub
+              </a>
+            </div>
+            <div *ngIf="project.isPrivate" class="private-project-badge">
+              <div class="alert alert-info mb-0" style="background: rgba(0, 203, 169, 0.1); border: 1px solid rgba(0, 203, 169, 0.3); border-radius: 8px;">
+                <i class="fas fa-lock me-2" style="color: #00cba9;"></i>
+                <strong style="color: #00cba9;">Private Client Project</strong>
+                <p class="mb-0 mt-2 text-white-50" style="font-size: 0.9rem;">
+                  This project is confidential and not publicly accessible. Screenshots are provided for portfolio demonstration.
+                </p>
+                <p class="mb-0 mt-2 text-white" style="font-size: 0.9rem;" *ngIf="project.clientName">
+                  <strong>Client:</strong> {{ project.clientName }}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Test Credentials -->
+          <div class="mb-3" *ngIf="project.testCredentials">
+            <h6 class="text-white-50 mb-2"><i class="fas fa-key me-2"></i>Test Credentials</h6>
+            <div class="credentials-box">
+              <div class="mb-2">
+                <small class="text-white-50">Username:</small>
+                <div class="d-flex align-items-center gap-2">
+                  <code class="credential-text flex-grow-1">{{ project.testCredentials.username }}</code>
+                  <button class="btn btn-sm btn-copy" (click)="copyToClipboard(project.testCredentials.username)" title="Copy username">
+                    <i class="fas fa-copy"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="mb-2">
+                <small class="text-white-50">Password:</small>
+                <div class="d-flex align-items-center gap-2">
+                  <code class="credential-text flex-grow-1">{{ project.testCredentials.password }}</code>
+                  <button class="btn btn-sm btn-copy" (click)="copyToClipboard(project.testCredentials.password)" title="Copy password">
+                    <i class="fas fa-copy"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="mb-2" *ngIf="project.testCredentials.otp">
+                <small class="text-white-50">OTP:</small>
+                <div class="d-flex align-items-center gap-2">
+                  <code class="credential-text flex-grow-1">{{ project.testCredentials.otp }}</code>
+                  <button class="btn btn-sm btn-copy" (click)="copyToClipboard(project.testCredentials.otp)" title="Copy OTP">
+                    <i class="fas fa-copy"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="alert alert-info-custom mb-0" *ngIf="project.testCredentials.instructions">
+                <small><i class="fas fa-info-circle me-1"></i>{{ project.testCredentials.instructions }}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="row mb-4" *ngIf="project.gallery && project.gallery.length > 0">
+      <div class="col-12">
+        <h4 class="mb-3" style="color: #00cba9;"><i class="fas fa-images me-2"></i>Project Gallery</h4>
+        <div class="gallery-grid">
+          <div class="gallery-item" *ngFor="let photo of project.gallery; let i = index">
+            <img 
+              [src]="photo" 
+              [alt]="project.title + ' - Gallery ' + (i + 1)"
+              class="gallery-img"
+              (click)="openGalleryImage(i)"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Related Projects -->
+    <div class="row mt-4" *ngIf="relatedProjects.length > 0">
+      <div class="col-12">
+        <div class="styled-section">
+        <h3 class="mb-4" style="color: #00cba9;"><i class="fas fa-layer-group me-2"></i>Related Projects</h3>
+        <div class="row g-3">
+          <div class="col-md-3 col-sm-6" *ngFor="let relatedProject of relatedProjects">
+            <div class="related-project-card" (click)="goToProject(relatedProject.id)">
+              <img 
+                [src]="relatedProject.imgLink" 
+                [alt]="relatedProject.title"
+                class="related-project-img-small"
+              />
+              <div class="p-2">
+                <h6 class="text-white mb-1">{{ relatedProject.title }}</h6>
+                <p class="mb-0">
+                  <small style="color: #00cba9;">{{ relatedProject.tech }}</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Loading/Not Found State -->
+<div class="container py-5 text-center" *ngIf="!project">
+  <div class="styled-section">
+  <h2 class="text-white">Project not found</h2>
+  <p class="text-white-50">The project you're looking for doesn't exist.</p>
+  <button class="btn btn-custom btn-primary-custom" (click)="goBack()">View All Projects</button>
+  </div>
+</div>

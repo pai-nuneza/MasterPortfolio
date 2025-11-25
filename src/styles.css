@@ -7,4 +7,18 @@
 
 body {
     font-family: 'Ubuntu Sans';
+    background-color: black;
+    color: #ffffff;
+}
+
+section {
+    background: transparent;
+}
+
+.styled-section {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 203, 169, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
 }

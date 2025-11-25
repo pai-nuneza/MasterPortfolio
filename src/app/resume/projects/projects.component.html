@@ -1,38 +1,38 @@
-<section id="works" class="page-60 py-5 glassy">
+<section id="works" class="py-5">
   <div class="container">
-    <div class="section-title d-flex justify-content-between align-items-center">
-      <h2 class="text-xl md:text-2xl lg:text-3xl mb-0">Featured Projects</h2>
-      <h3 class="mb-0">
-        <a href="#" routerLink="/all-projects" class="text-xl mb-0 text-right text-decoration-none">View All</a>
-      </h3>
-    </div>
-    <!-- Swiper Container -->
-    <swiper-container class="mySwiper" slides-per-view="1" space-between="20" pagination="{
-                        'el': '.swiper-pagination',
-                        'clickable': true
-                      }" breakpoints='{
-                        "640": { "slidesPerView": 2, "spaceBetween": 20 },
-                        "768": { "slidesPerView": 3, "spaceBetween": 30 },
-                        "1024": { "slidesPerView": 4, "spaceBetween": 30 }
-                      }'>
-
-      <swiper-slide class="pb-12 transform transition-transform duration-300 hover:scale-105"
-        *ngFor="let item of items">
-        <a target="_blank" href="{{ item.link }}" class="card border-0 rounded-3 overflow-hidden shadow-sm text-dark ">
-          <div class="position-relative">
-            <img src="{{ item.imgLink }}" alt="Card image" class="card-img" />
-            <div class="card-img-overlay d-flex flex-column justify-content-between bg-black bg-opacity-50 p-3">
-              <div>
-                <h1 class="text-lg md:text-xl lg:text-2xl fw-bold text-white">{{ item.title }}</h1>
-                <p class="text-white">{{ item.text }}</p>
-              </div>
-              <div>
-                <p class="text-white">{{ item.tech }}</p>
+    <div class="styled-section">
+      <div class="section-title text-center mb-5">
+        <h2 class="text-xl md:text-2xl lg:text-3xl mb-2" style="color: #00cba9;">Worked Projects</h2>
+        <p class="text-white-50 mb-0">A showcase of my professional work and contributions</p>
+      </div>
+      
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <div class="project-card" *ngFor="let item of items" (click)="viewProject(item.id, $event)">
+          <div class="project-card-image-wrapper">
+            <img src="{{ item.imgLink }}" alt="{{ item.title }}" class="project-card-img" />
+            <div class="project-card-overlay">
+              <div class="overlay-content">
+                <i class="fas fa-eye overlay-icon"></i>
+                <p class="overlay-text">View Project</p>
               </div>
             </div>
           </div>
-        </a>
-      </swiper-slide>
-    </swiper-container>
+          <div class="project-card-content">
+            <h4 class="project-title">{{ item.title }}</h4>
+            <p class="project-description">{{ item.text }}</p>
+            <div class="project-tech">
+              <i class="fas fa-code me-1"></i>
+              <small>{{ item.tech }}</small>
+            </div>
+            <div class="project-card-footer">
+              <span class="view-details-btn">
+                <i class="fas fa-arrow-right me-1"></i>View Details
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

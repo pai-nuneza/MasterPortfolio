@@ -1,0 +1,161 @@
+[
+  {
+    "id": "clr",
+    "title": "Country Law Repo API",
+    "text": "For a US Client (Private project and not accessible publicly)",
+    "description": "An API service that powers the Admin Portal for US clients. It centralizes and manages data related to patents, trademarks, and other intellectual property. The API processes requests, applications, official fees, and jurisdiction-specific rules to support individuals or organizations applying for IP protection in different countries. Built with .NET Core and Entity Framework for secure, scalable, and structured access to legal content.",
+    "buttonText": "Go to site",
+    "link": "https://unient.biz",
+    "tech": ".NET, C#, CQRS, DDD",
+    "technologies": [
+      ".NET",
+      "C#",
+      "SQL Server",
+      "CQRS",
+      "Entity Framework",
+      "Domain Driven Development"
+    ],
+    "category": "Corporate Application",
+    "date": "2023",
+    "imgLink": "https://media.istockphoto.com/id/1442100383/vector/application-programming-interface.jpg?s=612x612&w=0&k=20&c=DdjWcDxUCz2jRouizmWUA76TU7tVzA-2OUbY2MI7Yuc=",
+    "images": [
+      "assets/images/clr-1.png",
+      "assets/images/clr-2.png",
+      "assets/images/clr-3.png"
+    ],
+    "featured": true,
+    "status": "completed",
+    "liveLink": "https://unient.biz",
+    "isPrivate": true
+  },
+  {
+    "id": "ap",
+    "title": "Admin Portal ",
+    "text": "For a US Client (Private project and not accessible publicly)",
+    "description": "A management portal built for US clients to oversee and process intellectual property information such as patents, trademarks, and design filings. The portal interacts with the Country Law Repo API to handle applications, fee calculations, jurisdiction rules, and workflow processing. Designed to streamline operations for IP administrators handling country-specific regulations and submissions.",
+    "buttonText": "Go to site",
+    "link": "https://unient.biz",
+    "tech": "Vue, Nuxt, .NET, Vuetify, Typescript, Vite",
+    "technologies": [".NET", "Vue 3", "Nuxt", "Vuetify"],
+    "category": "Corporate Website",
+    "date": "2023",
+    "imgLink": "https://copyrightalliance.org/wp-content/uploads/2017/07/Trademark-etc-1.png",
+    "images": [
+      "assets/images/ap-1.png",
+      "assets/images/ap-2.png",
+      "assets/images/ap-3.png"
+    ],
+    "featured": true,
+    "status": "completed",
+    "liveLink": "https://unient.biz",
+    "isPrivate": true
+  },
+  {
+    "id": "unient",
+    "title": "Unient",
+    "text": "Company website",
+    "description": "Corporate website for Unient built on .NET and Umbraco CMS. Features content management, dynamic page creation, and enterprise-level architecture. Provides a professional online presence with easy content updates.",
+    "buttonText": "Go to site",
+    "link": "https://unient.biz",
+    "tech": ".NET, Umbraco",
+    "technologies": [".NET", "Umbraco CMS", "C#"],
+    "category": "Corporate Website",
+    "date": "2023",
+    "imgLink": "https://media.licdn.com/dms/image/D560BAQFDKjohBAGwZQ/company-logo_200_200/0/1682578036360/unient_biz_logo?e=2147483647&v=beta&t=4mcaMsqG0h1ikLllNSt2gcSYqJsAFNawLfpG5TLFzAk",
+    "images": [
+      "assets/images/unient-1.png",
+      "assets/images/unient-2.png",
+      "assets/images/unient-3.png"
+    ],
+    "featured": true,
+    "status": "completed",
+    "liveLink": "https://unient.biz"
+  },
+  {
+    "id": "ppsta",
+    "title": "PPSTA",
+    "text": "Philippine Public School Teachers Association - Insurance System",
+    "description": "The Philippine Public School Teachers Association (PPSTA) is the largest and leading professional organization for public school educators in the Philippines. It represents over 200,000 members nationwide, including administrators, supervisors, teachers, and non-teaching personnel working under the Department of Education.",
+    "buttonText": "Go to site",
+    "link": "https://dev-ppsta.ubivelox.com.ph/dashboard/users/login",
+    "tech": "PHP, CakePHP, Bootstrap, Javascript, MySQL, jQuery",
+    "technologies": ["CakePHP", "PHP", "Bootstrap", "MySQL", "jQuery"],
+    "category": "Web Portal",
+    "date": "2025",
+    "imgLink": "assets/images/ppsta.png",
+    "images": [
+      "assets/images/ppsta.png",
+      "assets/images/ppsta-1.png",
+      "assets/images/ppsta-2.png",
+      "assets/images/ppsta-3.png",
+      "assets/images/ppsta-4.png",
+      "assets/images/ppsta-5.png",
+      "assets/images/ppsta-6.png"
+    ],
+    "testCredentials": {
+      "username": "admin",
+      "password": "admin",
+      "otp": "118899",
+      "instructions": "Use the provided credentials to access the admin dashboard. Explore resident management, certificate generation, and reporting features."
+    },
+    "featured": true,
+    "status": "In progress",
+    "liveLink": "https://dev-ppsta.ubivelox.com.ph/dashboard/users/login"
+  },
+  {
+    "id": "brgy",
+    "title": "Barangay System",
+    "text": "Software for Barangay Management",
+    "description": "A comprehensive Barangay Management System built with Laravel and Vue.js. Features resident management, certificate issuance, blotter records, and administrative tools. Implements modern web technologies with responsive design for efficient local governance.",
+    "buttonText": "Go to site",
+    "link": "https://hris.mirallesresort.com/bms/public",
+    "tech": "Laravel, Vue, Bootstrap",
+    "technologies": ["Laravel", "Vue", "Bootstrap", "MySQL", "jQuery"],
+    "category": "Web Portal",
+    "date": "2025",
+    "imgLink": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+    "images": [
+      "assets/images/bms-1.png",
+      "assets/images/bms-2.png",
+      "assets/images/bms-3.png",
+      "assets/images/bms-4.png",
+      "assets/images/bms-5.png"
+    ],
+    "featured": true,
+    "status": "MVP Released",
+    "liveLink": "https://hris.mirallesresort.com/bms/public",
+    "testCredentials": {
+      "username": "test@email.com",
+      "password": "test",
+      "instructions": "Use the provided credentials to access the admin dashboard. Explore resident management, certificate generation, and reporting features."
+    }
+  },
+  {
+    "id": "bpls",
+    "title": "Business Permit Licensing System (LGU)",
+    "text": "Software for Barangay Management",
+    "description": "A comprehensive Barangay Management System built with Laravel and Vue.js. Features resident management, certificate issuance, blotter records, and administrative tools. Implements modern web technologies with responsive design for efficient local governance.",
+    "buttonText": "Go to site",
+    "link": "https://hris.mirallesresort.com/bms/public",
+    "tech": "Laravel, Vue, Bootstrap",
+    "technologies": ["Laravel", "Vue", "Bootstrap", "MySQL", "jQuery"],
+    "category": "Web Portal",
+    "date": "2025",
+    "imgLink": "assets/images/bpls.png",
+    "images": [
+      "assets/images/bpls-1.png",
+      "assets/images/bpls-2.png",
+      "assets/images/bpls-3.png",
+      "assets/images/bpls-4.png",
+      "assets/images/bpls-5.png"
+    ],
+    "featured": true,
+    "status": "MVP Ready",
+    "liveLink": "https://lgu.jnccglobalsolutionsinc.com/bpls/public/login",
+    "testCredentials": {
+      "username": "admin@example.com",
+      "password": "password",
+      "instructions": "Use the provided credentials to access the admin dashboard. Explore resident management, certificate generation, and reporting features."
+    }
+  }
+]

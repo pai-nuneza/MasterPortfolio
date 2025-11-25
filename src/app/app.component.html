@@ -1,14 +1,26 @@
 <nav class="py-3 glassy">
   <div class="container mx-auto flex items-center justify-between px-4">
     <div class="flex items-center">
-      <img class="rounded" width="35" src="assets/images/icons/apple-icon.png" alt="Logo" />
-      <a class="text-xl font-semibol0d ml-3" href="#"></a>
+      <a routerLink="/" class="flex items-center text-decoration-none">
+        <img
+          class="rounded"
+          width="35"
+          src="assets/images/icons/apple-icon.png"
+          alt="Logo"
+        />
+        <span class="text-white font-semibold text-lg ms-2">Pai Nuñeza</span>
+      </a>
     </div>
-    <div>
-
-    </div>
-    <button class="text-white focus:outline-none lg:hidden" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <div></div>
+    <button
+      class="text-white focus:outline-none lg:hidden"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="block w-6 h-1 bg-white mb-1"></span>
       <span class="block w-6 h-1 bg-white mb-1"></span>
       <span class="block w-6 h-1 bg-white"></span>
@@ -16,20 +28,15 @@
     <div class="lg:flex lg:items-center lg:space-x-6 hidden" id="navbarNav">
       <ul class="flex space-x-10">
         <li>
-          <a class="hover:text-gray-400" href="#about">Home</a>
-        </li>
-
-        <li>
-          <a class="hover:text-gray-400" routerLink="/all-projects">Worked Projects</a>
+          <a class="hover:text-gray-400" routerLink="/" fragment="skills">Skills</a>
         </li>
         <li>
-          <a class="hover:text-gray-400" routerLink="/experience">Employment History</a>
+          <a class="hover:text-gray-400" routerLink="/experience"
+            >Work Experience</a
+          >
         </li>
         <li>
-          <a class="hover:text-gray-400" href="#about">About</a>
-        </li>
-        <li>
-          <a class="hover:text-gray-400" href="#contact">Contact Me</a>
+          <a class="hover:text-gray-400" routerLink="/" fragment="contact">Contact</a>
         </li>
       </ul>
     </div>
@@ -37,61 +44,84 @@
 </nav>
 <router-outlet></router-outlet>
 
-<footer class="py-5 bg-dark text-white">
+<footer class="glassy py-5 text-white mt-5">
   <div class="container">
     <div class="row">
-      <!-- Information Section -->
+      <!-- Brand Section -->
       <div class="col-md-4 mb-4">
-        <h4 class="fw-bold">Information</h4>
-        <p class="mb-1"><i class="bi bi-person-circle"></i> Pai Nuñeza</p>
-        <p class="mb-1">
-          <i class="bi bi-envelope-fill"></i>
-          <a href="mailto:pai.nuneza@gmail.com" class="text-white text-decoration-none">pai.nuneza&#64;gmail.com</a>
-        </p>
-        <p class="mb-1">
-          <i class="bi bi-telephone-fill"></i>
-          <a href="tel:+639086345307" class="text-white text-decoration-none">+63 908 634 5307</a>
-        </p>
+        <div class="d-flex align-items-center mb-3">
+          <img class="rounded" width="40" src="assets/images/icons/apple-icon.png" alt="Logo" />
+          <h4 class="fw-bold ms-3 mb-0" style="color: #00cba9;">Pai Nuñeza</h4>
+        </div>
+        <p class="text-white-50 mb-3">Fullstack Software Developer with 10 years of experience building scalable web applications.</p>
+        <div class="social-links">
+          <a href="https://github.com/pai-nuneza" target="_blank" class="social-icon me-3" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/pailoununeza/" target="_blank" class="social-icon me-3" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:pailonu.nuneza@gmail.com" class="social-icon" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
       </div>
 
-      <!-- Connect with Me Section -->
+      <!-- Quick Links Section -->
       <div class="col-md-4 mb-4">
-        <h4 class="fw-bold">Connect with Me</h4>
+        <h5 class="fw-bold mb-3" style="color: #00cba9;">Quick Links</h5>
         <ul class="list-unstyled">
           <li class="mb-2">
-            <i class="bi bi-envelope-fill"></i>
-            <a href="mailto:pai.nuneza@gmail.com" class="text-white text-decoration-none">pai.nuneza&#64;gmail.com</a>
+            <a routerLink="/" class="footer-link">
+              <i class="fas fa-home me-2"></i>Home
+            </a>
           </li>
           <li class="mb-2">
-            <i class="bi bi-telephone-fill"></i>
-            <a href="tel:+639086345307" class="text-white text-decoration-none">+63 908 634 5307</a>
+            <a routerLink="/" fragment="skills" class="footer-link">
+              <i class="fas fa-code me-2"></i>Skills
+            </a>
           </li>
           <li class="mb-2">
-            <i class="bi bi-linkedin"></i>
-            <a href="https://www.linkedin.com/in/pai-nuneza" class="text-white text-decoration-none"
-              target="_blank">LinkedIn</a>
+            <a routerLink="/experience" class="footer-link">
+              <i class="fas fa-briefcase me-2"></i>Work Experience
+            </a>
           </li>
-          <li>
-            <i class="bi bi-github"></i>
-            <a href="https://github.com/painu" class="text-white text-decoration-none" target="_blank">GitHub</a>
+          <li class="mb-2">
+            <a routerLink="/" fragment="contact" class="footer-link">
+              <i class="fas fa-envelope me-2"></i>Contact
+            </a>
           </li>
         </ul>
       </div>
 
-      <!-- Optional Third Section -->
+      <!-- Contact Section -->
       <div class="col-md-4 mb-4">
-        <h4 class="fw-bold">Quick Links</h4>
+        <h5 class="fw-bold mb-3" style="color: #00cba9;">Get In Touch</h5>
         <ul class="list-unstyled">
-          <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
-          <li class="mb-2"><a href="#" class="text-white text-decoration-none">About</a></li>
-          <li class="mb-2"><a href="#" class="text-white text-decoration-none">Projects</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+          <li class="mb-3">
+            <i class="fas fa-envelope" style="color: #00cba9; width: 20px;"></i>
+            <a href="mailto:pai.nuneza@gmail.com" class="footer-link ms-2">pai.nuneza@gmail.com</a>
+          </li>
+          <li class="mb-3">
+            <i class="fas fa-phone" style="color: #00cba9; width: 20px;"></i>
+            <a href="tel:+639456968956" class="footer-link ms-2">+63 945 696 8956</a>
+          </li>
+          <li class="mb-3">
+            <i class="fas fa-map-marker-alt" style="color: #00cba9; width: 20px;"></i>
+            <span class="text-white-50 ms-2">Philippines</span>
+          </li>
         </ul>
       </div>
     </div>
-    <hr class="border-top border-light">
-    <div class="text-center">
-      <p class="mb-0">© 2024 Pai Nuñeza. All rights reserved.</p>
+    
+    <hr style="border-color: rgba(0, 203, 169, 0.3);" />
+    
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="mb-0 text-white-50">
+          © 2025 Pai Nuñeza. Built with <i class="fas fa-heart" style="color: #00cba9;"></i> using Angular
+        </p>
+      </div>
     </div>
   </div>
 </footer>
