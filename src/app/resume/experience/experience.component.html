@@ -3,11 +3,12 @@
     <div class="styled-section">
       <div class="section-title text-center">
         <h2 style="color: #00cba9;"><i class="fas fa-briefcase me-2"></i>Work Experience</h2>
-        <p class="text-white-50 mb-4">8+ years of professional software development experience</p>
+        <p class="text-white-50 mb-4">10+ years of professional software development experience</p>
       </div>
 
       <div class="timeline">
-        <div class="timeline-item" *ngFor="let exp of experiences; let i = index" [class.timeline-item-left]="i % 2 === 0" [class.timeline-item-right]="i % 2 !== 0">
+        <div class="timeline-item" *ngFor="let exp of experiences; let i = index"
+          [class.timeline-item-left]="i % 2 === 0" [class.timeline-item-right]="i % 2 !== 0">
           <div class="timeline-marker"></div>
           <div class="experience-card">
             <div class="experience-header">
@@ -28,7 +29,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="experience-description">
               <p>{{ exp.description }}</p>
             </div>
