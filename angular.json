@@ -19,7 +19,7 @@
             "index": "src/index.html",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-            "assets": ["src/favicon.ico", "src/assets", "src/fonts"],
+            "assets": ["src/favicon.ico", "src/assets", "src/fonts", "src/_redirects"],
             "styles": ["src/styles.css"],
             "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"],
             "browser": "src/main.ts"
