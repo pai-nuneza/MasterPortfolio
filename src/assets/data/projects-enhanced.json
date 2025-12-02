@@ -1,56 +1,5 @@
 [
   {
-    "id": "clr",
-    "title": "Country Law Repo API",
-    "text": "For a US Client (Private project and not accessible publicly)",
-    "description": "An API service that powers the Admin Portal for US clients. It centralizes and manages data related to patents, trademarks, and other intellectual property. The API processes requests, applications, official fees, and jurisdiction-specific rules to support individuals or organizations applying for IP protection in different countries. Built with .NET Core and Entity Framework for secure, scalable, and structured access to legal content.",
-    "buttonText": "Go to site",
-    "link": "https://unient.biz",
-    "tech": ".NET, C#, CQRS, DDD",
-    "technologies": [
-      ".NET",
-      "C#",
-      "SQL Server",
-      "CQRS",
-      "Entity Framework",
-      "Domain Driven Development"
-    ],
-    "category": "Corporate Application",
-    "date": "2023",
-    "imgLink": "https://media.istockphoto.com/id/1442100383/vector/application-programming-interface.jpg?s=612x612&w=0&k=20&c=DdjWcDxUCz2jRouizmWUA76TU7tVzA-2OUbY2MI7Yuc=",
-    "images": [
-      "assets/images/clr-1.png",
-      "assets/images/clr-2.png",
-      "assets/images/clr-3.png"
-    ],
-    "featured": true,
-    "status": "completed",
-    "liveLink": "https://unient.biz",
-    "isPrivate": true
-  },
-  {
-    "id": "ap",
-    "title": "Admin Portal ",
-    "text": "For a US Client (Private project and not accessible publicly)",
-    "description": "A management portal built for US clients to oversee and process intellectual property information such as patents, trademarks, and design filings. The portal interacts with the Country Law Repo API to handle applications, fee calculations, jurisdiction rules, and workflow processing. Designed to streamline operations for IP administrators handling country-specific regulations and submissions.",
-    "buttonText": "Go to site",
-    "link": "https://unient.biz",
-    "tech": "Vue, Nuxt, .NET, Vuetify, Typescript, Vite",
-    "technologies": [".NET", "Vue 3", "Nuxt", "Vuetify"],
-    "category": "Corporate Website",
-    "date": "2023",
-    "imgLink": "https://copyrightalliance.org/wp-content/uploads/2017/07/Trademark-etc-1.png",
-    "images": [
-      "assets/images/ap-1.png",
-      "assets/images/ap-2.png",
-      "assets/images/ap-3.png"
-    ],
-    "featured": true,
-    "status": "completed",
-    "liveLink": "https://unient.biz",
-    "isPrivate": true
-  },
-  {
     "id": "unient",
     "title": "Unient",
     "text": "Company website",
@@ -129,6 +78,57 @@
       "password": "test",
       "instructions": "Use the provided credentials to access the admin dashboard. Explore resident management, certificate generation, and reporting features."
     }
+  },
+  {
+    "id": "clr",
+    "title": "Country Law Repo API",
+    "text": "For a US Client (Private project and not accessible publicly)",
+    "description": "An API service that powers the Admin Portal for US clients. It centralizes and manages data related to patents, trademarks, and other intellectual property. The API processes requests, applications, official fees, and jurisdiction-specific rules to support individuals or organizations applying for IP protection in different countries. Built with .NET Core and Entity Framework for secure, scalable, and structured access to legal content.",
+    "buttonText": "Go to site",
+    "link": "https://unient.biz",
+    "tech": ".NET, C#, CQRS, DDD",
+    "technologies": [
+      ".NET",
+      "C#",
+      "SQL Server",
+      "CQRS",
+      "Entity Framework",
+      "Domain Driven Development"
+    ],
+    "category": "Corporate Application",
+    "date": "2023",
+    "imgLink": "https://media.istockphoto.com/id/1442100383/vector/application-programming-interface.jpg?s=612x612&w=0&k=20&c=DdjWcDxUCz2jRouizmWUA76TU7tVzA-2OUbY2MI7Yuc=",
+    "images": [
+      "assets/images/clr-1.png",
+      "assets/images/clr-2.png",
+      "assets/images/clr-3.png"
+    ],
+    "featured": true,
+    "status": "completed",
+    "liveLink": "https://unient.biz",
+    "isPrivate": true
+  },
+  {
+    "id": "ap",
+    "title": "Admin Portal ",
+    "text": "For a US Client (Private project and not accessible publicly)",
+    "description": "A management portal built for US clients to oversee and process intellectual property information such as patents, trademarks, and design filings. The portal interacts with the Country Law Repo API to handle applications, fee calculations, jurisdiction rules, and workflow processing. Designed to streamline operations for IP administrators handling country-specific regulations and submissions.",
+    "buttonText": "Go to site",
+    "link": "https://unient.biz",
+    "tech": "Vue, Nuxt, .NET, Vuetify, Typescript, Vite",
+    "technologies": [".NET", "Vue 3", "Nuxt", "Vuetify"],
+    "category": "Corporate Website",
+    "date": "2023",
+    "imgLink": "https://copyrightalliance.org/wp-content/uploads/2017/07/Trademark-etc-1.png",
+    "images": [
+      "assets/images/ap-1.png",
+      "assets/images/ap-2.png",
+      "assets/images/ap-3.png"
+    ],
+    "featured": true,
+    "status": "completed",
+    "liveLink": "https://unient.biz",
+    "isPrivate": true
   },
   {
     "id": "bpls",
