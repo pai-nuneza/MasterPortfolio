@@ -11,6 +11,18 @@
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title h2 {
+    font-size: 24px;
+  }
+}
+
 .section-title h2::after {
   content: "";
   position: absolute;

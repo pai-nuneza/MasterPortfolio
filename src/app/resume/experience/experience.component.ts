@@ -10,7 +10,7 @@ export class ExperienceComponent {
     {
       company: 'Codev',
       position: 'Senior Software Developer',
-      date: 'March 2024 - Presdent',
+      date: 'March 2024 - Present',
       description:
         'Built and deployed distributed web apps with Azure DevOps CI/CD, developed backend services in C# .NET and PHP, and improved front-end performance with Angular and Vue.js. Collaborated in Agile teams, upheld code quality, and explored AI solutions through prompt engineering.',
       companyWebsite: 'https://www.codev.com/',
@@ -19,9 +19,9 @@ export class ExperienceComponent {
     {
       company: 'Unient',
       position: 'Fullstack Developer',
-      date: 'Feb 2021 - February 2024',
+      date: 'Feb 2021 - Feb 2024',
       description:
-        'Leading full-stack development initiatives, implementing new features and resolving critical issues. Collaborate closely with cross-functional teams to deliver high-quality, efficient solutions. Conduct comprehensive code reviews and mentor team members on best practices and modern development standards.',
+        'Led full-stack development initiatives, implementing new features and resolving critical issues. Collaborated closely with cross-functional teams to deliver high-quality, efficient solutions. Conducted comprehensive code reviews and mentored team members on best practices and modern development standards.',
       companyWebsite: 'https://www.unient.biz/',
       skills: [
         'C#',

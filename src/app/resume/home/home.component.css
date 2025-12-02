@@ -1,5 +1,13 @@
 #home {
   min-height: 50vh;
+  padding: 1rem 0;
+}
+
+@media (max-width: 991px) {
+  #home {
+    min-height: auto;
+    padding: 2rem 0;
+  }
 }
 
 .contact-info {
@@ -23,6 +31,22 @@
   border-radius: 12px;
   padding: 2rem;
   backdrop-filter: blur(10px);
+}
+
+@media (max-width: 991px) {
+  .skills-overview {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-overview {
+    padding: 1rem;
+  }
+  
+  .skills-overview h3 {
+    font-size: 1.25rem !important;
+  }
 }
 
 .tech-icons-container {
@@ -64,6 +88,17 @@
   flex-shrink: 0;
 }
 
+@media (max-width: 576px) {
+  .tech-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .tech-icons-scroll {
+    gap: 1.5rem;
+  }
+}
+
 .tech-icon:hover {
   transform: scale(1.3) translateY(-5px);
   filter: brightness(1.15) drop-shadow(0 4px 12px rgba(0, 203, 169, 0.5));
@@ -71,6 +106,117 @@
 
 .experience-summary h5 {
   font-weight: 600;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary-custom,
+.btn-secondary-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primary-custom {
+  background: linear-gradient(135deg, #00cba9 0%, #00a88e 100%);
+  color: #000000;
+  box-shadow: 0 4px 15px rgba(0, 203, 169, 0.4);
+}
+
+.btn-primary-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #00e6c3 0%, #00cba9 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 203, 169, 0.6);
+  color: #000000;
+}
+
+.btn-primary-custom:hover::before {
+  opacity: 1;
+}
+
+.btn-secondary-custom {
+  background: rgba(255, 255, 255, 0.05);
+  color: #00cba9;
+  border: 2px solid #00cba9;
+  box-shadow: 0 4px 15px rgba(0, 203, 169, 0.2);
+}
+
+.btn-secondary-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 203, 169, 0.1);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-secondary-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 203, 169, 0.4);
+  color: #ffffff;
+  border-color: #00e6c3;
+}
+
+.btn-secondary-custom:hover::before {
+  opacity: 1;
+}
+
+@media (max-width: 576px) {
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .btn-primary-custom,
+  .btn-secondary-custom {
+    width: 100%;
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .experience-summary h5 {
+    font-size: 1rem !important;
+  }
+  
+  .experience-summary p {
+    font-size: 0.85rem !important;
+  }
+  
+  .experience-summary i {
+    font-size: 1rem !important;
+  }
 }
 
 .skill-category h5 {
@@ -191,6 +337,18 @@
 .landing-header {
   font-size: 40px;
   font-weight: 700;
+}
+
+@media (max-width: 991px) {
+  .landing-header {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .landing-header {
+    font-size: 28px;
+  }
 }
 
 .landing-name {

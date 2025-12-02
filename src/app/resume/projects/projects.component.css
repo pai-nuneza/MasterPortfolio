@@ -14,6 +14,12 @@
   }
 }
 
+@media (max-width: 576px) {
+  .projects-grid {
+    gap: 1rem;
+  }
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -59,6 +65,18 @@ swiper-slide {
     position: relative;
     overflow: hidden;
     height: 220px;
+}
+
+@media (max-width: 768px) {
+  .project-card-image-wrapper {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-card-image-wrapper {
+    height: 160px;
+  }
 }
 
 .project-card-img {
@@ -119,28 +137,36 @@ swiper-slide {
 }
 
 .project-card-content {
-    padding: 1.25rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.project-title {
-    color: #00cba9;
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0;
-    line-height: 1.3;
-    min-height: 2.6rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+@media (max-width: 576px) {
+  .project-card-content {
+    padding: 1rem;
+  }
+}.project-title {
+  color: #00cba9;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  line-height: 1.3;
+  min-height: 2.6rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.project-description {
+@media (max-width: 576px) {
+  .project-title {
+    font-size: 1.1rem;
+  }
+}.project-description {
     color: #e0e0e0;
     font-size: 0.9rem;
     margin-bottom: 0;

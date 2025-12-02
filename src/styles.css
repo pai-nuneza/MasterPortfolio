@@ -22,3 +22,16 @@ section {
     padding: 2rem;
     backdrop-filter: blur(10px);
 }
+
+@media (max-width: 991px) {
+  .styled-section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .styled-section {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
