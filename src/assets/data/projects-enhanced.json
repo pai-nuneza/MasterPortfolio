@@ -26,7 +26,7 @@
     "text": "Philippine Public School Teachers Association - Insurance System",
     "description": "The Philippine Public School Teachers Association (PPSTA) is the largest and leading professional organization for public school educators in the Philippines. It represents over 200,000 members nationwide, including administrators, supervisors, teachers, and non-teaching personnel working under the Department of Education.",
     "buttonText": "Go to site",
-    "link": "https://dev-ppsta.ubivelox.com.ph/dashboard/users/login",
+    "link": "https://dev.ppsta.ubiveloxph.com/dashboard/",
     "tech": "PHP, CakePHP, Bootstrap, Javascript, MySQL, jQuery",
     "technologies": ["CakePHP", "PHP", "Bootstrap", "MySQL", "jQuery"],
     "category": "Web Portal",
