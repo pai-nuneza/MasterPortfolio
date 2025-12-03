@@ -71,7 +71,7 @@
       "assets/images/bms-5.png"
     ],
     "featured": true,
-    "status": "MVP Released",
+    "status": "MVP Ready",
     "liveLink": "https://hris.mirallesresort.com/bms/public",
     "testCredentials": {
       "username": "test@email.com",
@@ -140,16 +140,10 @@
     "tech": ".NET 8, C#, Vector Search, Hugging Face API",
     "technologies": [
       ".NET 8",
-      "ASP.NET Core Web API",
       "C#",
       "Entity Framework Core",
       "SQL Server",
-      "Vector Embeddings",
-      "Hugging Face API",
-      "Semantic Search",
-      "Cosine Similarity",
-      "RESTful API",
-      "Machine Learning"
+      "Hugging Face API"
     ],
     "category": "API Development",
     "date": "2024",
@@ -181,7 +175,8 @@
     "featured": true,
     "status": "completed",
     "liveLink": "https://github.com/pai-nuneza/SemanticSearchAPI",
-    "isPrivate": false
+    "isPrivate": false,
+    "isPersonal": true
   },
   {
     "id": "bpls",
