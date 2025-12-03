@@ -49,7 +49,7 @@
     },
     "featured": true,
     "status": "In progress",
-    "liveLink": "https://dev-ppsta.ubivelox.com.ph/dashboard/users/login"
+    "liveLink": "https://dev.ppsta.ubiveloxph.com/dashboard/"
   },
   {
     "id": "brgy",
@@ -129,6 +129,59 @@
     "status": "completed",
     "liveLink": "https://unient.biz",
     "isPrivate": true
+  },
+  {
+    "id": "semantic-search-api",
+    "title": "Semantic Search API",
+    "text": "AI-Powered Search Engine with .NET 8",
+    "description": "A .NET 8 Web API demonstrating semantic search using vector embeddings from Hugging Face's free inference API. This API allows you to search through text documents using semantic similarity instead of traditional keyword matching - for example, search for 'billionaire superhero' and find documents about Iron Man/Tony Stark, or 'animated ocean movie' to find Finding Nemo. The system converts text into 384-dimensional vectors using the sentence-transformers/all-MiniLM-L6-v2 model, then finds similar documents by computing cosine similarity. Built with ASP.NET Core, Entity Framework Core, and SQL Server, featuring automatic seeding of 23 sample documents, retry logic for API calls, diagnostic endpoints, and a simple HTML/JS frontend for testing.",
+    "buttonText": "View on GitHub",
+    "link": "https://github.com/pai-nuneza/SemanticSearchAPI",
+    "tech": ".NET 8, C#, Vector Search, Hugging Face API",
+    "technologies": [
+      ".NET 8",
+      "ASP.NET Core Web API",
+      "C#",
+      "Entity Framework Core",
+      "SQL Server",
+      "Vector Embeddings",
+      "Hugging Face API",
+      "Semantic Search",
+      "Cosine Similarity",
+      "RESTful API",
+      "Machine Learning"
+    ],
+    "category": "API Development",
+    "date": "2024",
+    "imgLink": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+    ],
+    "highlights": [
+      "Implements semantic search using 384-dimensional vector embeddings",
+      "Integrates Hugging Face sentence-transformers/all-MiniLM-L6-v2 model",
+      "Cosine similarity ranking for intelligent document retrieval",
+      "Auto-seeding with 23 sample documents (tech docs, movies, concepts)",
+      "Retry logic with fallback for API resilience",
+      "Diagnostic endpoints for embedding verification and database reseeding",
+      "Simple HTML/JS frontend for testing and demonstration",
+      "Clean architecture with dependency injection",
+      "Supports alternative models (all-mpnet-base-v2, paraphrase-MiniLM-L6-v2)"
+    ],
+    "features": [
+      "Search by meaning rather than exact keyword matches",
+      "POST /api/search endpoint with topK parameter",
+      "GET /api/diagnostics/embeddings - verify embeddings",
+      "POST /api/diagnostics/reseed - regenerate all embeddings",
+      "POST /api/diagnostics/test-embedding - test API connection",
+      "Automatic database seeding on first run",
+      "Rate limiting handling for free tier API"
+    ],
+    "featured": true,
+    "status": "completed",
+    "liveLink": "https://github.com/pai-nuneza/SemanticSearchAPI",
+    "isPrivate": false
   },
   {
     "id": "bpls",
