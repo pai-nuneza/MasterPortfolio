@@ -132,49 +132,38 @@
   },
   {
     "id": "semantic-search-api",
-    "title": "Semantic Search API",
+    "title": "Semantic Search Web Api",
     "text": "AI-Powered Search Engine with .NET 8",
-    "description": "A .NET 8 Web API demonstrating semantic search using vector embeddings from Hugging Face's free inference API. This API allows you to search through text documents using semantic similarity instead of traditional keyword matching - for example, search for 'billionaire superhero' and find documents about Iron Man/Tony Stark, or 'animated ocean movie' to find Finding Nemo. The system converts text into 384-dimensional vectors using the sentence-transformers/all-MiniLM-L6-v2 model, then finds similar documents by computing cosine similarity. Built with ASP.NET Core, Entity Framework Core, and SQL Server, featuring automatic seeding of 23 sample documents, retry logic for API calls, diagnostic endpoints, and a simple HTML/JS frontend for testing.",
+    "description": "A .NET 8 Web API demonstrating semantic search using vector embeddings. Supports ML.NET TF-IDF (local, default) and ONNX Runtime for neural network models. Search using natural language - e.g., 'billionaire superhero' finds Iron Man. Converts text into 384-dimensional vectors and uses cosine similarity for ranking. Features configurable providers, customizable training data, auto-seeding with sample documents, diagnostic endpoints, and a Bootstrap frontend.",
     "buttonText": "View on GitHub",
     "link": "https://github.com/pai-nuneza/SemanticSearchAPI",
-    "tech": ".NET 8, C#, Vector Search, Hugging Face API",
+    "tech": ".NET 8, ML.NET, ONNX Runtime",
     "technologies": [
       ".NET 8",
       "C#",
       "Entity Framework Core",
       "SQL Server",
-      "Hugging Face API"
+      "ML.NET"
     ],
-    "category": "API Development",
-    "date": "2024",
+    "category": "Web API Development",
+    "date": "2025",
     "imgLink": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
     "images": [
-      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80"
     ],
     "highlights": [
-      "Implements semantic search using 384-dimensional vector embeddings",
-      "Integrates Hugging Face sentence-transformers/all-MiniLM-L6-v2 model",
-      "Cosine similarity ranking for intelligent document retrieval",
-      "Auto-seeding with 23 sample documents (tech docs, movies, concepts)",
-      "Retry logic with fallback for API resilience",
-      "Diagnostic endpoints for embedding verification and database reseeding",
-      "Simple HTML/JS frontend for testing and demonstration",
-      "Clean architecture with dependency injection",
-      "Supports alternative models (all-mpnet-base-v2, paraphrase-MiniLM-L6-v2)"
-    ],
-    "features": [
-      "Search by meaning rather than exact keyword matches",
-      "POST /api/search endpoint with topK parameter",
-      "GET /api/diagnostics/embeddings - verify embeddings",
-      "POST /api/diagnostics/reseed - regenerate all embeddings",
-      "POST /api/diagnostics/test-embedding - test API connection",
-      "Automatic database seeding on first run",
-      "Rate limiting handling for free tier API"
+      "Dual embedding providers: ML.NET TF-IDF (local, fast) and ONNX Runtime (neural networks)",
+      "384-dimensional vector embeddings with cosine similarity ranking",
+      "Customizable training data via training-data.json for domain-specific optimization",
+      "Auto-seeding with 22 diverse documents (Marvel movies, family films, tech concepts)",
+      "Modern responsive UI with Bootstrap 5 and real-time database status",
+      "Diagnostic endpoints for embedding testing, database status, and reseeding",
+      "Clean architecture with dependency injection and provider pattern",
+      "Production-ready with configurable providers via appsettings.json"
     ],
     "featured": true,
     "status": "completed",
-    "liveLink": "https://github.com/pai-nuneza/SemanticSearchAPI",
+    "liveLink": "http://mysemanticsearch.runasp.net/",
     "isPrivate": false,
     "isPersonal": true
   },
