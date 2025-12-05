@@ -76,7 +76,7 @@ export class ProjectDetailComponent implements OnInit {
 
   getStatusClass(status: string): string {
     switch (status) {
-      case 'completed':
+      case 'released':
         return 'bg-success';
       case 'in-progress':
         return 'bg-warning';

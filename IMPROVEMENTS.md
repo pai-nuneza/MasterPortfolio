@@ -105,7 +105,7 @@ src/
   "imgLink": "main-image-url",
   "images": ["image1-url", "image2-url"],
   "featured": true,
-  "status": "completed",
+  "status": "released",
   "liveLink": "https://...",
   "githubLink": "https://github.com/..."
 }

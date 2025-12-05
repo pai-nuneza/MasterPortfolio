@@ -63,7 +63,7 @@
   align-items: center;
 }
 
-.badge-completed {
+.badge-released {
   background: rgba(40, 167, 69, 0.2);
   color: #28a745;
   border: 1px solid rgba(40, 167, 69, 0.3);
@@ -244,3 +244,29 @@
 .related-project-card:hover .related-project-img-small {
   transform: scale(1.05);
 }
+
+/* Core Features List */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 0;
+  padding-left: 1.75rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.features-list li::before {
+  content: '\2022';
+  color: #00cba9;
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+}
+

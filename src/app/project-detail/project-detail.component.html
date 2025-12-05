@@ -151,6 +151,16 @@
       </div>
     </div>
 
+    <!-- Core Features -->
+    <div class="row mb-4" *ngIf="project.coreFeatures && project.coreFeatures.length > 0">
+      <div class="col-12">
+        <h4 class="mb-3" style="color: #00cba9;"><i class="fas fa-star me-2"></i>Core Features</h4>
+        <ul class="features-list">
+          <li *ngFor="let feature of project.coreFeatures">{{ feature }}</li>
+        </ul>
+      </div>
+    </div>
+
     <!-- Photo Gallery -->
     <div class="row mb-4" *ngIf="project.gallery && project.gallery.length > 0">
       <div class="col-12">

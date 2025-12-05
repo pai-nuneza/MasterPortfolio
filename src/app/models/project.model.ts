@@ -12,7 +12,7 @@ export interface Project {
   imgLink: string;
   images: string[];
   featured: boolean;
-  status: 'completed' | 'in-progress' | 'planned';
+  status: 'released' | 'in-progress' | 'planned';
   githubLink?: string;
   liveLink?: string;
   testCredentials?: {
@@ -24,4 +24,5 @@ export interface Project {
   gallery?: string[];
   isPrivate?: boolean;
   clientName?: string;
+  coreFeatures?: string[];
 }

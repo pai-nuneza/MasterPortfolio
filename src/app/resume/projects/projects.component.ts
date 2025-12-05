@@ -54,9 +54,9 @@ export class ProjectsComponent implements OnInit {
     const professional = allProjects.filter(p => !(p as any).isPersonal);
     const personal = allProjects.filter(p => (p as any).isPersonal);
     
-    // Shuffle both arrays
-    this.professionalProjects = this.shuffleArray([...professional]);
-    this.personalProjects = this.shuffleArray([...personal]);
+    // Assign projects without shuffling
+    this.professionalProjects = [...professional];
+    this.personalProjects = [...personal];
     
     // Initialize filtered arrays
     this.filteredProfessionalProjects = [...this.professionalProjects];
@@ -279,15 +279,6 @@ export class ProjectsComponent implements OnInit {
     this.viewMode = this.viewMode === 'grid' ? 'list' : 'grid';
   }
 
-  shuffleArray(array: Project[]): Project[] {
-    const shuffled = [...array];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-  }
-
   viewProject(projectId: string, event: Event): void {
     event.preventDefault();
     this.router.navigate(['/project', projectId]);
@@ -297,7 +288,7 @@ export class ProjectsComponent implements OnInit {
     const statusLower = status.toLowerCase();
     if (statusLower.includes('progress') || statusLower.includes('development')) return 'status-progress';
     if (statusLower.includes('mvp')) return 'status-mvp';
-    if (statusLower.includes('completed') || statusLower.includes('live')) return 'status-completed';
+    if (statusLower.includes('released') || statusLower.includes('live')) return 'status-released';
     if (statusLower.includes('beta')) return 'status-beta';
     if (statusLower.includes('archived') || statusLower.includes('deprecated')) return 'status-archived';
     return 'status-default';

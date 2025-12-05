@@ -1,26 +1,5 @@
 [
   {
-    "id": "unient",
-    "title": "Unient",
-    "text": "Company website",
-    "description": "Corporate website for Unient built on .NET and Umbraco CMS. Features content management, dynamic page creation, and enterprise-level architecture. Provides a professional online presence with easy content updates.",
-    "buttonText": "Go to site",
-    "link": "https://unient.biz",
-    "tech": ".NET, Umbraco",
-    "technologies": [".NET", "Umbraco CMS", "C#"],
-    "category": "Corporate Website",
-    "date": "2023",
-    "imgLink": "https://media.licdn.com/dms/image/D560BAQFDKjohBAGwZQ/company-logo_200_200/0/1682578036360/unient_biz_logo?e=2147483647&v=beta&t=4mcaMsqG0h1ikLllNSt2gcSYqJsAFNawLfpG5TLFzAk",
-    "images": [
-      "assets/images/unient-1.png",
-      "assets/images/unient-2.png",
-      "assets/images/unient-3.png"
-    ],
-    "featured": true,
-    "status": "completed",
-    "liveLink": "https://unient.biz"
-  },
-  {
     "id": "ppsta",
     "title": "PPSTA",
     "text": "Philippine Public School Teachers Association - Insurance System",
@@ -31,9 +10,9 @@
     "technologies": ["CakePHP", "PHP", "Bootstrap", "MySQL", "jQuery"],
     "category": "Web Portal",
     "date": "2025",
-    "imgLink": "assets/images/ppsta.png",
+    "imgLink": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "images": [
-      "assets/images/ppsta.png",
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "assets/images/ppsta-1.png",
       "assets/images/ppsta-2.png",
       "assets/images/ppsta-3.png",
@@ -50,6 +29,42 @@
     "featured": true,
     "status": "In progress",
     "liveLink": "https://dev.ppsta.ubiveloxph.com/dashboard/"
+  },
+  {
+    "id": "migration-tool",
+    "title": "Foxpro To MySQL Migration Tool",
+    "text": "A tool to migrate Foxpro DBF files to MySQL database.",
+    "description": "A WPF .NET C# application that reads Foxpro DBF files and migrates the data to a MySQL database. It supports batch processing of multiple DBF files, data type mapping, and error handling. The tool provides a user-friendly interface for selecting source files, configuring database connections, and monitoring migration progress.",
+    "buttonText": "View on GitHub",
+    "link": "https://github.com/pai-nuneza/SemanticSearchAPI",
+    "tech": ".NET 8, ML.NET, ONNX Runtime",
+    "technologies": [".NET 10", "C#", "WPF"],
+    "category": "Web API Development",
+    "date": "2025",
+    "imgLink": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "images": ["assets/images/foxprotomysql.png"],
+    "highlights": [
+      "Dual embedding providers: ML.NET TF-IDF (local, fast) and ONNX Runtime (neural networks)",
+      "384-dimensional vector embeddings with cosine similarity ranking",
+      "Customizable training data via training-data.json for domain-specific optimization",
+      "Auto-seeding with 22 diverse documents (Marvel movies, family films, tech concepts)",
+      "Modern responsive UI with Bootstrap 5 and real-time database status",
+      "Diagnostic endpoints for embedding testing, database status, and reseeding",
+      "Clean architecture with dependency injection and provider pattern",
+      "Production-ready with configurable providers via appsettings.json"
+    ],
+    "featured": true,
+    "status": "released",
+    "liveLink": "https://github.com/pai-nuneza/FoxProToMySqlMigrator",
+    "isPrivate": false,
+    "isPersonal": false,
+    "coreFeatures": [
+      "Reads Foxpro DBF files and extracts data",
+      "Maps Foxpro data types to MySQL data types",
+      "Supports batch processing of multiple DBF files",
+      "Has stop and resume releasedity",
+      "Displays migration progress and error handling"
+    ]
   },
   {
     "id": "brgy",
@@ -104,9 +119,30 @@
       "assets/images/clr-3.png"
     ],
     "featured": true,
-    "status": "completed",
+    "status": "released",
     "liveLink": "https://unient.biz",
     "isPrivate": true
+  },
+  {
+    "id": "unient",
+    "title": "Unient",
+    "text": "Company website",
+    "description": "Corporate website for Unient built on .NET and Umbraco CMS. Features content management, dynamic page creation, and enterprise-level architecture. Provides a professional online presence with easy content updates.",
+    "buttonText": "Go to site",
+    "link": "https://unient.biz",
+    "tech": ".NET, Umbraco",
+    "technologies": [".NET", "Umbraco CMS", "C#"],
+    "category": "Corporate Website",
+    "date": "2023",
+    "imgLink": "https://media.licdn.com/dms/image/D560BAQFDKjohBAGwZQ/company-logo_200_200/0/1682578036360/unient_biz_logo?e=2147483647&v=beta&t=4mcaMsqG0h1ikLllNSt2gcSYqJsAFNawLfpG5TLFzAk",
+    "images": [
+      "assets/images/unient-1.png",
+      "assets/images/unient-2.png",
+      "assets/images/unient-3.png"
+    ],
+    "featured": true,
+    "status": "released",
+    "liveLink": "https://unient.biz"
   },
   {
     "id": "ap",
@@ -126,7 +162,7 @@
       "assets/images/ap-3.png"
     ],
     "featured": true,
-    "status": "completed",
+    "status": "released",
     "liveLink": "https://unient.biz",
     "isPrivate": true
   },
@@ -162,11 +198,19 @@
       "Production-ready with configurable providers via appsettings.json"
     ],
     "featured": true,
-    "status": "completed",
+    "status": "released",
     "liveLink": "http://mysemanticsearch.runasp.net/",
     "isPrivate": false,
-    "isPersonal": true
+    "isPersonal": true,
+    "coreFeatures": [
+      "Understands meaning and intent, not just keywords",
+      "Uses embeddings/vectors to measure semantic similarity",
+      "Retrieves contextually relevant results even with different wording",
+      "Supports hybrid search (semantic + keyword)",
+      "Can rerank results using AI models for higher relevance"
+    ]
   },
+
   {
     "id": "bpls",
     "title": "Business Permit Licensing System (LGU)",
@@ -193,6 +237,13 @@
       "username": "admin@example.com",
       "password": "password",
       "instructions": "Use the provided credentials to access the admin dashboard. Explore resident management, certificate generation, and reporting features."
-    }
+    },
+    "coreFeatures": [
+      "Streamlined business registration and permit processing",
+      "Automated fee computation and payment integration",
+      "Document management with digital submissions and approvals",
+      "Real-time status tracking for applications and renewals",
+      "Reporting and analytics for LGU compliance and revenue monitoring"
+    ]
   }
 ]
