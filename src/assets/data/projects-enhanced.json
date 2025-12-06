@@ -57,7 +57,7 @@
     "status": "released",
     "liveLink": "https://github.com/pai-nuneza/FoxProToMySqlMigrator",
     "isPrivate": false,
-    "isPersonal": false,
+    "isPersonal": true,
     "coreFeatures": [
       "Reads Foxpro DBF files and extracts data",
       "Maps Foxpro data types to MySQL data types",
@@ -68,9 +68,9 @@
   },
   {
     "id": "brgy",
-    "title": "Barangay System",
-    "text": "Software for Barangay Management",
-    "description": "A comprehensive Barangay Management System built with Laravel and Vue.js. Features resident management, certificate issuance, blotter records, and administrative tools. Implements modern web technologies with responsive design for efficient local governance.",
+    "title": "Community System",
+    "text": "For managing resident, permits, certificates, and community services.",
+    "description": "A full-featured Community Management System built with Laravel and Vue.js. Designed for local government workflows, it includes resident profiling, certificate issuance, incident/blotter logging, administrative tools, and reporting dashboards. Built with a responsive interface and scalable architecture for efficient community operations.",
     "buttonText": "Go to site",
     "link": "https://hris.mirallesresort.com/bms/public",
     "tech": "Laravel, Vue, Bootstrap",
@@ -91,8 +91,17 @@
     "testCredentials": {
       "username": "test@email.com",
       "password": "test",
-      "instructions": "Use the provided credentials to access the admin dashboard. Explore resident management, certificate generation, and reporting features."
-    }
+      "instructions": "Log in with the test account to explore the admin dashboard. You can browse resident records, generate certificates, manage incidents, and review system reports."
+    },
+    "coreFeatures": [
+      "Resident profiling and household management",
+      "Digital certificate and permit issuance",
+      "Incident and complaint (blotter) logging",
+      "Document management for community records",
+      "Administrative tools for roles and user access",
+      "Dashboards and reporting for community insights",
+      "Responsive interface for desktop and mobile use"
+    ]
   },
   {
     "id": "clr",
@@ -210,12 +219,11 @@
       "Can rerank results using AI models for higher relevance"
     ]
   },
-
   {
     "id": "bpls",
     "title": "Business Permit Licensing System (LGU)",
-    "text": "Software for Barangay Management",
-    "description": "A comprehensive Barangay Management System built with Laravel and Vue.js. Features resident management, certificate issuance, blotter records, and administrative tools. Implements modern web technologies with responsive design for efficient local governance.",
+    "text": "A digital platform for managing business permits and municipal licensing.",
+    "description": "A municipality-level Business Permit Licensing System designed to streamline business registration, permit processing, and compliance workflows. Built with Laravel and Vue.js, the platform supports digital applications, automated fee computation, payment integration, document management, approvals, and real-time tracking. Developed with a responsive and modern interface to help local government units manage operations efficiently and improve service delivery.",
     "buttonText": "Go to site",
     "link": "https://hris.mirallesresort.com/bms/public",
     "tech": "Laravel, Vue, Bootstrap",
@@ -236,13 +244,13 @@
     "testCredentials": {
       "username": "admin@example.com",
       "password": "password",
-      "instructions": "Use the provided credentials to access the admin dashboard. Explore resident management, certificate generation, and reporting features."
+      "instructions": "Log in with the test credentials to explore the full licensing workflow—including business applications, fee computation, payments, document review, approvals, and analytics dashboards."
     },
     "coreFeatures": [
       "Streamlined business registration and permit processing",
-      "Automated fee computation and payment integration",
-      "Document management with digital submissions and approvals",
-      "Real-time status tracking for applications and renewals",
+      "Automated fee computation with payment integration",
+      "Digital document submission, review, and approval workflows",
+      "Real-time application and renewal status tracking",
       "Reporting and analytics for LGU compliance and revenue monitoring"
     ]
   }
