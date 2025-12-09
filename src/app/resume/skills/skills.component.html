@@ -1,89 +1,89 @@
 <section id="skills-page" class="py-5">
   <div class="container">
     <div class="styled-section">
-      <div class="section-title text-center mb-5">
+      <div class="section-title text-center mb-4">
          <h2 class="text-xl md:text-2xl lg:text-3xl mb-2" style="color: #00cba9;">
-            <i class="fas fa-code me-2"></i>Technical Skills
+            <i class="fas fa-code me-2"></i>What can I do
           </h2>
         <p class="text-white-50">Technologies I use to build modern applications</p>
       </div>
+
+      <!-- Controls Bar -->
+      <div class="controls-bar mb-4">
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <button class="btn-filter-toggle" (click)="openFiltersModal()">
+              <i class="fas fa-filter me-2"></i>Filters
+              <span class="filter-count" *ngIf="selectedCategoryFilters.length > 0">
+                {{ selectedCategoryFilters.length }}
+              </span>
+            </button>
+          </div>
+
+          <div class="col-auto">
+            <button class="btn-sort-toggle" (click)="toggleSort()">
+              <i class="fas" [class.fa-sort-amount-down]="sortOrder === 'desc'" [class.fa-sort-amount-up]="sortOrder === 'asc'"></i>
+              <span>Sort by Years</span>
+            </button>
+          </div>
+
+          <div class="col-auto">
+            <button class="toggle-years-btn" [class.active]="showYears" (click)="toggleYearsDisplay()">
+              <i class="fas" [class.fa-eye]="!showYears" [class.fa-eye-slash]="showYears"></i>
+              <span>{{ showYears ? 'Hide' : 'Show' }} Years</span>
+            </button>
+          </div>
+
+          <div class="col">
+            <div class="active-filters" *ngIf="selectedCategoryFilters.length > 0">
+              <span class="active-filter-tag" *ngFor="let category of selectedCategoryFilters"
+                (click)="removeCategoryFilter(category)">
+                {{ category }} <i class="fas fa-times ms-1"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-auto" *ngIf="selectedCategoryFilters.length > 0">
+            <button class="btn-clear-filters" (click)="clearAppliedFilters()">
+              <i class="fas fa-times me-2"></i>Clear
+            </button>
+          </div>
+        </div>
+      </div>
       
-      <!-- Backend Skills -->
-      <div class="mb-5">
-        <h3 class="skill-category-title mb-4">
-          <i class="fas fa-server me-2"></i>Backend Development
-        </h3>
-        <div class="skills-grid">
-          <div class="skill-card" *ngFor="let skill of getSkillsByCategory('backend')">
-            <div class="skill-icon-wrapper">
-              <img [src]="skill.icon" [alt]="skill.name + ' icon'" class="skill-icon" />
-            </div>
-            <div class="skill-info">
-              <span class="skill-name">{{ skill.name }}</span>
-              <span class="skill-percentage">{{ skill.percentage }}%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Frontend Skills -->
-      <div class="mb-5">
-        <h3 class="skill-category-title mb-4">
-          <i class="fas fa-palette me-2"></i>Frontend Development
-        </h3>
-        <div class="skills-grid">
-          <div class="skill-card" *ngFor="let skill of getSkillsByCategory('frontend')">
-            <div class="skill-icon-wrapper">
-              <img [src]="skill.icon" [alt]="skill.name + ' icon'" class="skill-icon" />
-            </div>
-            <div class="skill-info">
-              <span class="skill-name">{{ skill.name }}</span>
-              <span class="skill-percentage">{{ skill.percentage }}%</span>
+      <!-- All Skills -->
+      <div class="skills-grid">
+        <div class="skill-card-wrapper" *ngFor="let skill of filteredSkills">
+          <div class="skill-card" [class.show-years]="showYears">
+            <div class="skill-content">
+              <div class="skill-icon-wrapper">
+                <img [src]="skill.icon" [alt]="skill.name + ' icon'" class="skill-icon" />
+              </div>
+              
+              <!-- Tech Name (always visible) -->
+              <span class="skill-name" *ngIf="!showYears">{{ skill.name }}</span>
+              
+              <!-- Years Info (shown when toggle is ON) -->
+              <div class="years-info" *ngIf="showYears">
+                <span class="skill-name-with-years">{{ skill.name }}</span>
+                <div class="years-badge-inline">
+                  <span class="years-number">{{ skill.years }}</span>
+                  <span class="years-text">{{ skill.years === 1 ? 'Year' : 'Years' }}</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-
-
-      <!-- Database -->
-      <div class="mb-5">
-        <h3 class="skill-category-title mb-4">
-          <i class="fas fa-database me-2"></i>Database Management
-        </h3>
-        <div class="skills-grid">
-          <div class="skill-card" *ngFor="let skill of getSkillsByCategory('database')">
-            <div class="skill-icon-wrapper">
-              <img [src]="skill.icon" [alt]="skill.name + ' icon'" class="skill-icon" />
-            </div>
-            <div class="skill-info">
-              <span class="skill-name">{{ skill.name }}</span>
-              <span class="skill-percentage">{{ skill.percentage }}%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tools -->
-      <div class="mb-5">
-        <h3 class="skill-category-title mb-4">
-          <i class="fas fa-tools me-2"></i>Tools & Cloud Platforms
-        </h3>
-        <div class="skills-grid">
-          <div class="skill-card" *ngFor="let skill of getSkillsByCategory('tools')">
-            <div class="skill-icon-wrapper">
-              <img [src]="skill.icon" [alt]="skill.name + ' icon'" class="skill-icon" />
-            </div>
-            <div class="skill-info">
-              <span class="skill-name">{{ skill.name }}</span>
-              <span class="skill-percentage">{{ skill.percentage }}%</span>
-            </div>
-          </div>
-        </div>
+      <!-- No Results Message -->
+      <div class="no-results" *ngIf="filteredSkills.length === 0">
+        <i class="fas fa-search fa-3x mb-3" style="color: #00cba9; opacity: 0.3;"></i>
+        <p>No skills match your search criteria</p>
       </div>
 
       <!-- Best Practices & Principles -->
-      <div class="mb-5">
+      <div class="mb-5 mt-5">
         <h3 class="skill-category-title mb-4">
           <i class="fas fa-lightbulb me-2"></i>Best Practices & Principles
         </h3>
@@ -113,6 +113,43 @@
             <span>Agile Methodologies</span>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filters Modal -->
+  <div class="filters-modal-overlay" *ngIf="showFiltersModal" (click)="showFiltersModal = false">
+    <div class="filters-modal" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h3><i class="fas fa-filter me-2"></i>Filter Skills</h3>
+        <button class="modal-close" (click)="showFiltersModal = false">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="filter-group">
+          <label class="filter-group-label">
+            <i class="fas fa-layer-group me-2"></i>Skill Category
+          </label>
+          <p class="filter-description">Select which categories of skills to display</p>
+          <div class="filter-tags">
+            <button *ngFor="let category of categories" class="filter-tag"
+              [class.active]="tempCategoryFilters.includes(category)" (click)="toggleCategoryFilter(category)">
+              <i class="fas me-2" [ngClass]="getCategoryIcon(category)"></i>
+              {{ category }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-modal-clear" (click)="clearFilters()">
+          <i class="fas fa-times me-2"></i>Clear All
+        </button>
+        <button class="btn-modal-apply" (click)="applyFilters()">
+          <i class="fas fa-check me-2"></i>Apply Filters
+        </button>
       </div>
     </div>
   </div>
