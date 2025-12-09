@@ -28,7 +28,14 @@
     },
     "featured": true,
     "status": "In progress",
-    "liveLink": "https://dev.ppsta.ubiveloxph.com/dashboard/"
+    "liveLink": "https://dev.ppsta.ubiveloxph.com/dashboard/",
+    "coreFeatures": [
+      "Member management and profiling",
+      "Insurance plan enrollment and tracking",
+      "Premium payment processing and history",
+      "Claims submission and status monitoring",
+      "Administrative dashboard with reporting tools"
+    ]
   },
   {
     "id": "migration-tool",
@@ -109,7 +116,7 @@
     "text": "For a US Client (Private project and not accessible publicly)",
     "description": "An API service that powers the Admin Portal for US clients. It centralizes and manages data related to patents, trademarks, and other intellectual property. The API processes requests, applications, official fees, and jurisdiction-specific rules to support individuals or organizations applying for IP protection in different countries. Built with .NET Core and Entity Framework for secure, scalable, and structured access to legal content.",
     "buttonText": "Go to site",
-    "link": "https://unient.biz",
+    "link": "",
     "tech": ".NET, C#, CQRS, DDD",
     "technologies": [
       ".NET",
@@ -130,7 +137,14 @@
     "featured": true,
     "status": "released",
     "liveLink": "https://unient.biz",
-    "isPrivate": true
+    "isPrivate": true,
+    "coreFeatures": [
+      "Unified API for patents, trademarks, and copyrights",
+      "Endpoints for submissions, updates, and status tracking",
+      "Automatic calculation of official fees",
+      "Supports multi-country rules and requirements",
+      "Secure and scalable .NET Core architecture"
+    ]
   },
   {
     "id": "unient",
@@ -253,5 +267,34 @@
       "Real-time application and renewal status tracking",
       "Reporting and analytics for LGU compliance and revenue monitoring"
     ]
+  },
+  {
+    "id": "sydney-boats",
+    "title": "Harbour Fleet Boats & Yachts",
+    "text": "A modern platform for browsing, booking, and managing Sydney boat and yacht hire services.",
+    "description": "A full-featured Sydney boat hire portal that allows users to explore available vessels, check real-time availability, customize cruise packages, and complete bookings online. Built with Angular and Bootstrap, the platform provides a smooth, responsive experience with secure payments, fleet management tools, and automated notifications—designed to streamline both customer booking and operator management workflows.",
+    "buttonText": "Go to site",
+    "link": "https://sydney-boats.netlify.app/home",
+    "tech": "Angular, Bootstrap",
+    "technologies": ["Angular", "Bootstrap"],
+    "category": "Web Portal",
+    "date": "2025",
+    "imgLink": "https://images.unsplash.com/photo-1604737637145-48cc31d160eb?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "images": [
+      "https://images.unsplash.com/photo-1604737637145-48cc31d160eb?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "assets/images/boats-1.png",
+      "assets/images/boats-2.png"
+    ],
+    "featured": true,
+    "status": "MVP Ready",
+    "liveLink": "https://sydney-boats.netlify.app/home",
+    "coreFeatures": [
+      "Real-time boat availability and booking",
+      "Fleet catalog with photos, specs, and pricing",
+      "Custom cruise packages with optional add-ons",
+      "Weather updates and safety information",
+      "Secure payment flow with automated confirmations"
+    ],
+    "isPersonal": true
   }
 ]
