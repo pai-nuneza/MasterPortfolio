@@ -163,7 +163,7 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.5rem;
   justify-items: stretch;
   align-items: start;
@@ -171,7 +171,7 @@
   margin: 0 auto;
   
   @media (max-width: 1200px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1.5rem;
   }
   
