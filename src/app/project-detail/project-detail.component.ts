@@ -71,7 +71,7 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['/'], { fragment: 'works' });
   }
 
   getStatusClass(status: string): string {

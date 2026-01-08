@@ -2,112 +2,87 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Project } from '../../models/project.model';
 import projectsData from '../../../assets/data/projects-enhanced.json';
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
 })
 export class ProjectsComponent implements OnInit {
-  professionalProjects: Project[] = [];
-  personalProjects: Project[] = [];
-  
-  filteredProfessionalProjects: Project[] = [];
-  filteredPersonalProjects: Project[] = [];
+  allProjects: Project[] = [];
+  filteredProjects: Project[] = [];
   
   // View mode and search
   viewMode: 'grid' | 'list' = 'grid';
-  professionalViewMode: 'grid' | 'list' = 'grid';
-  personalViewMode: 'grid' | 'list' = 'grid';
-  professionalSearchTerm: string = '';
-  personalSearchTerm: string = '';
+  searchTerm: string = '';
   
   // Modal states
-  showProfessionalFiltersModal: boolean = false;
-  showPersonalFiltersModal: boolean = false;
+  showFiltersModal: boolean = false;
   
-  // Filters for professional projects
-  selectedProfessionalTechFilters: string[] = [];
-  selectedProfessionalStatusFilters: string[] = [];
-  
-  // Filters for personal projects
-  selectedPersonalTechFilters: string[] = [];
-  selectedPersonalStatusFilters: string[] = [];
+  // Filters
+  selectedTechFilters: string[] = [];
+  selectedStatusFilters: string[] = [];
+  selectedTypeFilters: string[] = [];
   
   // Temporary filters (for modal preview)
-  tempProfessionalTechFilters: string[] = [];
-  tempProfessionalStatusFilters: string[] = [];
-  tempPersonalTechFilters: string[] = [];
-  tempPersonalStatusFilters: string[] = [];
+  tempTechFilters: string[] = [];
+  tempStatusFilters: string[] = [];
+  tempTypeFilters: string[] = [];
   
   // Available options for filters
-  professionalTechStacks: string[] = [];
-  professionalStatuses: string[] = [];
-  personalTechStacks: string[] = [];
-  personalStatuses: string[] = [];
+  techStacks: string[] = [];
+  statuses: string[] = [];
+  projectTypes: string[] = ['Professional', 'Personal'];
 
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    const allProjects = projectsData as Project[];
+    const projects = projectsData as Project[];
     
-    // Separate professional and personal projects
-    const professional = allProjects.filter(p => !(p as any).isPersonal);
-    const personal = allProjects.filter(p => (p as any).isPersonal);
+    // Add project type property to each project and set featured to false by default
+    this.allProjects = projects.map(p => ({
+      ...p,
+      projectType: (p as any).isPersonal ? 'Personal' : 'Professional',
+      featured: p.featured || false
+    }));
+
+    // Sort: featured projects first
+    this.allProjects.sort((a, b) => {
+      if (a.featured && !b.featured) return -1;
+      if (!a.featured && b.featured) return 1;
+      return 0;
+    });
     
-    // Assign projects without shuffling
-    this.professionalProjects = [...professional];
-    this.personalProjects = [...personal];
-    
-    // Initialize filtered arrays
-    this.filteredProfessionalProjects = [...this.professionalProjects];
-    this.filteredPersonalProjects = [...this.personalProjects];
+    // Initialize filtered array
+    this.filteredProjects = [...this.allProjects];
     
     // Extract unique tech stacks and statuses
     this.extractFilterOptions();
   }
   
   extractFilterOptions(): void {
-    // Get unique tech stacks for professional projects
-    const professionalTechSet = new Set<string>();
-    this.professionalProjects.forEach(project => {
-      project.technologies?.forEach(tech => professionalTechSet.add(tech));
+    // Get unique tech stacks
+    const techSet = new Set<string>();
+    this.allProjects.forEach(project => {
+      project.technologies?.forEach(tech => techSet.add(tech));
     });
-    this.professionalTechStacks = Array.from(professionalTechSet).sort();
+    this.techStacks = Array.from(techSet).sort();
     
-    // Get unique statuses for professional projects
-    const professionalStatusSet = new Set<string>();
-    this.professionalProjects.forEach(project => {
-      if (project.status) professionalStatusSet.add(project.status);
+    // Get unique statuses
+    const statusSet = new Set<string>();
+    this.allProjects.forEach(project => {
+      if (project.status) statusSet.add(project.status);
     });
-    this.professionalStatuses = Array.from(professionalStatusSet).sort();
-    
-    // Get unique tech stacks for personal projects
-    const personalTechSet = new Set<string>();
-    this.personalProjects.forEach(project => {
-      project.technologies?.forEach(tech => personalTechSet.add(tech));
-    });
-    this.personalTechStacks = Array.from(personalTechSet).sort();
-    
-    // Get unique statuses for personal projects
-    const personalStatusSet = new Set<string>();
-    this.personalProjects.forEach(project => {
-      if (project.status) personalStatusSet.add(project.status);
-    });
-    this.personalStatuses = Array.from(personalStatusSet).sort();
+    this.statuses = Array.from(statusSet).sort();
   }
   
   // Search and filter methods
-  applyFilters(type: 'professional' | 'personal'): void {
-    const sourceProjects = type === 'professional' ? this.professionalProjects : this.personalProjects;
-    const searchTerm = type === 'professional' ? this.professionalSearchTerm : this.personalSearchTerm;
-    const techFilters = type === 'professional' ? this.selectedProfessionalTechFilters : this.selectedPersonalTechFilters;
-    const statusFilters = type === 'professional' ? this.selectedProfessionalStatusFilters : this.selectedPersonalStatusFilters;
-    
-    let filtered = [...sourceProjects];
+  applyFilters(): void {
+    let filtered = [...this.allProjects];
     
     // Apply search
-    if (searchTerm) {
-      const term = searchTerm.toLowerCase();
+    if (this.searchTerm) {
+      const term = this.searchTerm.toLowerCase();
       filtered = filtered.filter(project => 
         project.title.toLowerCase().includes(term) ||
         project.text.toLowerCase().includes(term) ||
@@ -117,162 +92,123 @@ export class ProjectsComponent implements OnInit {
     }
     
     // Apply tech filters
-    if (techFilters.length > 0) {
+    if (this.selectedTechFilters.length > 0) {
       filtered = filtered.filter(project => 
-        techFilters.some(tech => 
+        this.selectedTechFilters.some(tech => 
           project.technologies?.includes(tech)
         )
       );
     }
     
     // Apply status filters
-    if (statusFilters.length > 0) {
+    if (this.selectedStatusFilters.length > 0) {
       filtered = filtered.filter(project => 
-        statusFilters.includes(project.status)
+        this.selectedStatusFilters.includes(project.status)
       );
     }
     
-    if (type === 'professional') {
-      this.filteredProfessionalProjects = filtered;
-    } else {
-      this.filteredPersonalProjects = filtered;
+    // Apply type filters
+    if (this.selectedTypeFilters.length > 0) {
+      filtered = filtered.filter(project => 
+        this.selectedTypeFilters.includes((project as any).projectType)
+      );
     }
+
+    // Sort: featured projects first
+    filtered.sort((a, b) => {
+      if (a.featured && !b.featured) return -1;
+      if (!a.featured && b.featured) return 1;
+      return 0;
+    });
+    
+    this.filteredProjects = filtered;
   }
   
-  onSearchChange(type: 'professional' | 'personal'): void {
-    this.applyFilters(type);
+  onSearchChange(): void {
+    this.applyFilters();
   }
   
-  // Professional project filter methods
-  openProfessionalFiltersModal(): void {
+  // Filter methods
+  openFiltersModal(): void {
     // Copy current filters to temporary filters
-    this.tempProfessionalTechFilters = [...this.selectedProfessionalTechFilters];
-    this.tempProfessionalStatusFilters = [...this.selectedProfessionalStatusFilters];
-    this.showProfessionalFiltersModal = true;
+    this.tempTechFilters = [...this.selectedTechFilters];
+    this.tempStatusFilters = [...this.selectedStatusFilters];
+    this.tempTypeFilters = [...this.selectedTypeFilters];
+    this.showFiltersModal = true;
   }
   
-  toggleProfessionalTechFilter(tech: string): void {
-    const index = this.tempProfessionalTechFilters.indexOf(tech);
+  toggleTechFilter(tech: string): void {
+    const index = this.tempTechFilters.indexOf(tech);
     if (index > -1) {
-      this.tempProfessionalTechFilters.splice(index, 1);
+      this.tempTechFilters.splice(index, 1);
     } else {
-      this.tempProfessionalTechFilters.push(tech);
+      this.tempTechFilters.push(tech);
     }
   }
   
-  toggleProfessionalStatusFilter(status: string): void {
-    const index = this.tempProfessionalStatusFilters.indexOf(status);
+  toggleStatusFilter(status: string): void {
+    const index = this.tempStatusFilters.indexOf(status);
     if (index > -1) {
-      this.tempProfessionalStatusFilters.splice(index, 1);
+      this.tempStatusFilters.splice(index, 1);
     } else {
-      this.tempProfessionalStatusFilters.push(status);
+      this.tempStatusFilters.push(status);
     }
   }
   
-  applyProfessionalFilters(): void {
+  toggleTypeFilter(type: string): void {
+    const index = this.tempTypeFilters.indexOf(type);
+    if (index > -1) {
+      this.tempTypeFilters.splice(index, 1);
+    } else {
+      this.tempTypeFilters.push(type);
+    }
+  }
+  
+  applyFiltersFromModal(): void {
     // Apply the temporary filters to actual filters
-    this.selectedProfessionalTechFilters = [...this.tempProfessionalTechFilters];
-    this.selectedProfessionalStatusFilters = [...this.tempProfessionalStatusFilters];
-    this.applyFilters('professional');
-    this.showProfessionalFiltersModal = false;
+    this.selectedTechFilters = [...this.tempTechFilters];
+    this.selectedStatusFilters = [...this.tempStatusFilters];
+    this.selectedTypeFilters = [...this.tempTypeFilters];
+    this.applyFilters();
+    this.showFiltersModal = false;
   }
   
-  clearProfessionalFilters(): void {
-    this.tempProfessionalTechFilters = [];
-    this.tempProfessionalStatusFilters = [];
+  clearFiltersInModal(): void {
+    this.tempTechFilters = [];
+    this.tempStatusFilters = [];
+    this.tempTypeFilters = [];
   }
   
-  removeProfessionalTechFilter(tech: string): void {
-    const index = this.selectedProfessionalTechFilters.indexOf(tech);
+  removeTechFilter(tech: string): void {
+    const index = this.selectedTechFilters.indexOf(tech);
     if (index > -1) {
-      this.selectedProfessionalTechFilters.splice(index, 1);
-      this.applyFilters('professional');
+      this.selectedTechFilters.splice(index, 1);
+      this.applyFilters();
     }
   }
   
-  removeProfessionalStatusFilter(status: string): void {
-    const index = this.selectedProfessionalStatusFilters.indexOf(status);
+  removeStatusFilter(status: string): void {
+    const index = this.selectedStatusFilters.indexOf(status);
     if (index > -1) {
-      this.selectedProfessionalStatusFilters.splice(index, 1);
-      this.applyFilters('professional');
+      this.selectedStatusFilters.splice(index, 1);
+      this.applyFilters();
     }
   }
   
-  clearAppliedProfessionalFilters(): void {
-    this.selectedProfessionalTechFilters = [];
-    this.selectedProfessionalStatusFilters = [];
-    this.professionalSearchTerm = '';
-    this.filteredProfessionalProjects = [...this.professionalProjects];
-  }
-  
-  // Personal project filter methods
-  openPersonalFiltersModal(): void {
-    // Copy current filters to temporary filters
-    this.tempPersonalTechFilters = [...this.selectedPersonalTechFilters];
-    this.tempPersonalStatusFilters = [...this.selectedPersonalStatusFilters];
-    this.showPersonalFiltersModal = true;
-  }
-  
-  togglePersonalTechFilter(tech: string): void {
-    const index = this.tempPersonalTechFilters.indexOf(tech);
+  removeTypeFilter(type: string): void {
+    const index = this.selectedTypeFilters.indexOf(type);
     if (index > -1) {
-      this.tempPersonalTechFilters.splice(index, 1);
-    } else {
-      this.tempPersonalTechFilters.push(tech);
+      this.selectedTypeFilters.splice(index, 1);
+      this.applyFilters();
     }
   }
   
-  togglePersonalStatusFilter(status: string): void {
-    const index = this.tempPersonalStatusFilters.indexOf(status);
-    if (index > -1) {
-      this.tempPersonalStatusFilters.splice(index, 1);
-    } else {
-      this.tempPersonalStatusFilters.push(status);
-    }
-  }
-  
-  applyPersonalFilters(): void {
-    // Apply the temporary filters to actual filters
-    this.selectedPersonalTechFilters = [...this.tempPersonalTechFilters];
-    this.selectedPersonalStatusFilters = [...this.tempPersonalStatusFilters];
-    this.applyFilters('personal');
-    this.showPersonalFiltersModal = false;
-  }
-  
-  clearPersonalFilters(): void {
-    this.tempPersonalTechFilters = [];
-    this.tempPersonalStatusFilters = [];
-  }
-  
-  removePersonalTechFilter(tech: string): void {
-    const index = this.selectedPersonalTechFilters.indexOf(tech);
-    if (index > -1) {
-      this.selectedPersonalTechFilters.splice(index, 1);
-      this.applyFilters('personal');
-    }
-  }
-  
-  removePersonalStatusFilter(status: string): void {
-    const index = this.selectedPersonalStatusFilters.indexOf(status);
-    if (index > -1) {
-      this.selectedPersonalStatusFilters.splice(index, 1);
-      this.applyFilters('personal');
-    }
-  }
-  
-  clearAppliedPersonalFilters(): void {
-    this.selectedPersonalTechFilters = [];
-    this.selectedPersonalStatusFilters = [];
-    this.personalSearchTerm = '';
-    this.filteredPersonalProjects = [...this.personalProjects];
-  }
-  
-  toggleProfessionalViewMode(): void {
-    this.professionalViewMode = this.professionalViewMode === 'grid' ? 'list' : 'grid';
-  }
-  
-  togglePersonalViewMode(): void {
-    this.personalViewMode = this.personalViewMode === 'grid' ? 'list' : 'grid';
+  clearAppliedFilters(): void {
+    this.selectedTechFilters = [];
+    this.selectedStatusFilters = [];
+    this.selectedTypeFilters = [];
+    this.searchTerm = '';
+    this.filteredProjects = [...this.allProjects];
   }
   
   toggleViewMode(): void {

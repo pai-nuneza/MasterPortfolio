@@ -1,52 +1,56 @@
 <section id="works" class="py-5">
   <div class="container">
-    <!-- Professional Projects Section -->
+    <!-- Projects Section -->
     <div class="styled-section mb-5">
       <div class="section-header">
         <div class="section-title text-center mb-4">
           <h2 class="text-xl md:text-2xl lg:text-3xl mb-2" style="color: #00cba9;">
-            <i class="fas fa-briefcase me-2"></i>Professional Projects
+            <i class="fas fa-folder-open me-2"></i>All Projects
           </h2>
-          <p class="text-white-50 mb-0">A showcase of my professional work and contributions</p>
+          <p class="text-white-50 mb-0">A showcase of my professional and personal work</p>
         </div>
 
-        <!-- Professional Filters and Controls -->
+        <!-- Filters and Controls -->
         <div class="controls-bar mb-4">
           <div class="row g-3 align-items-center">
             <div class="col-auto">
-              <button class="btn-view-toggle" (click)="toggleProfessionalViewMode()">
-                <i class="fas" [ngClass]="professionalViewMode === 'grid' ? 'fa-list' : 'fa-th'"></i>
-                {{ professionalViewMode === 'grid' ? 'List' : 'Grid' }}
+              <button class="btn-view-toggle" (click)="toggleViewMode()">
+                <i class="fas" [ngClass]="viewMode === 'grid' ? 'fa-list' : 'fa-th'"></i>
+                {{ viewMode === 'grid' ? 'List' : 'Grid' }}
               </button>
             </div>
 
             <div class="col-auto">
-              <button class="btn-sm btn-filter-toggle" (click)="openProfessionalFiltersModal()">
+              <button class="btn-sm btn-filter-toggle" (click)="openFiltersModal()">
                 <i class="fas fa-filter me-2"></i>Filters
                 <span class="filter-count"
-                  *ngIf="selectedProfessionalTechFilters.length > 0 || selectedProfessionalStatusFilters.length > 0">
-                  {{ selectedProfessionalTechFilters.length + selectedProfessionalStatusFilters.length }}
+                  *ngIf="selectedTechFilters.length > 0 || selectedStatusFilters.length > 0 || selectedTypeFilters.length > 0">
+                  {{ selectedTechFilters.length + selectedStatusFilters.length + selectedTypeFilters.length }}
                 </span>
               </button>
             </div>
 
             <div class="col">
               <div class="active-filters"
-                *ngIf="selectedProfessionalTechFilters.length > 0 || selectedProfessionalStatusFilters.length > 0">
-                <span class="active-filter-tag" *ngFor="let tech of selectedProfessionalTechFilters"
-                  (click)="removeProfessionalTechFilter(tech)">
+                *ngIf="selectedTechFilters.length > 0 || selectedStatusFilters.length > 0 || selectedTypeFilters.length > 0">
+                <span class="active-filter-tag" *ngFor="let tech of selectedTechFilters"
+                  (click)="removeTechFilter(tech)">
                   {{ tech }} <i class="fas fa-times ms-1"></i>
                 </span>
-                <span class="active-filter-tag" *ngFor="let status of selectedProfessionalStatusFilters"
-                  (click)="removeProfessionalStatusFilter(status)">
+                <span class="active-filter-tag" *ngFor="let status of selectedStatusFilters"
+                  (click)="removeStatusFilter(status)">
                   {{ status }} <i class="fas fa-times ms-1"></i>
+                </span>
+                <span class="active-filter-tag" *ngFor="let type of selectedTypeFilters"
+                  (click)="removeTypeFilter(type)">
+                  {{ type }} <i class="fas fa-times ms-1"></i>
                 </span>
               </div>
             </div>
 
             <div class="col-auto"
-              *ngIf="selectedProfessionalTechFilters.length > 0 || selectedProfessionalStatusFilters.length > 0">
-              <button class="btn-clear-filters" (click)="clearAppliedProfessionalFilters()">
+              *ngIf="selectedTechFilters.length > 0 || selectedStatusFilters.length > 0 || selectedTypeFilters.length > 0">
+              <button class="btn-clear-filters" (click)="clearAppliedFilters()">
                 <i class="fas fa-times me-2"></i>Clear
               </button>
             </div>
@@ -55,10 +59,10 @@
             <div class="col-12 col-md-auto">
               <div class="search-container-inline">
                 <i class="fas fa-search search-icon"></i>
-                <input type="text" class="search-input" placeholder="Search..." [(ngModel)]="professionalSearchTerm"
-                  (ngModelChange)="onSearchChange('professional')">
-                <span class="search-count" *ngIf="professionalSearchTerm">
-                  {{ filteredProfessionalProjects.length }}/{{ professionalProjects.length }}
+                <input type="text" class="search-input" placeholder="Search..." [(ngModel)]="searchTerm"
+                  (ngModelChange)="onSearchChange()">
+                <span class="search-count" *ngIf="searchTerm">
+                  {{ filteredProjects.length }}/{{ allProjects.length }}
                 </span>
               </div>
             </div>
@@ -66,10 +70,10 @@
         </div>
       </div>
 
-      <!-- Professional Projects Grid/List -->
-      <div class="projects-grid" [class.list-view]="professionalViewMode === 'list'">
-        <div class="project-card" [class.list-card]="professionalViewMode === 'list'"
-          *ngFor="let item of filteredProfessionalProjects" (click)="viewProject(item.id, $event)">
+      <!-- Projects Grid/List -->
+      <div class="projects-grid" [class.list-view]="viewMode === 'list'">
+        <div class="project-card" [class.list-card]="viewMode === 'list'"
+          *ngFor="let item of filteredProjects" (click)="viewProject(item.id, $event)">
           <div class="project-card-image-wrapper">
             <img src="{{ item.imgLink }}" alt="{{ item.title }}" class="project-card-img" />
             <div class="project-card-overlay">
@@ -78,156 +82,39 @@
                 <p class="overlay-text">View Project</p>
               </div>
             </div>
-            <span class="project-status-badge" [ngClass]="getStatusClass(item.status)">
-              {{ item.status }}
+            <span class="project-type-badge" [ngClass]="item.projectType === 'Professional' ? 'type-professional' : 'type-personal'">
+              <i class="fas" [ngClass]="item.projectType === 'Professional' ? 'fa-briefcase' : 'fa-rocket'"></i>
+              {{ item.projectType }}
             </span>
           </div>
           <div class="project-card-content">
-            <h4 class="project-title">{{ item.title }}</h4>
+            <h4 class="project-title">
+              {{ item.title }}
+              <i class="fas fa-star featured-star" *ngIf="item.featured" title="Featured Project"></i>
+            </h4>
+            <span class="project-status-badge" [ngClass]="getStatusClass(item.status)">
+              {{ item.status }}
+            </span>
             <p class="project-description">{{ item.text }}</p>
-
-            <!-- Tech Stack Tags -->
-            <div class="tech-tags-container">
-              <span class="tech-tag" *ngFor="let tech of item.technologies.slice(0, 3)">
-                <i class="fas fa-tag me-1"></i>{{ tech }}
-              </span>
-              <span class="tech-more" *ngIf="item.technologies && item.technologies.length > 3">...</span>
-            </div>
-
-            <div class="project-card-footer">
-              <span class="view-details-btn">
-                Click to See More
-              </span>
-            </div>
           </div> 
         </div>
       </div>
 
       <!-- No Results Message -->
-      <div class="no-results" *ngIf="filteredProfessionalProjects.length === 0">
-        <i class="fas fa-search fa-3x mb-3" style="color: #00cba9; opacity: 0.3;"></i>
-        <p>No projects match your search criteria</p>
-      </div>
-    </div>
-
-    <!-- Personal Projects Section -->
-    <div class="styled-section" *ngIf="personalProjects.length > 0">
-      <div class="section-header">
-        <div class="section-title text-center mb-4">
-          <h2 class="text-xl md:text-2xl lg:text-3xl mb-2" style="color: #00cba9;">
-            <i class="fas fa-rocket me-2"></i>Personal Projects
-          </h2>
-          <p class="text-white-50 mb-0">Side projects and experimental work</p>
-        </div>
-
-        <!-- Personal Filters and Controls -->
-        <div class="controls-bar mb-4">
-          <div class="row g-3 align-items-center">
-            <div class="col-auto">
-              <button class="btn-view-toggle" (click)="togglePersonalViewMode()">
-                <i class="fas" [ngClass]="personalViewMode === 'grid' ? 'fa-list' : 'fa-th'"></i>
-                {{ personalViewMode === 'grid' ? 'List' : 'Grid' }}
-              </button>
-            </div>
-
-            <div class="col-auto">
-              <button class="btn-filter-toggle" (click)="openPersonalFiltersModal()">
-                <i class="fas fa-filter me-2"></i>Filters
-                <span class="filter-count"
-                  *ngIf="selectedPersonalTechFilters.length > 0 || selectedPersonalStatusFilters.length > 0">
-                  {{ selectedPersonalTechFilters.length + selectedPersonalStatusFilters.length }}
-                </span>
-              </button>
-            </div>
-
-            <div class="col">
-              <div class="active-filters"
-                *ngIf="selectedPersonalTechFilters.length > 0 || selectedPersonalStatusFilters.length > 0">
-                <span class="active-filter-tag" *ngFor="let tech of selectedPersonalTechFilters"
-                  (click)="removePersonalTechFilter(tech)">
-                  {{ tech }} <i class="fas fa-times ms-1"></i>
-                </span>
-                <span class="active-filter-tag" *ngFor="let status of selectedPersonalStatusFilters"
-                  (click)="removePersonalStatusFilter(status)">
-                  {{ status }} <i class="fas fa-times ms-1"></i>
-                </span>
-              </div>
-            </div>
-
-            <div class="col-auto"
-              *ngIf="selectedPersonalTechFilters.length > 0 || selectedPersonalStatusFilters.length > 0">
-              <button class="btn-clear-filters" (click)="clearAppliedPersonalFilters()">
-                <i class="fas fa-times me-2"></i>Clear
-              </button>
-            </div>
-
-            <!-- Search Bar -->
-            <div class="col-12 col-md-auto">
-              <div class="search-container-inline">
-                <i class="fas fa-search search-icon"></i>
-                <input type="text" class="search-input" placeholder="Search..." [(ngModel)]="personalSearchTerm"
-                  (ngModelChange)="onSearchChange('personal')">
-                <span class="search-count" *ngIf="personalSearchTerm">
-                  {{ filteredPersonalProjects.length }}/{{ personalProjects.length }}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Personal Projects Grid/List -->
-      <div class="projects-grid" [class.list-view]="personalViewMode === 'list'">
-        <div class="project-card" [class.list-card]="personalViewMode === 'list'"
-          *ngFor="let item of filteredPersonalProjects" (click)="viewProject(item.id, $event)">
-          <div class="project-card-image-wrapper">
-            <img src="{{ item.imgLink }}" alt="{{ item.title }}" class="project-card-img" />
-            <div class="project-card-overlay">
-              <div class="overlay-content">
-                <i class="fas fa-eye overlay-icon"></i>
-                <p class="overlay-text">View Project</p>
-              </div>
-            </div>
-            <span class="project-status-badge" [ngClass]="getStatusClass(item.status)">
-              {{ item.status }}
-            </span>
-          </div>
-          <div class="project-card-content">
-            <h4 class="project-title">{{ item.title }}</h4>
-            <p class="project-description">{{ item.text }}</p>
-
-            <!-- Tech Stack Tags -->
-            <div class="tech-tags-container">
-              <span class="tech-tag" *ngFor="let tech of item.technologies.slice(0, 3)">
-                <i class="fas fa-tag me-1"></i>{{ tech }}
-              </span>
-              <span class="tech-more" *ngIf="item.technologies && item.technologies.length > 3">...</span>
-            </div>
-
-            <div class="project-card-footer">
-              <span class="view-details-btn">
-                Click to See More
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- No Results Message -->
-      <div class="no-results" *ngIf="filteredPersonalProjects.length === 0">
+      <div class="no-results" *ngIf="filteredProjects.length === 0">
         <i class="fas fa-search fa-3x mb-3" style="color: #00cba9; opacity: 0.3;"></i>
         <p>No projects match your search criteria</p>
       </div>
     </div>
   </div>
 
-  <!-- Professional Filters Modal -->
-  <div class="filters-modal-overlay" *ngIf="showProfessionalFiltersModal"
-    (click)="showProfessionalFiltersModal = false">
+  <!-- Filters Modal -->
+  <div class="filters-modal-overlay" *ngIf="showFiltersModal"
+    (click)="showFiltersModal = false">
     <div class="filters-modal" (click)="$event.stopPropagation()">
       <div class="modal-header">
-        <h3><i class="fas fa-filter me-2"></i>Filter Professional Projects</h3>
-        <button class="modal-close" (click)="showProfessionalFiltersModal = false">
+        <h3><i class="fas fa-filter me-2"></i>Filter Projects</h3>
+        <button class="modal-close" (click)="showFiltersModal = false">
           <i class="fas fa-times"></i>
         </button>
       </div>
@@ -235,11 +122,24 @@
       <div class="modal-body">
         <div class="filter-group">
           <label class="filter-group-label">
+            <i class="fas fa-layer-group me-2"></i>Project Type
+          </label>
+          <div class="filter-tags">
+            <button *ngFor="let type of projectTypes" class="filter-tag"
+              [class.active]="tempTypeFilters.includes(type)" (click)="toggleTypeFilter(type)">
+              <i class="fas" [ngClass]="type === 'Professional' ? 'fa-briefcase' : 'fa-rocket'"></i>
+              {{ type }}
+            </button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-group-label">
             <i class="fas fa-code me-2"></i>Tech Stack
           </label>
           <div class="filter-tags">
-            <button *ngFor="let tech of professionalTechStacks" class="filter-tag"
-              [class.active]="tempProfessionalTechFilters.includes(tech)" (click)="toggleProfessionalTechFilter(tech)">
+            <button *ngFor="let tech of techStacks" class="filter-tag"
+              [class.active]="tempTechFilters.includes(tech)" (click)="toggleTechFilter(tech)">
               {{ tech }}
             </button>
           </div>
@@ -250,9 +150,9 @@
             <i class="fas fa-flag me-2"></i>Status
           </label>
           <div class="filter-tags">
-            <button *ngFor="let status of professionalStatuses" class="filter-tag"
-              [class.active]="tempProfessionalStatusFilters.includes(status)"
-              (click)="toggleProfessionalStatusFilter(status)">
+            <button *ngFor="let status of statuses" class="filter-tag"
+              [class.active]="tempStatusFilters.includes(status)"
+              (click)="toggleStatusFilter(status)">
               {{ status }}
             </button>
           </div>
@@ -260,57 +160,10 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn-modal-clear" (click)="clearProfessionalFilters()">
+        <button class="btn-modal-clear" (click)="clearFiltersInModal()">
           <i class="fas fa-times me-2"></i>Clear All
         </button>
-        <button class="btn-modal-apply" (click)="applyProfessionalFilters()">
-          <i class="fas fa-check me-2"></i>Apply Filters
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Personal Filters Modal -->
-  <div class="filters-modal-overlay" *ngIf="showPersonalFiltersModal" (click)="showPersonalFiltersModal = false">
-    <div class="filters-modal" (click)="$event.stopPropagation()">
-      <div class="modal-header">
-        <h3><i class="fas fa-filter me-2"></i>Filter Personal Projects</h3>
-        <button class="modal-close" (click)="showPersonalFiltersModal = false">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-
-      <div class="modal-body">
-        <div class="filter-group">
-          <label class="filter-group-label">
-            <i class="fas fa-code me-2"></i>Tech Stack
-          </label>
-          <div class="filter-tags">
-            <button *ngFor="let tech of personalTechStacks" class="filter-tag"
-              [class.active]="tempPersonalTechFilters.includes(tech)" (click)="togglePersonalTechFilter(tech)">
-              {{ tech }}
-            </button>
-          </div>
-        </div>
-
-        <div class="filter-group">
-          <label class="filter-group-label">
-            <i class="fas fa-flag me-2"></i>Status
-          </label>
-          <div class="filter-tags">
-            <button *ngFor="let status of personalStatuses" class="filter-tag"
-              [class.active]="tempPersonalStatusFilters.includes(status)" (click)="togglePersonalStatusFilter(status)">
-              {{ status }}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal-footer">
-        <button class="btn-modal-clear" (click)="clearPersonalFilters()">
-          <i class="fas fa-times me-2"></i>Clear All
-        </button>
-        <button class="btn-modal-apply" (click)="applyPersonalFilters()">
+        <button class="btn-modal-apply" (click)="applyFiltersFromModal()">
           <i class="fas fa-check me-2"></i>Apply Filters
         </button>
       </div>

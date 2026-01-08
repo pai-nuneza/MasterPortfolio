@@ -15,10 +15,7 @@
       "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "assets/images/ppsta-1.png",
       "assets/images/ppsta-2.png",
-      "assets/images/ppsta-3.png",
-      "assets/images/ppsta-4.png",
-      "assets/images/ppsta-5.png",
-      "assets/images/ppsta-6.png"
+      "assets/images/ppsta-3.png"
     ],
     "testCredentials": {
       "username": "admin",
@@ -45,7 +42,7 @@
     "buttonText": "View on GitHub",
     "link": "https://github.com/pai-nuneza/SemanticSearchAPI",
     "tech": ".NET 8, ML.NET, ONNX Runtime",
-    "technologies": [".NET 10", "C#", "WPF"],
+    "technologies": [".NET 10", "Desktop App",  "C#", "WPF"],
     "category": "Web API Development",
     "date": "2025",
     "imgLink": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -60,7 +57,7 @@
       "Clean architecture with dependency injection and provider pattern",
       "Production-ready with configurable providers via appsettings.json"
     ],
-    "featured": true,
+    "featured": false,
     "status": "released",
     "liveLink": "https://github.com/pai-nuneza/FoxProToMySqlMigrator",
     "isPrivate": false,
@@ -92,7 +89,7 @@
       "assets/images/bms-4.png",
       "assets/images/bms-5.png"
     ],
-    "featured": true,
+    "featured": false,
     "status": "MVP Ready",
     "liveLink": "https://hris.mirallesresort.com/bms/public",
     "testCredentials": {
@@ -134,7 +131,7 @@
       "assets/images/clr-2.png",
       "assets/images/clr-3.png"
     ],
-    "featured": true,
+    "featured": false,
     "status": "released",
     "liveLink": "https://unient.biz",
     "isPrivate": true,
@@ -163,7 +160,7 @@
       "assets/images/unient-2.png",
       "assets/images/unient-3.png"
     ],
-    "featured": true,
+    "featured": false,
     "status": "released",
     "liveLink": "https://unient.biz"
   },
@@ -184,7 +181,7 @@
       "assets/images/ap-2.png",
       "assets/images/ap-3.png"
     ],
-    "featured": true,
+    "featured": false,
     "status": "released",
     "liveLink": "https://unient.biz",
     "isPrivate": true
@@ -220,7 +217,7 @@
       "Clean architecture with dependency injection and provider pattern",
       "Production-ready with configurable providers via appsettings.json"
     ],
-    "featured": true,
+    "featured": false,
     "status": "released",
     "liveLink": "http://mysemanticsearch.runasp.net/",
     "isPrivate": false,
@@ -271,7 +268,7 @@
   {
     "id": "sydney-boats",
     "title": "Harbour Fleet Boats & Yachts",
-    "text": "A modern platform for browsing, booking, and managing Sydney boat and yacht hire services.",
+    "text": "Browse, Book, and Sail Sydney’s Finest Fleet.",
     "description": "A full-featured Sydney boat hire portal that allows users to explore available vessels, check real-time availability, customize cruise packages, and complete bookings online. Built with Angular and Bootstrap, the platform provides a smooth, responsive experience with secure payments, fleet management tools, and automated notifications—designed to streamline both customer booking and operator management workflows.",
     "buttonText": "Go to site",
     "link": "https://sydney-boats.netlify.app/home",
@@ -294,6 +291,39 @@
       "Custom cruise packages with optional add-ons",
       "Weather updates and safety information",
       "Secure payment flow with automated confirmations"
+    ],
+    "isPersonal": true
+  },
+  {
+    "id": "auth-service",
+    "title": "Wano Auth Service",
+    "text": "Guarding Identity, Controlling Access.",
+    "description": "WanoAuth is a secure identity and access management service that unifies authentication, authorization, RBAC, and permissions within a scalable .NET architecture.",
+    "buttonText": "View Repository",
+    "link": "https://your-wanoauth-link-here.com",
+    "tech": ".NET 10, Clean Architecture",
+    "technologies": [
+      ".NET 10",
+      "Entity Framework",
+      "JWT",
+      "Clean Architecture",
+      "Web API"
+    ],
+    "category": "Authentication & Authorization Service",
+    "date": "2025",
+    "imgLink": "https://plus.unsplash.com/premium_photo-1676618539983-d1a95978fd7d?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "images": [
+      "https://plus.unsplash.com/premium_photo-1676618539983-d1a95978fd7d?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "featured": false,
+    "status": "In Progress",
+    "liveLink": "",
+    "coreFeatures": [
+      "User authentication with JWT and refresh token flow",
+      "Role-Based Access Control (RBAC) with hierarchical permissions",
+      "Fine-grained authorization using policies and claims",
+      "Secure resource protection for microservices and APIs",
+      "User, role, and permission management through an admin dashboard"
     ],
     "isPersonal": true
   }

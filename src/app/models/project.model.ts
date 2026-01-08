@@ -13,6 +13,7 @@ export interface Project {
   images: string[];
   featured: boolean;
   status: 'released' | 'in-progress' | 'planned';
+  projectType?: 'Professional' | 'Personal';
   githubLink?: string;
   liveLink?: string;
   testCredentials?: {
