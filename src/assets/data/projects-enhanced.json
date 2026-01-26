@@ -1,147 +1,32 @@
 [
   {
-    "id": "ppsta",
-    "title": "PPSTA",
-    "text": "Philippine Public School Teachers Association - Insurance System",
-    "description": "The Philippine Public School Teachers Association (PPSTA) is the largest and leading professional organization for public school educators in the Philippines. It represents over 200,000 members nationwide, including administrators, supervisors, teachers, and non-teaching personnel working under the Department of Education.",
+    "id": "sydney-boats",
+    "title": "Harbour Fleet Boats & Yachts",
+    "text": "Browse, Book, and Sail Sydney’s Finest Fleet.",
+    "description": "A full-featured Sydney boat hire portal that allows users to explore available vessels, check real-time availability, customize cruise packages, and complete bookings online. Built with Angular and Bootstrap, the platform provides a smooth, responsive experience with secure payments, fleet management tools, and automated notifications—designed to streamline both customer booking and operator management workflows.",
     "buttonText": "Go to site",
-    "link": "https://dev.ppsta.ubiveloxph.com/dashboard/",
-    "tech": "PHP, CakePHP, Bootstrap, Javascript, MySQL, jQuery",
-    "technologies": ["CakePHP", "PHP", "Bootstrap", "MySQL", "jQuery"],
+    "link": "https://sydney-boats.netlify.app/home",
+    "tech": "Angular, Bootstrap",
+    "technologies": ["Angular", "Bootstrap"],
     "category": "Web Portal",
     "date": "2025",
-    "imgLink": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "imgLink": "https://images.unsplash.com/photo-1604737637145-48cc31d160eb?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "images": [
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "assets/images/ppsta-1.png",
-      "assets/images/ppsta-2.png",
-      "assets/images/ppsta-3.png"
+      "https://images.unsplash.com/photo-1604737637145-48cc31d160eb?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "assets/images/boats-1.png",
+      "assets/images/boats-2.png"
     ],
-    "testCredentials": {
-      "username": "admin",
-      "password": "admin",
-      "otp": "118899",
-      "instructions": "Use the provided credentials to access the admin dashboard. Explore resident management, certificate generation, and reporting features."
-    },
     "featured": true,
-    "status": "In progress",
-    "liveLink": "https://dev.ppsta.ubiveloxph.com/dashboard/",
-    "coreFeatures": [
-      "Member management and profiling",
-      "Insurance plan enrollment and tracking",
-      "Premium payment processing and history",
-      "Claims submission and status monitoring",
-      "Administrative dashboard with reporting tools"
-    ]
-  },
-  {
-    "id": "migration-tool",
-    "title": "Foxpro To MySQL Migration Tool",
-    "text": "A tool to migrate Foxpro DBF files to MySQL database.",
-    "description": "A WPF .NET C# application that reads Foxpro DBF files and migrates the data to a MySQL database. It supports batch processing of multiple DBF files, data type mapping, and error handling. The tool provides a user-friendly interface for selecting source files, configuring database connections, and monitoring migration progress.",
-    "buttonText": "View on GitHub",
-    "link": "https://github.com/pai-nuneza/SemanticSearchAPI",
-    "tech": ".NET 8, ML.NET, ONNX Runtime",
-    "technologies": [".NET 10", "Desktop App",  "C#", "WPF"],
-    "category": "Web API Development",
-    "date": "2025",
-    "imgLink": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "images": ["assets/images/foxprotomysql.png"],
-    "highlights": [
-      "Dual embedding providers: ML.NET TF-IDF (local, fast) and ONNX Runtime (neural networks)",
-      "384-dimensional vector embeddings with cosine similarity ranking",
-      "Customizable training data via training-data.json for domain-specific optimization",
-      "Auto-seeding with 22 diverse documents (Marvel movies, family films, tech concepts)",
-      "Modern responsive UI with Bootstrap 5 and real-time database status",
-      "Diagnostic endpoints for embedding testing, database status, and reseeding",
-      "Clean architecture with dependency injection and provider pattern",
-      "Production-ready with configurable providers via appsettings.json"
-    ],
-    "featured": false,
-    "status": "released",
-    "liveLink": "https://github.com/pai-nuneza/FoxProToMySqlMigrator",
-    "isPrivate": false,
-    "isPersonal": true,
-    "coreFeatures": [
-      "Reads Foxpro DBF files and extracts data",
-      "Maps Foxpro data types to MySQL data types",
-      "Supports batch processing of multiple DBF files",
-      "Has stop and resume releasedity",
-      "Displays migration progress and error handling"
-    ]
-  },
-  {
-    "id": "brgy",
-    "title": "Community System",
-    "text": "For managing resident, permits, certificates, and community services.",
-    "description": "A full-featured Community Management System built with Laravel and Vue.js. Designed for local government workflows, it includes resident profiling, certificate issuance, incident/blotter logging, administrative tools, and reporting dashboards. Built with a responsive interface and scalable architecture for efficient community operations.",
-    "buttonText": "Go to site",
-    "link": "https://hris.mirallesresort.com/bms/public",
-    "tech": "Laravel, Vue, Bootstrap",
-    "technologies": ["Laravel", "Vue", "Bootstrap", "MySQL", "jQuery"],
-    "category": "Web Portal",
-    "date": "2025",
-    "imgLink": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-    "images": [
-      "assets/images/bms-1.png",
-      "assets/images/bms-2.png",
-      "assets/images/bms-3.png",
-      "assets/images/bms-4.png",
-      "assets/images/bms-5.png"
-    ],
-    "featured": false,
     "status": "MVP Ready",
-    "liveLink": "https://hris.mirallesresort.com/bms/public",
-    "testCredentials": {
-      "username": "test@email.com",
-      "password": "test",
-      "instructions": "Log in with the test account to explore the admin dashboard. You can browse resident records, generate certificates, manage incidents, and review system reports."
-    },
+    "liveLink": "https://sydney-boats.netlify.app/home",
     "coreFeatures": [
-      "Resident profiling and household management",
-      "Digital certificate and permit issuance",
-      "Incident and complaint (blotter) logging",
-      "Document management for community records",
-      "Administrative tools for roles and user access",
-      "Dashboards and reporting for community insights",
-      "Responsive interface for desktop and mobile use"
-    ]
-  },
-  {
-    "id": "clr",
-    "title": "Country Law Repo API",
-    "text": "For a US Client (Private project and not accessible publicly)",
-    "description": "An API service that powers the Admin Portal for US clients. It centralizes and manages data related to patents, trademarks, and other intellectual property. The API processes requests, applications, official fees, and jurisdiction-specific rules to support individuals or organizations applying for IP protection in different countries. Built with .NET Core and Entity Framework for secure, scalable, and structured access to legal content.",
-    "buttonText": "Go to site",
-    "link": "",
-    "tech": ".NET, C#, CQRS, DDD",
-    "technologies": [
-      ".NET",
-      "C#",
-      "SQL Server",
-      "CQRS",
-      "Entity Framework",
-      "Domain Driven Development"
+      "Real-time boat availability and booking",
+      "Fleet catalog with photos, specs, and pricing",
+      "Custom cruise packages with optional add-ons",
+      "Weather updates and safety information",
+      "Secure payment flow with automated confirmations"
     ],
-    "category": "Corporate Application",
-    "date": "2023",
-    "imgLink": "https://media.istockphoto.com/id/1442100383/vector/application-programming-interface.jpg?s=612x612&w=0&k=20&c=DdjWcDxUCz2jRouizmWUA76TU7tVzA-2OUbY2MI7Yuc=",
-    "images": [
-      "assets/images/clr-1.png",
-      "assets/images/clr-2.png",
-      "assets/images/clr-3.png"
-    ],
-    "featured": false,
-    "status": "released",
-    "liveLink": "https://unient.biz",
-    "isPrivate": true,
-    "coreFeatures": [
-      "Unified API for patents, trademarks, and copyrights",
-      "Endpoints for submissions, updates, and status tracking",
-      "Automatic calculation of official fees",
-      "Supports multi-country rules and requirements",
-      "Secure and scalable .NET Core architecture"
-    ]
+    "isPersonal": false
   },
   {
     "id": "unient",
@@ -165,26 +50,83 @@
     "liveLink": "https://unient.biz"
   },
   {
-    "id": "ap",
-    "title": "Admin Portal ",
-    "text": "For a US Client (Private project and not accessible publicly)",
-    "description": "A management portal built for US clients to oversee and process intellectual property information such as patents, trademarks, and design filings. The portal interacts with the Country Law Repo API to handle applications, fee calculations, jurisdiction rules, and workflow processing. Designed to streamline operations for IP administrators handling country-specific regulations and submissions.",
+    "id": "ppsta",
+    "title": "PPSTA",
+    "text": "Philippine Public School Teachers Association - Insurance System",
+    "description": "A web-based insurance management application for the Philippine Public School Teachers Association (PPSTA), the largest professional organization for public school educators in the Philippines with over 200,000 members nationwide. This system is a modernization of a legacy FoxPro desktop application, redesigned to support scalable, secure, and centralized operations.",
     "buttonText": "Go to site",
-    "link": "https://unient.biz",
-    "tech": "Vue, Nuxt, .NET, Vuetify, Typescript, Vite",
-    "technologies": [".NET", "Vue 3", "Nuxt", "Vuetify"],
-    "category": "Corporate Website",
-    "date": "2023",
-    "imgLink": "https://copyrightalliance.org/wp-content/uploads/2017/07/Trademark-etc-1.png",
+    "link": "https://dev.ppsta.ubiveloxph.com/dashboard/",
+    "tech": "PHP, CakePHP, Bootstrap, JavaScript, MySQL, jQuery",
+    "technologies": ["CakePHP", "PHP", "Bootstrap", "MySQL", "jQuery"],
+    "category": "Web Application / Insurance Management System",
+    "date": "2025",
+    "imgLink": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "images": [
-      "assets/images/ap-1.png",
-      "assets/images/ap-2.png",
-      "assets/images/ap-3.png"
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "assets/images/ppsta-1.png",
+      "assets/images/ppsta-2.png",
+      "assets/images/ppsta-3.png"
+    ],
+    "testCredentials": {
+      "username": "admin",
+      "password": "admin",
+      "otp": "118899",
+      "instructions": "Use the provided credentials to access the admin dashboard. Explore member management, insurance plans, claims processing, and reporting features."
+    },
+    "featured": true,
+    "status": "In progress",
+    "liveLink": "https://dev.ppsta.ubiveloxph.com/dashboard/",
+    "coreFeatures": [
+      "Member management and profiling",
+      "Insurance plan enrollment and tracking",
+      "Premium payment processing and history",
+      "Claims submission and status monitoring",
+      "Administrative dashboard with analytics and reporting",
+      "Role-based access control"
+    ],
+    "projectHighlights": [
+      "Modernized a legacy FoxPro desktop application into a scalable web-based system",
+      "Designed and built a custom FoxPro-to-MySQL data migration tool to ensure data integrity and continuity",
+      "Led and coordinated a team of developers, overseeing architecture decisions, task delegation, and code reviews",
+      "Implemented improved data structures and workflows to support long-term maintainability"
+    ],
+    "role": "Lead Developer / Technical Lead"
+  },
+  {
+    "id": "migration-tool",
+    "title": "Foxpro To MySQL Migration Tool",
+    "text": "A tool to migrate Foxpro DBF files to MySQL database.",
+    "description": "A WPF .NET C# application that reads Foxpro DBF files and migrates the data to a MySQL database. It supports batch processing of multiple DBF files, data type mapping, and error handling. The tool provides a user-friendly interface for selecting source files, configuring database connections, and monitoring migration progress.",
+    "buttonText": "View on GitHub",
+    "link": "https://github.com/pai-nuneza/SemanticSearchAPI",
+    "tech": ".NET 8, ML.NET, ONNX Runtime",
+    "technologies": [".NET 10", "Desktop App", "C#", "WPF"],
+    "category": "Web API Development",
+    "date": "2025",
+    "imgLink": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "images": ["assets/images/foxprotomysql.png"],
+    "highlights": [
+      "Dual embedding providers: ML.NET TF-IDF (local, fast) and ONNX Runtime (neural networks)",
+      "384-dimensional vector embeddings with cosine similarity ranking",
+      "Customizable training data via training-data.json for domain-specific optimization",
+      "Auto-seeding with 22 diverse documents (Marvel movies, family films, tech concepts)",
+      "Modern responsive UI with Bootstrap 5 and real-time database status",
+      "Diagnostic endpoints for embedding testing, database status, and reseeding",
+      "Clean architecture with dependency injection and provider pattern",
+      "Production-ready with configurable providers via appsettings.json"
     ],
     "featured": false,
     "status": "released",
-    "liveLink": "https://unient.biz",
-    "isPrivate": true
+    "liveLink": "https://github.com/pai-nuneza/FoxProToMySqlMigrator",
+    "isPrivate": false,
+    "isPersonal": false,
+    "coreFeatures": [
+      "Reads Foxpro DBF files and extracts data",
+      "Maps Foxpro data types to MySQL data types",
+      "Supports batch processing of multiple DBF files",
+      "Has stop and resume releasedity",
+      "Displays migration progress and error handling"
+    ]
   },
   {
     "id": "semantic-search-api",
@@ -266,65 +208,30 @@
     ]
   },
   {
-    "id": "sydney-boats",
-    "title": "Harbour Fleet Boats & Yachts",
-    "text": "Browse, Book, and Sail Sydney’s Finest Fleet.",
-    "description": "A full-featured Sydney boat hire portal that allows users to explore available vessels, check real-time availability, customize cruise packages, and complete bookings online. Built with Angular and Bootstrap, the platform provides a smooth, responsive experience with secure payments, fleet management tools, and automated notifications—designed to streamline both customer booking and operator management workflows.",
-    "buttonText": "Go to site",
-    "link": "https://sydney-boats.netlify.app/home",
-    "tech": "Angular, Bootstrap",
-    "technologies": ["Angular", "Bootstrap"],
-    "category": "Web Portal",
+    "id": "angular-hub",
+    "title": "Angular Hub",
+    "text": "Your Angular Resource Center",
+    "description": "A comprehensive resource center for Angular developers, featuring tutorials, best practices, component libraries, and tools to enhance Angular development workflow.",
+    "buttonText": "Visit Angular Hub",
+    "link": "https://angular-hub.netlify.app/",
+    "tech": "Angular, TypeScript, SCSS",
+    "technologies": ["Angular", "TypeScript", "SCSS", "HTML"],
+    "category": "Educational Resource",
     "date": "2025",
-    "imgLink": "https://images.unsplash.com/photo-1604737637145-48cc31d160eb?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "imgLink": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "images": [
-      "https://images.unsplash.com/photo-1604737637145-48cc31d160eb?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "assets/images/boats-1.png",
-      "assets/images/boats-2.png"
-    ],
-    "featured": true,
-    "status": "MVP Ready",
-    "liveLink": "https://sydney-boats.netlify.app/home",
-    "coreFeatures": [
-      "Real-time boat availability and booking",
-      "Fleet catalog with photos, specs, and pricing",
-      "Custom cruise packages with optional add-ons",
-      "Weather updates and safety information",
-      "Secure payment flow with automated confirmations"
-    ],
-    "isPersonal": true
-  },
-  {
-    "id": "auth-service",
-    "title": "Wano Auth Service",
-    "text": "Guarding Identity, Controlling Access.",
-    "description": "WanoAuth is a secure identity and access management service that unifies authentication, authorization, RBAC, and permissions within a scalable .NET architecture.",
-    "buttonText": "View Repository",
-    "link": "https://your-wanoauth-link-here.com",
-    "tech": ".NET 10, Clean Architecture",
-    "technologies": [
-      ".NET 10",
-      "Entity Framework",
-      "JWT",
-      "Clean Architecture",
-      "Web API"
-    ],
-    "category": "Authentication & Authorization Service",
-    "date": "2025",
-    "imgLink": "https://plus.unsplash.com/premium_photo-1676618539983-d1a95978fd7d?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "images": [
-      "https://plus.unsplash.com/premium_photo-1676618539983-d1a95978fd7d?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ],
     "featured": false,
-    "status": "In Progress",
-    "liveLink": "",
+    "status": "Live",
+    "liveLink": "https://angular-hub.netlify.app/",
+    "isPersonal": true,
     "coreFeatures": [
-      "User authentication with JWT and refresh token flow",
-      "Role-Based Access Control (RBAC) with hierarchical permissions",
-      "Fine-grained authorization using policies and claims",
-      "Secure resource protection for microservices and APIs",
-      "User, role, and permission management through an admin dashboard"
-    ],
-    "isPersonal": true
+      "Angular tutorials and guides",
+      "Component library showcase",
+      "Best practices documentation",
+      "Development tools and resources",
+      "Community-driven content"
+    ]
   }
 ]

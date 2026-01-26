@@ -393,7 +393,7 @@
   position: absolute;
   border: 2px solid rgba(0, 203, 169, 0.1);
   border-radius: 50%;
-  animation: rotate 40s linear infinite;
+  animation: rotate 80s linear infinite;
 }
 
 .circle-1 {
@@ -402,7 +402,7 @@
   top: -5%;
   left: -5%;
   border-style: dashed;
-  border-color: rgba(255, 215, 0, 0.2);
+  animation-duration: 12s;
 }
 
 .circle-2 {
@@ -411,7 +411,7 @@
   top: -10%;
   left: -10%;
   animation-direction: reverse;
-  animation-duration: 50s;
+  animation-duration: 100s;
 }
 
 @keyframes rotate {

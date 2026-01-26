@@ -10,29 +10,15 @@ import projectsData from '../../../assets/data/projects-enhanced.json';
 })
 export class ProjectsComponent implements OnInit {
   allProjects: Project[] = [];
-  filteredProjects: Project[] = [];
+  professionalProjects: Project[] = [];
+  personalProjects: Project[] = [];
   
-  // View mode and search
+  // View mode
   viewMode: 'grid' | 'list' = 'grid';
-  searchTerm: string = '';
   
-  // Modal states
-  showFiltersModal: boolean = false;
-  
-  // Filters
-  selectedTechFilters: string[] = [];
-  selectedStatusFilters: string[] = [];
-  selectedTypeFilters: string[] = [];
-  
-  // Temporary filters (for modal preview)
-  tempTechFilters: string[] = [];
-  tempStatusFilters: string[] = [];
-  tempTypeFilters: string[] = [];
-  
-  // Available options for filters
+  // Available options for filters (keeping for potential future use)
   techStacks: string[] = [];
   statuses: string[] = [];
-  projectTypes: string[] = ['Professional', 'Personal'];
 
   constructor(private router: Router) {}
 
@@ -46,17 +32,21 @@ export class ProjectsComponent implements OnInit {
       featured: p.featured || false
     }));
 
-    // Sort: featured projects first
-    this.allProjects.sort((a, b) => {
+    // Separate projects by type
+    this.professionalProjects = this.allProjects.filter(p => p.projectType === 'Professional');
+    this.personalProjects = this.allProjects.filter(p => p.projectType === 'Personal');
+
+    // Sort each array: featured projects first
+    const sortByFeatured = (a: Project, b: Project) => {
       if (a.featured && !b.featured) return -1;
       if (!a.featured && b.featured) return 1;
       return 0;
-    });
+    };
     
-    // Initialize filtered array
-    this.filteredProjects = [...this.allProjects];
+    this.professionalProjects.sort(sortByFeatured);
+    this.personalProjects.sort(sortByFeatured);
     
-    // Extract unique tech stacks and statuses
+    // Extract unique tech stacks and statuses (keeping for potential future use)
     this.extractFilterOptions();
   }
   
@@ -74,141 +64,6 @@ export class ProjectsComponent implements OnInit {
       if (project.status) statusSet.add(project.status);
     });
     this.statuses = Array.from(statusSet).sort();
-  }
-  
-  // Search and filter methods
-  applyFilters(): void {
-    let filtered = [...this.allProjects];
-    
-    // Apply search
-    if (this.searchTerm) {
-      const term = this.searchTerm.toLowerCase();
-      filtered = filtered.filter(project => 
-        project.title.toLowerCase().includes(term) ||
-        project.text.toLowerCase().includes(term) ||
-        project.description.toLowerCase().includes(term) ||
-        project.technologies?.some(tech => tech.toLowerCase().includes(term))
-      );
-    }
-    
-    // Apply tech filters
-    if (this.selectedTechFilters.length > 0) {
-      filtered = filtered.filter(project => 
-        this.selectedTechFilters.some(tech => 
-          project.technologies?.includes(tech)
-        )
-      );
-    }
-    
-    // Apply status filters
-    if (this.selectedStatusFilters.length > 0) {
-      filtered = filtered.filter(project => 
-        this.selectedStatusFilters.includes(project.status)
-      );
-    }
-    
-    // Apply type filters
-    if (this.selectedTypeFilters.length > 0) {
-      filtered = filtered.filter(project => 
-        this.selectedTypeFilters.includes((project as any).projectType)
-      );
-    }
-
-    // Sort: featured projects first
-    filtered.sort((a, b) => {
-      if (a.featured && !b.featured) return -1;
-      if (!a.featured && b.featured) return 1;
-      return 0;
-    });
-    
-    this.filteredProjects = filtered;
-  }
-  
-  onSearchChange(): void {
-    this.applyFilters();
-  }
-  
-  // Filter methods
-  openFiltersModal(): void {
-    // Copy current filters to temporary filters
-    this.tempTechFilters = [...this.selectedTechFilters];
-    this.tempStatusFilters = [...this.selectedStatusFilters];
-    this.tempTypeFilters = [...this.selectedTypeFilters];
-    this.showFiltersModal = true;
-  }
-  
-  toggleTechFilter(tech: string): void {
-    const index = this.tempTechFilters.indexOf(tech);
-    if (index > -1) {
-      this.tempTechFilters.splice(index, 1);
-    } else {
-      this.tempTechFilters.push(tech);
-    }
-  }
-  
-  toggleStatusFilter(status: string): void {
-    const index = this.tempStatusFilters.indexOf(status);
-    if (index > -1) {
-      this.tempStatusFilters.splice(index, 1);
-    } else {
-      this.tempStatusFilters.push(status);
-    }
-  }
-  
-  toggleTypeFilter(type: string): void {
-    const index = this.tempTypeFilters.indexOf(type);
-    if (index > -1) {
-      this.tempTypeFilters.splice(index, 1);
-    } else {
-      this.tempTypeFilters.push(type);
-    }
-  }
-  
-  applyFiltersFromModal(): void {
-    // Apply the temporary filters to actual filters
-    this.selectedTechFilters = [...this.tempTechFilters];
-    this.selectedStatusFilters = [...this.tempStatusFilters];
-    this.selectedTypeFilters = [...this.tempTypeFilters];
-    this.applyFilters();
-    this.showFiltersModal = false;
-  }
-  
-  clearFiltersInModal(): void {
-    this.tempTechFilters = [];
-    this.tempStatusFilters = [];
-    this.tempTypeFilters = [];
-  }
-  
-  removeTechFilter(tech: string): void {
-    const index = this.selectedTechFilters.indexOf(tech);
-    if (index > -1) {
-      this.selectedTechFilters.splice(index, 1);
-      this.applyFilters();
-    }
-  }
-  
-  removeStatusFilter(status: string): void {
-    const index = this.selectedStatusFilters.indexOf(status);
-    if (index > -1) {
-      this.selectedStatusFilters.splice(index, 1);
-      this.applyFilters();
-    }
-  }
-  
-  removeTypeFilter(type: string): void {
-    const index = this.selectedTypeFilters.indexOf(type);
-    if (index > -1) {
-      this.selectedTypeFilters.splice(index, 1);
-      this.applyFilters();
-    }
-  }
-  
-  clearAppliedFilters(): void {
-    this.selectedTechFilters = [];
-    this.selectedStatusFilters = [];
-    this.selectedTypeFilters = [];
-    this.searchTerm = '';
-    this.filteredProjects = [...this.allProjects];
   }
   
   toggleViewMode(): void {
