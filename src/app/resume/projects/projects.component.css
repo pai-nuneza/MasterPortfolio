@@ -250,20 +250,19 @@
 
 /* Project Cards */
 .project-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid rgba(0, 203, 169, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 203, 169, 0.18);
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: box-shadow 0.12s ease, border-color 0.12s ease;
   display: flex;
   flex-direction: column;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
-  border-color: #00cba9;
-  box-shadow: 0 12px 32px rgba(0, 203, 169, 0.4);
+  border-color: rgba(0, 203, 169, 0.35);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .project-card-image-wrapper {
@@ -376,41 +375,15 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: none;
+  transform: none;
 }
 
-.project-card:hover .project-card-img {
-  transform: scale(1.1);
-}
+/* Overlay removed to keep visuals static and professional */
+.project-card-overlay { display: none; }
 
-.project-card-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 203, 169, 0.9), rgba(0, 150, 136, 0.9));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project-card:hover .project-card-overlay {
-  opacity: 1;
-}
-
-.overlay-icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.overlay-text {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0;
-}
+.overlay-icon { display: none; }
+.overlay-text { display: none; }
 
 .project-card-content {
   padding: 1.25rem;
