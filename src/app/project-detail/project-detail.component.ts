@@ -11,7 +11,6 @@ import projectsData from '../../assets/data/projects-enhanced.json';
 export class ProjectDetailComponent implements OnInit {
   project: Project | undefined;
   allProjects: Project[] = projectsData as Project[];
-  selectedImageIndex: number = 0;
   relatedProjects: Project[] = [];
 
   constructor(private route: ActivatedRoute, private router: Router) {}
@@ -47,10 +46,6 @@ export class ProjectDetailComponent implements OnInit {
     }
   }
 
-  selectImage(index: number): void {
-    this.selectedImageIndex = index;
-  }
-
   copyToClipboard(text: string): void {
     navigator.clipboard.writeText(text).then(() => {
       // Optional: Add a toast notification here
@@ -58,12 +53,8 @@ export class ProjectDetailComponent implements OnInit {
     });
   }
 
-  openGalleryImage(index: number): void {
-    // You can implement a lightbox/modal here if needed
-    // For now, just select the image in the main gallery
-    if (this.project && this.project.gallery) {
-      this.selectedImageIndex = index;
-    }
+  get projectImage(): string {
+    return this.project?.images?.[0] || this.project?.imgLink || '';
   }
 
   goToProject(projectId: string): void {

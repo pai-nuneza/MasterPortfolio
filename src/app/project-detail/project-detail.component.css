@@ -10,41 +10,6 @@
   box-shadow: 0 8px 24px rgba(0, 203, 169, 0.2);
 }
 
-.thumbnail {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  cursor: pointer;
-  opacity: 0.5;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.thumbnail:hover {
-  opacity: 0.8;
-  border-color: #00cba9;
-  transform: scale(1.05);
-}
-
-.thumbnail.active {
-  opacity: 1;
-  border-color: #00cba9;
-}
-
-.thumbnails-container {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 203, 169, 0.5) transparent;
-}
-
-.thumbnails-container::-webkit-scrollbar {
-  height: 8px;
-}
-
-.thumbnails-container::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 203, 169, 0.5);
-  border-radius: 4px;
-}
-
 .info-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(0, 203, 169, 0.2);
@@ -204,34 +169,6 @@
   padding: 0.75rem;
   color: #66b3ff;
   margin-top: 0.5rem;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  cursor: pointer;
-  aspect-ratio: 16/9;
-}
-
-.gallery-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-  border: 1px solid rgba(0, 203, 169, 0.2);
-  border-radius: 8px;
-}
-
-.gallery-item:hover .gallery-img {
-  transform: scale(1.1);
-  border-color: #00cba9;
 }
 
 .related-project-img-small {

@@ -15,10 +15,6 @@ export class ProjectsComponent implements OnInit {
   
   // View mode
   viewMode: 'grid' | 'list' = 'grid';
-  
-  // Available options for filters (keeping for potential future use)
-  techStacks: string[] = [];
-  statuses: string[] = [];
 
   constructor(private router: Router) {}
 
@@ -45,25 +41,6 @@ export class ProjectsComponent implements OnInit {
     
     this.professionalProjects.sort(sortByFeatured);
     this.personalProjects.sort(sortByFeatured);
-    
-    // Extract unique tech stacks and statuses (keeping for potential future use)
-    this.extractFilterOptions();
-  }
-  
-  extractFilterOptions(): void {
-    // Get unique tech stacks
-    const techSet = new Set<string>();
-    this.allProjects.forEach(project => {
-      project.technologies?.forEach(tech => techSet.add(tech));
-    });
-    this.techStacks = Array.from(techSet).sort();
-    
-    // Get unique statuses
-    const statusSet = new Set<string>();
-    this.allProjects.forEach(project => {
-      if (project.status) statusSet.add(project.status);
-    });
-    this.statuses = Array.from(statusSet).sort();
   }
   
   toggleViewMode(): void {
@@ -73,15 +50,5 @@ export class ProjectsComponent implements OnInit {
   viewProject(projectId: string, event: Event): void {
     event.preventDefault();
     this.router.navigate(['/project', projectId]);
-  }
-
-  getStatusClass(status: string): string {
-    const statusLower = status.toLowerCase();
-    if (statusLower.includes('progress') || statusLower.includes('development')) return 'status-progress';
-    if (statusLower.includes('mvp')) return 'status-mvp';
-    if (statusLower.includes('released') || statusLower.includes('live')) return 'status-released';
-    if (statusLower.includes('beta')) return 'status-beta';
-    if (statusLower.includes('archived') || statusLower.includes('deprecated')) return 'status-archived';
-    return 'status-default';
   }
 }

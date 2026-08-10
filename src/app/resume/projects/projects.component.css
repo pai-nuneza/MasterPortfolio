@@ -206,41 +206,6 @@
   transform: translateY(-2px);
 }
 
-/* Tech Tags in Cards */
-.tech-tags-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 0.75rem 0;
-  min-height: 2rem;
-}
-
-.tech-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.3rem 0.6rem;
-  background: rgba(0, 203, 169, 0.15);
-  border: 1px solid rgba(0, 203, 169, 0.3);
-  border-radius: 4px;
-  color: #00cba9;
-  font-size: 0.75rem;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-.tech-tag:hover {
-  background: rgba(0, 203, 169, 0.25);
-  border-color: #00cba9;
-  transform: scale(1.05);
-}
-
-.tech-more {
-  color: #00cba9;
-  font-size: 0.9rem;
-  font-weight: 600;
-  padding: 0 0.3rem;
-}
-
 /* No Results */
 .no-results {
   text-align: center;
@@ -269,106 +234,6 @@
   position: relative;
   overflow: hidden;
   height: 140px;
-}
-
-.project-status-badge {
-  display: inline-block;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-  margin-bottom: 0.5rem;
-  border: 1px solid;
-}
-
-.project-type-badge {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-  z-index: 2;
-  backdrop-filter: blur(8px);
-  border: 1px solid;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-
-.project-star-badge {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  width: 32px;
-  height: 32px;
-  background: rgba(255, 215, 0, 0.95);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  backdrop-filter: blur(8px);
-  border: 2px solid #ffd700;
-  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
-}
-
-.project-star-badge i {
-  color: #000;
-  font-size: 0.9rem;
-}
-
-.type-professional {
-  background: rgba(0, 203, 169, 0.9);
-  color: #fff;
-  border-color: #00cba9;
-}
-
-.type-personal {
-  background: rgba(255, 87, 34, 0.9);
-  color: #fff;
-  border-color: #ff5722;
-}
-
-.status-progress {
-  background: rgba(255, 193, 7, 0.9);
-  color: #000;
-  border-color: #ffc107;
-}
-
-.status-mvp {
-  background: rgba(33, 150, 243, 0.9);
-  color: #fff;
-  border-color: #2196f3;
-}
-
-.status-released {
-  background: rgba(76, 175, 80, 0.9);
-  color: #fff;
-  border-color: #4caf50;
-}
-
-.status-beta {
-  background: rgba(156, 39, 176, 0.9);
-  color: #fff;
-  border-color: #9c27b0;
-}
-
-.status-archived {
-  background: rgba(96, 125, 139, 0.9);
-  color: #fff;
-  border-color: #607d8b;
-}
-
-.status-default {
-  background: rgba(158, 158, 158, 0.9);
-  color: #fff;
-  border-color: #9e9e9e;
 }
 
 .project-card-img {
@@ -403,24 +268,7 @@
   gap: 0.5rem;
 }
 
-.featured-star {
-  color: #ffd700;
-  font-size: 0.85rem;
-  flex-shrink: 0;
-}
-
-.project-status-badge {
-  display: inline-block;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-  margin-bottom: 0.75rem;
-  border: 1px solid;
-  width: fit-content;
-}
+.project-description {
   color: #e0e0e0;
   font-size: 0.9rem;
   margin-bottom: 0;

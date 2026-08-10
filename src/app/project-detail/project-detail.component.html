@@ -32,14 +32,8 @@
         <div class="col-lg-8 mb-4 mb-lg-0">
           <!-- Main Image -->
           <div class="image-container mb-3">
-            <img [src]="project.images[selectedImageIndex]" [alt]="project.title" class="img-fluid rounded-3 w-100"
+            <img [src]="projectImage" [alt]="project.title" class="img-fluid rounded-3 w-100"
               style="max-height: 500px; object-fit: cover;" />
-          </div>
-          <!-- Thumbnail Gallery -->
-          <div class="thumbnails-container d-flex gap-2 overflow-auto" *ngIf="project.images.length > 1">
-            <img *ngFor="let image of project.images; let i = index" [src]="image"
-              [alt]="project.title + ' - Image ' + (i + 1)" class="thumbnail rounded"
-              [class.active]="i === selectedImageIndex" (click)="selectImage(i)" />
           </div>
         </div>
 
@@ -155,18 +149,6 @@
         </div>
       </div>
 
-      <!-- Photo Gallery -->
-      <div class="row mb-4" *ngIf="project.gallery && project.gallery.length > 0">
-        <div class="col-12">
-          <h4 class="mb-3" style="color: #00cba9;"><i class="fas fa-images me-2"></i>Project Gallery</h4>
-          <div class="gallery-grid">
-            <div class="gallery-item" *ngFor="let photo of project.gallery; let i = index">
-              <img [src]="photo" [alt]="project.title + ' - Gallery ' + (i + 1)" class="gallery-img"
-                (click)="openGalleryImage(i)" />
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- Related Projects -->

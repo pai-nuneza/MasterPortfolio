@@ -5,109 +5,13 @@
         <h2 class="text-xl md:text-2xl lg:text-3xl mb-2" style="color: #00cba9;">
           <i class="fas fa-code me-2"></i>Technical Skills
         </h2>
-        <p class="text-white-50">Technologies I use to build modern applications</p>
+        <p class="text-white-50 mb-0">Main technologies I use across frontend, backend, database, and deployment work</p>
       </div>
 
-      <!-- Skills Categories Grid -->
-      <div class="row g-4">
-        <!-- Backend Card -->
-        <div class="col-lg-6">
-          <div class="category-card">
-            <div class="category-header">
-              <h3>Backend</h3>
-            </div>
-            <div class="skills-list">
-              <div class="skill-item" *ngFor="let skill of getSkillsByCategory('backend')">
-                <img [src]="skill.icon" [alt]="skill.name" class="skill-icon-small">
-                <span class="skill-name">{{ skill.name }}</span>
-                <span class="skill-years">{{ skill.years }}+ yrs</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Frontend Card -->
-        <div class="col-lg-6">
-          <div class="category-card">
-            <div class="category-header">
-              <h3>Frontend</h3>
-            </div>
-            <div class="skills-list">
-              <div class="skill-item" *ngFor="let skill of getSkillsByCategory('frontend')">
-                <img [src]="skill.icon" [alt]="skill.name" class="skill-icon-small">
-                <span class="skill-name">{{ skill.name }}</span>
-                <span class="skill-years">{{ skill.years }}+ yrs</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Database Card -->
-        <div class="col-lg-6">
-          <div class="category-card">
-            <div class="category-header">
-              <h3>Database</h3>
-            </div>
-            <div class="skills-list">
-              <div class="skill-item" *ngFor="let skill of getSkillsByCategory('database')">
-                <img [src]="skill.icon" [alt]="skill.name" class="skill-icon-small">
-                <span class="skill-name">{{ skill.name }}</span>
-                <span class="skill-years">{{ skill.years }}+ yrs</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tools & Cloud Card -->
-        <div class="col-lg-6">
-          <div class="category-card">
-            <div class="category-header">
-              <h3>Tools & Cloud</h3>
-            </div>
-            <div class="skills-list">
-              <div class="skill-item" *ngFor="let skill of getSkillsByCategory('tools')">
-                <img [src]="skill.icon" [alt]="skill.name" class="skill-icon-small">
-                <span class="skill-name">{{ skill.name }}</span>
-                <span class="skill-years">{{ skill.years }}+ yrs</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Best Practices & Principles -->
-      <div class="mt-5">
-        <div class="category-card">
-          <div class="category-header">
-            <i class="fas fa-lightbulb"></i>
-            <h3>Best Practices & Principles</h3>
-          </div>
-          <div class="principles-grid">
-            <div class="principle-item">
-              <i class="fas fa-check-circle"></i>
-              <span>SOLID Principles</span>
-            </div>
-            <div class="principle-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Clean Code Architecture</span>
-            </div>
-            <div class="principle-item">
-              <i class="fas fa-check-circle"></i>
-              <span>RESTful API Design</span>
-            </div>
-            <div class="principle-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Design Patterns</span>
-            </div>
-            <div class="principle-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Version Control (Git)</span>
-            </div>
-            <div class="principle-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Agile Methodologies</span>
-            </div>
-          </div>
+      <div class="skills-grid">
+        <div class="skill-item" *ngFor="let skill of skills">
+          <img [src]="skill.icon" [alt]="skill.name" class="skill-icon">
+          <span>{{ skill.name }}</span>
         </div>
       </div>
     </div>
