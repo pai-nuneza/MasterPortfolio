@@ -6,32 +6,21 @@ import { ProjectsComponent } from './resume/projects/projects.component';
 import { ContactMeComponent } from './resume/contact-me/contact-me.component';
 import { HomeComponent } from './resume/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NgxTypedJsModule } from 'ngx-typed-js';
-import { LoaderComponent } from './loader/loader.component';
-import { SkillsComponent } from './resume/skills/skills.component';
 import { ExperienceComponent } from './resume/experience/experience.component';
+import { AboutComponent } from './resume/about/about.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
-// import function to register Swiper custom elements
-import { register } from 'swiper/element/bundle';
-import { ProjectDetailComponent } from './project-detail/project-detail.component';
-// register Swiper custom elements
-register();
 
 @NgModule({ declarations: [
         AppComponent,
         ProjectsComponent,
         ContactMeComponent,
         HomeComponent,
-        LoaderComponent,
-        SkillsComponent,
         ExperienceComponent,
-        ProjectDetailComponent,
+        AboutComponent,
     ],
     bootstrap: [AppComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA], imports: [BrowserModule,
         AppRoutingModule,
-        NgxTypedJsModule,
         FormsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}

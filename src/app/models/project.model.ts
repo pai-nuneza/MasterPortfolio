@@ -10,7 +10,6 @@ export interface Project {
   category: string;
   date: string;
   imgLink: string;
-  images: string[];
   featured: boolean;
   status: 'released' | 'in-progress' | 'planned';
   projectType?: 'Professional' | 'Personal';
@@ -22,7 +21,6 @@ export interface Project {
     otp?: string;
     instructions?: string;
   };
-  gallery?: string[];
   isPrivate?: boolean;
   clientName?: string;
   coreFeatures?: string[];

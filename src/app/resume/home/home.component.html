@@ -1,35 +1,29 @@
 <section id="home" class="hero-section">
   <div class="container" data-aos="fade-up">
     <div class="row align-items-center min-vh-80">
-      <!-- Left Column: Content -->
-      <div class="col-12 col-lg-7 order-2 order-lg-1">
+      <div class="col-12">
         <div class="hero-content">
-          <!-- Name -->
-          <h1 class="hero-name" data-aos="fade-right" data-aos-delay="150">
-            Pai Nuñeza
-          </h1>
-
-          <!-- Title with Gradient -->
-          <h2 class="hero-title" data-aos="fade-right" data-aos-delay="200">
+          <h2 class="hero-title" data-aos="fade-right" data-aos-delay="150">
             Senior Software <span class="gradient-text">Developer</span>
           </h2>
 
-          <!-- Tagline -->
+          <h1 class="hero-name" data-aos="fade-right" data-aos-delay="150">
+            Ramer Pailou Nuñeza
+          </h1>
+
           <p class="hero-tagline" data-aos="fade-right" data-aos-delay="250">
             I help businesses modernize systems, optimize APIs, and deliver maintainable web applications.
           </p>
 
-          <!-- Core Tech Stack -->
           <div class="tech-stack-inline" data-aos="fade-right" data-aos-delay="300">
-
             <div class="tech-icons-list">
               <div class="tech-icon-item" *ngFor="let tech of techStack" [title]="tech.name">
                 <img [src]="tech.icon" [alt]="tech.name" />
+                <span>{{ tech.name }}</span>
               </div>
             </div>
           </div>
 
-          <!-- Quick Stats - Mobile Only (Below Tech Icons) -->
           <div class="hero-stats hero-stats-mobile d-lg-none" data-aos="fade-right" data-aos-delay="350">
             <div class="stat-item">
               <div class="stat-number">10+</div>
@@ -49,119 +43,19 @@
             </div>
           </div>
 
-          <!-- CTAs -->
           <div class="hero-ctas" data-aos="fade-right" data-aos-delay="350">
-            <a class="btn-primary-custom" href="#contact">
-              <i class="fas fa-calendar-check me-2"></i>
-              <span>Book A Call</span>
+            <a class="btn-primary-custom" href="#works">
+              <i class="fas fa-folder-open me-2"></i>
+              <span>Explore Projects</span>
             </a>
-            <a target="_blank" class="btn-secondary-custom"
+            <a
+              target="_blank"
+              class="btn-secondary-custom"
               href="https://drive.google.com/file/d/1VDXAc-70PId4-AtEA9E97e3-TipEBl9H/view?usp=sharing">
               <i class="fas fa-file-download me-2"></i>
               <span>View Resume</span>
             </a>
           </div>
-
-
-          <!-- Contact & Social -->
-          <div class="hero-contact" data-aos="fade-right" data-aos-delay="450">
-            <div class="contact-items">
-              <a href="mailto:pai.nuneza@gmail.com" class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <span>pai.nuneza&#64;gmail.com</span>
-              </a>
-              <a href="tel:+639086345307" class="contact-item">
-                <i class="fas fa-phone"></i>
-                <span>+639086345307</span>
-              </a>
-            </div>
-            <div class="social-links">
-              <a href="https://github.com/pai-nuneza" class="social-link" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/pailoununeza/" class="social-link" target="_blank"
-                aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Right Column: Image -->
-      <div class="col-12 col-lg-5 order-1 order-lg-2 mb-5 mb-lg-0 d-none d-lg-block">
-        <div class="hero-image-container" data-aos="fade-left" data-aos-delay="250">
-          <div class="image-decoration">
-            <div class="decoration-circle circle-1"></div>
-            <div class="decoration-circle circle-2"></div>
-            <div class="decoration-dots"></div>
-          </div>
-          <div class="professional-image-wrapper">
-            <img src="assets/images/pai-image.png" alt="Pai Nuñeza - Professional Photo" class="professional-image" />
-          </div>
-        </div>
-
-        <!-- Quick Stats - Desktop Only -->
-        <div class="hero-stats hero-stats-desktop" data-aos="fade-right" data-aos-delay="400">
-          <div class="stat-item">
-            <div class="stat-number">10+</div>
-            <div class="stat-label">Years Experience</div>
-          </div>
-          <div class="stat-divider"></div>
-
-          <div class="stat-item">
-            <div class="stat-number">Fullstack</div>
-            <div class="stat-label">API & Systems</div>
-          </div>
-          <div class="stat-divider"></div>
-
-          <div class="stat-item">
-            <div class="stat-number">AI-Ready</div>
-            <div class="stat-label">Prompt Engineering</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Introduction Section -->
-<section id="introduction" class="introduction-section py-5">
-  <div class="container">
-    <div class="section-header text-center mb-4" data-aos="fade-up">
-      <h2 class="section-title">
-        <i class="fas fa-play-circle me-2"></i>Introduction
-      </h2>
-    </div>
-
-    <div class="row align-items-center g-4">
-      <!-- Left: Video -->
-      <div class="col-12 col-lg-7" data-aos="fade-right">
-        <div class="intro-media">
-          <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                    title="Pai Nuñeza - Introduction Video" 
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: Description -->
-      <div class="col-12 col-lg-5" data-aos="fade-left">
-        <div class="intro-content">
-          <h3 class="intro-heading">About Me</h3>
-          <p class="intro-text">
-            I'm <strong>Pai Nuñeza</strong>, a <strong>Senior Fullstack Developer</strong> with over 
-            <strong>10 years of experience</strong> building scalable solutions with modern technologies.
-          </p>
-          <p class="intro-text">
-            In this video, I share my journey, approach to development, and what drives me to create 
-            exceptional software solutions.
-          </p>
         </div>
       </div>
     </div>
@@ -169,5 +63,6 @@
 </section>
 
 <app-projects></app-projects>
-<app-skills></app-skills>
+<app-about></app-about>
+<app-experience></app-experience>
 <app-contact-me></app-contact-me>

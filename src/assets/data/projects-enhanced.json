@@ -7,15 +7,13 @@
     "buttonText": "Go to site",
     "link": "https://sydney-boats.netlify.app/home",
     "tech": "Angular, Bootstrap",
-    "technologies": ["Angular", "Bootstrap"],
+    "technologies": [
+      "Angular",
+      "Bootstrap"
+    ],
     "category": "Web Portal",
     "date": "2025",
     "imgLink": "https://images.unsplash.com/photo-1604737637145-48cc31d160eb?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "images": [
-      "https://images.unsplash.com/photo-1604737637145-48cc31d160eb?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "assets/images/boats-1.png",
-      "assets/images/boats-2.png"
-    ],
     "featured": true,
     "status": "MVP Ready",
     "liveLink": "https://sydney-boats.netlify.app/home",
@@ -36,15 +34,14 @@
     "buttonText": "Go to site",
     "link": "https://unient.biz",
     "tech": ".NET, Umbraco",
-    "technologies": [".NET", "Umbraco CMS", "C#"],
+    "technologies": [
+      ".NET",
+      "Umbraco CMS",
+      "C#"
+    ],
     "category": "Corporate Website",
     "date": "2023",
     "imgLink": "https://media.licdn.com/dms/image/D560BAQFDKjohBAGwZQ/company-logo_200_200/0/1682578036360/unient_biz_logo?e=2147483647&v=beta&t=4mcaMsqG0h1ikLllNSt2gcSYqJsAFNawLfpG5TLFzAk",
-    "images": [
-      "assets/images/unient-1.png",
-      "assets/images/unient-2.png",
-      "assets/images/unient-3.png"
-    ],
     "featured": false,
     "status": "released",
     "liveLink": "https://unient.biz"
@@ -57,16 +54,16 @@
     "buttonText": "Go to site",
     "link": "https://dev.ppsta.ubiveloxph.com/dashboard/",
     "tech": "PHP, CakePHP, Bootstrap, JavaScript, MySQL, jQuery",
-    "technologies": ["CakePHP", "PHP", "Bootstrap", "MySQL", "jQuery"],
+    "technologies": [
+      "CakePHP",
+      "PHP",
+      "Bootstrap",
+      "MySQL",
+      "jQuery"
+    ],
     "category": "Web Application / Insurance Management System",
     "date": "2025",
     "imgLink": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "images": [
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "assets/images/ppsta-1.png",
-      "assets/images/ppsta-2.png",
-      "assets/images/ppsta-3.png"
-    ],
     "testCredentials": {
       "username": "admin",
       "password": "admin",
@@ -100,11 +97,15 @@
     "buttonText": "View on GitHub",
     "link": "https://github.com/pai-nuneza/SemanticSearchAPI",
     "tech": ".NET 8, ML.NET, ONNX Runtime",
-    "technologies": [".NET 10", "Desktop App", "C#", "WPF"],
+    "technologies": [
+      ".NET 10",
+      "Desktop App",
+      "C#",
+      "WPF"
+    ],
     "category": "Web API Development",
     "date": "2025",
     "imgLink": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "images": ["assets/images/foxprotomysql.png"],
     "highlights": [
       "Dual embedding providers: ML.NET TF-IDF (local, fast) and ONNX Runtime (neural networks)",
       "384-dimensional vector embeddings with cosine similarity ranking",
@@ -146,9 +147,6 @@
     "category": "Web API Development",
     "date": "2025",
     "imgLink": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80"
-    ],
     "highlights": [
       "Dual embedding providers: ML.NET TF-IDF (local, fast) and ONNX Runtime (neural networks)",
       "384-dimensional vector embeddings with cosine similarity ranking",
@@ -180,17 +178,16 @@
     "buttonText": "Go to site",
     "link": "https://hris.mirallesresort.com/bms/public",
     "tech": "Laravel, Vue, Bootstrap",
-    "technologies": ["Laravel", "Vue", "Bootstrap", "MySQL", "jQuery"],
+    "technologies": [
+      "Laravel",
+      "Vue",
+      "Bootstrap",
+      "MySQL",
+      "jQuery"
+    ],
     "category": "Web Portal",
     "date": "2025",
     "imgLink": "assets/images/bpls.png",
-    "images": [
-      "assets/images/bpls-1.png",
-      "assets/images/bpls-2.png",
-      "assets/images/bpls-3.png",
-      "assets/images/bpls-4.png",
-      "assets/images/bpls-5.png"
-    ],
     "featured": true,
     "status": "MVP Ready",
     "liveLink": "https://lgu.jnccglobalsolutionsinc.com/bpls/public/login",
@@ -215,13 +212,15 @@
     "buttonText": "Visit Angular Hub",
     "link": "https://angular-hub.netlify.app/",
     "tech": "Angular, TypeScript, SCSS",
-    "technologies": ["Angular", "TypeScript", "SCSS", "HTML"],
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "SCSS",
+      "HTML"
+    ],
     "category": "Educational Resource",
     "date": "2025",
     "imgLink": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "images": [
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    ],
     "featured": false,
     "status": "Live",
     "liveLink": "https://angular-hub.netlify.app/",

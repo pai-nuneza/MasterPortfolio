@@ -1,45 +1,46 @@
-<nav class="py-3 glassy">
-  <div class="container mx-auto flex items-center justify-between px-4">
-    <div class="flex items-center">
+<nav class="py-3 glassy main-nav">
+  <div class="container mx-auto flex items-center justify-between px-4 nav-container">
+    <div class="flex items-center nav-brand">
       <a routerLink="/" class="flex items-center text-decoration-none">
-        <img
-          class="rounded"
-          width="35"
-          src="assets/images/icons/apple-icon.png"
-          alt="Logo"
-        />
-        <span class="text-white font-semibold text-lg ms-2">Pai Nuñeza</span>
+        <span class="brand-name">Welcome</span>
       </a>
     </div>
-    <div></div>
-    <button
-      class="text-white focus:outline-none lg:hidden"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="block w-6 h-1 bg-white mb-1"></span>
-      <span class="block w-6 h-1 bg-white mb-1"></span>
-      <span class="block w-6 h-1 bg-white"></span>
-    </button>
-    <div class="lg:flex lg:items-center lg:space-x-6 hidden" id="navbarNav">
-      <ul class="flex space-x-10">
+    <div class="lg:flex lg:items-center hidden nav-menu" id="navbarNav">
+      <ul class="flex space-x-10 mb-0">
         <li>
-          <a class="hover:text-gray-400" routerLink="/" fragment="skills">Skills</a>
+          <a class="hover:text-gray-400" routerLink="/" fragment="home">Home</a>
         </li>
         <li>
-          <a class="hover:text-gray-400" routerLink="/experience"
-            >Work Experience</a
-          >
+          <a class="hover:text-gray-400" routerLink="/" fragment="works">Projects</a>
+        </li>
+        <li>
+          <a class="hover:text-gray-400" routerLink="/" fragment="about">About</a>
+        </li>
+        <li>
+          <a class="hover:text-gray-400" routerLink="/" fragment="experience">Experiences</a>
         </li>
         <li>
           <a class="hover:text-gray-400" routerLink="/" fragment="contact">Contact</a>
         </li>
       </ul>
     </div>
+    <div class="hidden lg:flex nav-actions">
+      <a href="https://www.linkedin.com/in/pailoununeza/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/pai-nuneza" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:pai.nuneza@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    <button class="text-white focus:outline-none lg:hidden nav-toggle" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="block w-6 h-1 bg-white mb-1"></span>
+      <span class="block w-6 h-1 bg-white mb-1"></span>
+      <span class="block w-6 h-1 bg-white"></span>
+    </button>
   </div>
 </nav>
 <router-outlet></router-outlet>
@@ -53,7 +54,8 @@
           <img class="rounded" width="40" src="assets/images/icons/apple-icon.png" alt="Logo" />
           <h4 class="fw-bold ms-3 mb-0" style="color: #00cba9;">Pai Nuñeza</h4>
         </div>
-        <p class="text-white-50 mb-3">Fullstack Software Developer with 10 years of experience building scalable web applications.</p>
+        <p class="text-white-50 mb-3">Fullstack Software Developer with 10 years of experience building scalable web
+          applications.</p>
         <div class="social-links">
           <a href="https://github.com/pai-nuneza" target="_blank" class="social-icon me-3" title="GitHub">
             <i class="fab fa-github"></i>
@@ -77,13 +79,18 @@
             </a>
           </li>
           <li class="mb-2">
-            <a routerLink="/" fragment="skills" class="footer-link">
-              <i class="fas fa-code me-2"></i>Skills
+            <a routerLink="/" fragment="works" class="footer-link">
+              <i class="fas fa-folder-open me-2"></i>Projects
             </a>
           </li>
           <li class="mb-2">
-            <a routerLink="/experience" class="footer-link">
-              <i class="fas fa-briefcase me-2"></i>Work Experience
+            <a routerLink="/" fragment="about" class="footer-link">
+              <i class="fas fa-user me-2"></i>About
+            </a>
+          </li>
+          <li class="mb-2">
+            <a routerLink="/" fragment="experience" class="footer-link">
+              <i class="fas fa-briefcase me-2"></i>Experiences
             </a>
           </li>
           <li class="mb-2">
@@ -113,9 +120,9 @@
         </ul>
       </div>
     </div>
-    
+
     <hr style="border-color: rgba(0, 203, 169, 0.3);" />
-    
+
     <div class="row">
       <div class="col-md-12 text-center">
         <p class="mb-0 text-white-50">

@@ -6,77 +6,119 @@ import { Component } from '@angular/core';
   styleUrls: ['./experience.component.css'],
 })
 export class ExperienceComponent {
+  showFullHistory = false;
+
   experiences = [
     {
       company: 'Codev',
       position: 'Senior Software Developer',
-      date: 'March 2024 - Present',
-      description:
-        'Built and deployed distributed web apps with Azure DevOps CI/CD, developed backend services in C# .NET and PHP, and improved front-end performance with Angular and Vue.js. Collaborated in Agile teams, upheld code quality, and explored AI solutions through prompt engineering.',
+      date: 'Mar 2024 - Present',
+      location: 'International team',
+      description: 'IPR management platform for patents, trademarks, copyrights, renewals, due dates, and official fee workflows.',
+      highlights: [
+        'Build C#/.NET backend features for official fee calculation, due date calculation, validation rules, and IP-related business logic.',
+        'Develop Vue.js frontend features and maintain PHP applications built with Slim and Blade templates.',
+        'Use GitHub Copilot and ChatGPT to support code analysis, debugging, documentation review, and test-case preparation.',
+      ],
       companyWebsite: 'https://www.codev.com/',
-      skills: ['C#', 'PHP', '.NET Core', 'Vue', 'SQL Server', 'REST APIs'],
+      skills: ['C#', '.NET', 'Vue.js', 'PHP', 'Slim', 'Blade', 'Agile'],
+    },
+    {
+      company: 'Contract / Freelance',
+      position: 'Technical Lead Developer',
+      date: 'Sept 2022 - Jan 2024',
+      location: 'Remote',
+      description: 'Led a small team rebuilding a legacy FoxPro desktop system into a PHP/MySQL web application.',
+      highlights: [
+        'Led 4 developers, managed tasks, reviewed pull requests, and guided technical decisions throughout the project.',
+        'Designed the new relational MySQL database and mapped legacy FoxPro data into the new schema.',
+        'Built a C# WPF migration tool to convert FoxPro DBF files into MySQL relational tables.',
+        'Coordinated with the project manager and joined client meetings to clarify requirements and align priorities.',
+      ],
+      skills: ['PHP', 'MySQL', 'C#', 'WPF', 'FoxPro', 'DBF Migration', 'Team Leadership'],
     },
     {
       company: 'Unient',
-      position: 'Fullstack Developer',
-      date: 'Feb 2021 - Feb 2024',
-      description:
-        'Led full-stack development initiatives, implementing new features and resolving critical issues. Collaborated closely with cross-functional teams to deliver high-quality, efficient solutions. Conducted comprehensive code reviews and mentored team members on best practices and modern development standards.',
-      companyWebsite: 'https://www.unient.biz/',
-      skills: [
-        'C#',
-        '.NET Core',
-        'Angular',
-        'SQL Server',
-        'Azure',
-        'REST APIs',
+      position: 'Senior Application Specialist',
+      date: 'Feb 2021 - Mar 2024',
+      location: 'Cebu, Philippines',
+      description: 'Developed terminal operations systems and internal workflow tools for Australian clients and company teams.',
+      highlights: [
+        'Built C# and Angular features for terminal operations workflows, including integrations with Navis N4.',
+        'Rebuilt the company website using Umbraco CMS so management could update content without developer support.',
+        'Created an internal timesheet and reporting tool used by 90-100 employees, reducing reliance on subscription-based HR tools.',
+        'Built a Team Configuration Management tool that helped sales estimate team cost by role, seniority, and staffing needs.',
       ],
+      companyWebsite: 'https://www.unient.biz/',
+      skills: ['C#', 'Angular', 'Umbraco', 'SQL Server', 'Navis N4', 'Reporting'],
     },
     {
-      company: 'Symon Systems',
-      position: 'Senior Developer',
-      date: 'Feb 2021 - May 2023',
-      description:
-        'Led end-to-end feature development from concept to deployment. Performed rigorous code reviews and comprehensive testing to ensure software quality. Maintained strong client relationships through effective communication and timely project delivery.',
-      companyWebsite: 'http://3.0.204.178/#url',
-      skills: ['ASP.NET', 'Angular', 'SQL', 'Git', 'Agile', 'Team Leadership'],
-    },
-    {
-      company: 'Digital Excellence',
-      position: 'Fullstack Developer',
+      company: 'Digital Excellence Group Cebu',
+      position: 'Full Stack Developer',
       date: 'Jun 2020 - Jan 2021',
-      description:
-        'Collaborated with cross-functional teams including designers, QA, and product managers. Analyzed and translated business requirements into technical specifications. Maintained detailed documentation and ensured clear client communication for successful project outcomes.',
+      location: 'Cebu, Philippines',
+      description: 'Worked on Health Watch, a web application used by employees to track and report health and wellness information.',
+      highlights: [
+        'Built full-stack features using ASP.NET MVC, C#, JavaScript, jQuery, and Chart.js.',
+        'Developed survey, reporting, and chart-based features for employee wellness data.',
+        'Improved usability by fixing issues, updating screens, and supporting backend and frontend changes.',
+      ],
       companyWebsite: 'http://digitalexcellencegroup.com/',
-      skills: ['C#', 'Angular', 'Bootstrap', 'MySQL', 'API Development'],
+      skills: ['ASP.NET MVC', 'C#', 'JavaScript', 'jQuery', 'Chart.js', 'Bootstrap'],
     },
     {
-      company: 'Alliance Software',
-      position: 'Software Engineer',
+      company: 'Alliance Software, Inc.',
+      position: 'Technical Specialist II',
       date: 'Nov 2018 - May 2020',
-      description:
-        'Developed and maintained enterprise web applications. Implemented new features based on client requirements and resolved technical issues promptly. Collaborated with stakeholders to ensure client satisfaction and project success.',
+      location: 'Cebu, Philippines',
+      description: 'Supported and enhanced an HRIS application through feature updates, bug fixes, and production support.',
+      highlights: [
+        'Assessed reported issues by urgency and business impact, then worked with QA and release teams to move fixes into production.',
+        'Prepared technical documentation, diagrams, and low-level design notes for feature work and project manager review.',
+      ],
       companyWebsite: 'https://www.alliance.com.ph/index.html',
-      skills: ['.NET Framework', 'JavaScript', 'SQL Server', 'Web Services'],
+      skills: ['HRIS', '.NET', 'SQL Server', 'QA Support', 'Documentation'],
     },
     {
-      company: 'Mlhuillier Financial Services',
-      position: 'Programmer',
-      date: 'Sep 2015 - Nov 2018',
-      description:
-        'Contributed to financial system projects as a developer. Involved in complete web application development lifecycle including UI/UX design, database architecture, back-end development, comprehensive testing, and production deployment support.',
+      company: 'M. Lhuillier Financial Services',
+      position: 'Junior Developer',
+      date: 'Sept 2015 - Nov 2018',
+      location: 'Cebu, Philippines',
+      description: 'Supported internal business application development for nationwide branch operations.',
+      highlights: [
+        'Worked on C#, ASP.NET MVC, jQuery, and Bootstrap while supporting internal business systems.',
+        'Helped build an Online Request Application for nationwide branch supply, equipment, and business requests.',
+        'Moved paper-based branch requests into an online approval workflow for branch managers, regional managers, and other approvers.',
+      ],
       companyWebsite: 'https://mlhuillier.com/',
-      skills: ['ASP.NET', 'C#', 'MSSQL', 'jQuery', 'CSS'],
+      skills: ['C#', 'ASP.NET MVC', 'jQuery', 'Bootstrap', 'SQL Server', 'Workflow Systems'],
+    },
+    {
+      company: 'Freelance Project Support',
+      position: 'PHP / CodeIgniter Developer',
+      date: 'Additional project work',
+      location: 'Belgium-based client',
+      description: 'Support a task-based food and beverage management project when development tasks are available.',
+      highlights: [
+        'Handle PHP/CodeIgniter development tasks for a food and beverage management application.',
+      ],
+      skills: ['PHP', 'CodeIgniter', 'Task-Based Development'],
     },
   ];
 
-  ngOnInit() {}
+  get featuredExperiences() {
+    return this.experiences.slice(0, 3);
+  }
 
-  shuffleArray(array: any[]): any[] {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
+  get historyExperiences() {
+    return this.experiences.slice(3);
+  }
+
+  get visibleHistoryExperiences() {
+    return this.showFullHistory ? this.historyExperiences : this.historyExperiences.slice(0, 2);
+  }
+
+  toggleHistory() {
+    this.showFullHistory = !this.showFullHistory;
   }
 }

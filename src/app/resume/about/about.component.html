@@ -1,0 +1,48 @@
+<section id="about" class="about-page py-5">
+  <div class="container">
+    <div class="about-header" data-aos="fade-up">
+      <h1>About Me</h1>
+      <p>
+        I build web applications that are easy to use, easy to maintain, and helpful to the people who rely on them.
+      </p>
+    </div>
+
+    <div class="about-grid about-profile-card" data-aos="fade-up">
+      <div class="about-story">
+        <span class="about-kicker">Full-stack developer</span>
+        <h2>Hi, I'm Pai.</h2>
+        <p>
+          I have been building software for more than 10 years, mostly for business tools,
+          internal systems, and web apps that need to be reliable every day.
+        </p>
+        <p>
+          I like clean screens, clear code, and working closely with teams to turn rough ideas
+          into something people can actually use.
+        </p>
+
+        <div class="about-actions">
+          <a
+            href="https://drive.google.com/file/d/1VDXAc-70PId4-AtEA9E97e3-TipEBl9H/view?usp=sharing"
+            target="_blank"
+            class="resume-link">
+            View Resume
+          </a>
+          <a href="#contact" class="about-contact-link">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="about-side">
+        <div class="about-image-frame">
+          <img src="assets/images/pai-image.png" alt="Pai Nuneza" class="about-image" />
+        </div>
+      </div>
+    </div>
+
+    <div class="about-stats" data-aos="fade-up">
+      <div class="stat-card" *ngFor="let stat of stats">
+        <strong>{{ stat.value }}</strong>
+        <span>{{ stat.label }}</span>
+      </div>
+    </div>
+  </div>
+</section>

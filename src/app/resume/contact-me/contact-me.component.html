@@ -1,26 +1,120 @@
-<!-- ======= Contact Section ======= -->
-<section id="contact" class="contact py-5">
-  <div class="container my-5">
-    <div class="styled-section">
-    <div class="section-title">
-      <h2>Book A Call</h2>
-      <p class="lead">
-        If you're interested in creating something great, feel free to reach out
-        to me. I'd be happy to collaborate!
+<section id="contact" class="contact-section py-5">
+  <div class="container">
+    <div class="contact-intro">
+      <h1>Let's <span>Connect</span></h1>
+      <p>
+        I'm always interested in new opportunities and exciting projects.
+        Whether you have a question or just want to say hi, feel free to reach out.
       </p>
     </div>
-    <div>
-      <div class="calendly-placeholder">
-        <div class="contact-inline-fields mb-3">
-          <input class="form-input" type="text" placeholder="Your name" [(ngModel)]="name" />
-          <textarea class="form-input" rows="3" placeholder="Short message" [(ngModel)]="message"></textarea>
-          <a class="btn-primary-custom mt-2" [href]="mailtoHref" title="Open your email client to send a message">
-            <i class="fas fa-envelope me-2"></i>
-            <span>Send Email</span>
+
+    <div class="contact-layout">
+      <aside class="contact-info">
+        <h2>Contact Information</h2>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="far fa-envelope"></i>
+          </div>
+          <div class="contact-copy">
+            <span>Email</span>
+            <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a>
+          </div>
+          <button type="button" class="copy-button" (click)="copyEmail()">
+            <i class="far fa-copy"></i>
+            <span>{{ copiedEmail ? 'Copied' : 'Copy' }}</span>
+          </button>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-copy">
+            <span>Location</span>
+            <strong>Philippines</strong>
+          </div>
+        </div>
+
+        <div class="looking-card">
+          <h3>What I'm Looking For</h3>
+          <ul>
+            <li>Full-stack development opportunities</li>
+            <li>Web app modernization projects</li>
+            <li>API, backend, and database-heavy systems</li>
+          </ul>
+        </div>
+
+        <div class="follow-block">
+          <h3>Follow Me</h3>
+          <div class="follow-links">
+            <a href="https://www.linkedin.com/in/pailoununeza/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/pai-nuneza" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a [href]="'mailto:' + contactEmail" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <form class="message-panel" (ngSubmit)="submitForm()">
+        <div class="message-heading">
+          <h2>Send a Message</h2>
+          <p>Fill out the form below or reach out directly.</p>
+        </div>
+
+        <div class="form-row">
+          <label>
+            <span>Your Name <strong>*</strong></span>
+            <input type="text" name="name" placeholder="John Doe" [(ngModel)]="name" required />
+          </label>
+
+          <label>
+            <span>Your Email <strong>*</strong></span>
+            <input type="email" name="email" placeholder="john@example.com" [(ngModel)]="email" required />
+          </label>
+        </div>
+
+        <label>
+          <span>Project Type / Subject</span>
+          <select name="projectType" [(ngModel)]="projectType">
+            <option>Full-stack development</option>
+            <option>Web app modernization</option>
+            <option>Backend / API development</option>
+            <option>Consultation</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label>
+          <span class="message-label">
+            <span>Message <strong>*</strong></span>
+            <small>{{ messageLength }} / 1000</small>
+          </span>
+          <textarea
+            name="message"
+            maxlength="1000"
+            rows="6"
+            placeholder="Tell me about your project, goals, timeline, or any questions..."
+            [(ngModel)]="message"
+            required></textarea>
+        </label>
+
+        <div class="send-actions">
+          <button type="submit" class="send-button">
+            <span>Send Message</span>
+            <i class="far fa-paper-plane"></i>
+          </button>
+          <a class="mailto-link" [href]="mailtoHref" title="Open your email client">
+            <i class="far fa-envelope"></i>
+            <span>Use email app</span>
           </a>
         </div>
-      </div>
-    </div>
+      </form>
     </div>
   </div>
 </section>
