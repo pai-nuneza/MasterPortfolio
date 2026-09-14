@@ -35,7 +35,6 @@ section.contact-section::before {
   z-index: 0;
   background: linear-gradient(115deg, transparent 44%, rgba(0, 203, 169, 0.045) 50%, transparent 56%);
   background-size: 220% 100%;
-  animation: section-light-drift 18s linear infinite;
   pointer-events: none;
 }
 
@@ -45,20 +44,6 @@ section.experience-page > *,
 section.contact-section > * {
   position: relative;
   z-index: 1;
-}
-
-@keyframes section-light-drift {
-  from { background-position: 100% 0; }
-  to { background-position: -100% 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  section.about-page::before,
-  section.selected-works-section::before,
-  section.experience-page::before,
-  section.contact-section::before {
-    animation: none;
-  }
 }
 
 .styled-section {

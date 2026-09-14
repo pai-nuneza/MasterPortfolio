@@ -3,8 +3,6 @@
 }
 
 :host {
-  --scroll-depth: 0px;
-  --scroll-tilt: 0deg;
   --meteor-opacity: 1;
   display: block;
   min-height: 100vh;
@@ -24,47 +22,27 @@
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  perspective: 900px;
-  transform-style: preserve-3d;
 }
 
 .ambient-background::before {
   content: "";
   position: absolute;
-  inset: -16%;
-  z-index: 0;
+  inset: -12%;
   background:
-    radial-gradient(circle at 16% 18%, rgba(0, 203, 169, 0.16), transparent 31%),
-    radial-gradient(circle at 78% 24%, rgba(255, 255, 255, 0.08), transparent 27%),
-    linear-gradient(135deg, rgba(0, 203, 169, 0.05), rgba(8, 17, 34, 0.15) 46%, rgba(0, 0, 0, 0.1));
-  filter: blur(20px);
-  opacity: 0.82;
-  transform: translate3d(0, calc(var(--scroll-depth) * -0.18), -90px) rotateX(var(--scroll-tilt));
-  animation: ambient-glow-drift 18s ease-in-out infinite alternate;
-  transition: transform 0.18s ease-out;
-}
-
-.ambient-background::after {
-  content: "";
-  position: absolute;
-  inset: -20%;
-  z-index: 1;
-  background: linear-gradient(115deg, transparent 38%, rgba(0, 203, 169, 0.16) 49%, transparent 60%);
-  background-size: 180% 100%;
-  filter: blur(22px);
-  opacity: 0.42;
-  animation: ambient-light-sweep 12s linear infinite;
+    radial-gradient(circle at 16% 18%, rgba(0, 203, 169, 0.12), transparent 30%),
+    radial-gradient(circle at 78% 24%, rgba(255, 255, 255, 0.055), transparent 26%),
+    linear-gradient(135deg, rgba(0, 203, 169, 0.035), rgba(8, 17, 34, 0.12) 46%, rgba(0, 0, 0, 0.08));
+  filter: blur(18px);
+  opacity: 0.7;
 }
 
 .ambient-plane {
   position: absolute;
-  z-index: 2;
   display: block;
-  border: 1px solid rgba(0, 203, 169, 0.13);
+  border: 1px solid rgba(0, 203, 169, 0.12);
   border-radius: 8px;
-  box-shadow: 0 0 40px rgba(0, 203, 169, 0.08);
-  opacity: 0.48;
-  transform-style: preserve-3d;
+  box-shadow: 0 0 32px rgba(0, 203, 169, 0.06);
+  opacity: 0.38;
 }
 
 .ambient-plane-one {
@@ -72,9 +50,8 @@
   right: -10vw;
   width: min(48vw, 680px);
   height: min(34vw, 460px);
-  background: linear-gradient(135deg, rgba(0, 203, 169, 0.08), transparent 58%);
-  transform: translate3d(0, calc(var(--scroll-depth) * -0.55), -120px) rotateX(62deg) rotateZ(-12deg);
-  animation: ambient-plane-float-one 14s ease-in-out infinite alternate;
+  background: linear-gradient(135deg, rgba(0, 203, 169, 0.065), transparent 58%);
+  transform: rotateX(62deg) rotateZ(-12deg);
 }
 
 .ambient-plane-two {
@@ -82,24 +59,65 @@
   left: -12vw;
   width: min(46vw, 620px);
   height: min(30vw, 390px);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(0, 203, 169, 0.05) 42%, transparent 70%);
-  transform: translate3d(0, calc(var(--scroll-depth) * 0.42), -80px) rotateX(66deg) rotateZ(18deg);
-  animation: ambient-plane-float-two 16s ease-in-out infinite alternate;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.045), rgba(0, 203, 169, 0.04) 42%, transparent 70%);
+  transform: rotateX(66deg) rotateZ(18deg);
 }
 
 .ambient-grid {
   position: absolute;
   inset: -12%;
-  z-index: 2;
   display: block;
   background-image:
-    linear-gradient(rgba(0, 203, 169, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 203, 169, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(0, 203, 169, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 203, 169, 0.045) 1px, transparent 1px);
   background-size: 82px 82px;
-  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.65), transparent 68%);
-  opacity: 0.18;
-  transform: translate3d(0, calc(var(--scroll-depth) * -0.32), -160px) rotateX(66deg);
-  animation: ambient-grid-drift 22s linear infinite;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.58), transparent 68%);
+  opacity: 0.14;
+  transform: rotateX(66deg);
+}
+
+.ambient-dot {
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+  background: rgba(0, 203, 169, 0.7);
+  box-shadow: 0 0 14px rgba(0, 203, 169, 0.5);
+}
+
+.ambient-dot-one {
+  top: 22%;
+  left: 12%;
+  width: 7px;
+  height: 7px;
+}
+
+.ambient-dot-two {
+  top: 58%;
+  right: 18%;
+  width: 5px;
+  height: 5px;
+  opacity: 0.58;
+}
+
+.ambient-dot-three {
+  bottom: 18%;
+  left: 42%;
+  width: 4px;
+  height: 4px;
+  opacity: 0.48;
+}
+
+.ambient-noise {
+  position: absolute;
+  inset: -50%;
+  display: block;
+  opacity: 0.045;
+  mix-blend-mode: screen;
+  background-image:
+    radial-gradient(circle at 17% 23%, rgba(255, 255, 255, 0.8) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 72% 36%, rgba(0, 203, 169, 0.6) 0 1px, transparent 1.35px),
+    radial-gradient(circle at 43% 78%, rgba(255, 255, 255, 0.45) 0 1px, transparent 1.3px);
+  background-size: 31px 29px, 43px 41px, 53px 47px;
 }
 
 .meteor-overlay {
@@ -136,118 +154,6 @@
 .meteor-line-two {
   animation-name: meteor-stroke-two;
   animation-delay: -2.7s;
-}
-
-.ambient-orbit {
-  position: absolute;
-  z-index: 3;
-  display: block;
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: rgba(0, 203, 169, 0.85);
-  box-shadow: 0 0 18px rgba(0, 203, 169, 0.75);
-  opacity: 0.62;
-}
-
-.ambient-orbit-one {
-  top: 22%;
-  left: 12%;
-  animation: ambient-dot-drift-one 11s ease-in-out infinite alternate;
-}
-
-.ambient-orbit-two {
-  top: 58%;
-  right: 18%;
-  width: 5px;
-  height: 5px;
-  opacity: 0.5;
-  animation: ambient-dot-drift-two 13s ease-in-out infinite alternate;
-}
-
-.ambient-orbit-three {
-  bottom: 18%;
-  left: 42%;
-  width: 4px;
-  height: 4px;
-  opacity: 0.45;
-  animation: ambient-dot-drift-three 15s ease-in-out infinite alternate;
-}
-
-.ambient-noise {
-  position: absolute;
-  inset: -50%;
-  z-index: 5;
-  display: block;
-  opacity: 0.075;
-  mix-blend-mode: screen;
-  background-image:
-    radial-gradient(circle at 17% 23%, rgba(255, 255, 255, 0.9) 0 1px, transparent 1.4px),
-    radial-gradient(circle at 72% 36%, rgba(0, 203, 169, 0.7) 0 1px, transparent 1.35px),
-    radial-gradient(circle at 43% 78%, rgba(255, 255, 255, 0.55) 0 1px, transparent 1.3px);
-  background-size: 31px 29px, 43px 41px, 53px 47px;
-  animation: ambient-noise-drift 9s steps(8) infinite;
-  transform: translate3d(0, calc(var(--scroll-depth) * -0.08), 0);
-}
-
-@keyframes ambient-noise-drift {
-  0% {
-    background-position: 0 0, 12px 8px, 22px 18px;
-  }
-
-  100% {
-    background-position: 31px 29px, -31px 41px, 53px -47px;
-  }
-}
-
-@keyframes ambient-glow-drift {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 8vw -5vh;
-  }
-}
-
-@keyframes ambient-light-sweep {
-  from {
-    background-position: 100% 0;
-  }
-
-  to {
-    background-position: -100% 0;
-  }
-}
-
-@keyframes ambient-plane-float-one {
-  from {
-    translate: -1vw -1vh;
-  }
-
-  to {
-    translate: 2vw 3vh;
-  }
-}
-
-@keyframes ambient-plane-float-two {
-  from {
-    translate: 2vw 2vh;
-  }
-
-  to {
-    translate: -2vw -3vh;
-  }
-}
-
-@keyframes ambient-grid-drift {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 82px 82px;
-  }
 }
 
 @keyframes meteor-stroke-one {
@@ -366,63 +272,7 @@
   }
 }
 
-@keyframes ambient-dot-drift-one {
-  from {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-
-  to {
-    transform: translate3d(12vw, 9vh, 0) scale(1.35);
-  }
-}
-
-@keyframes ambient-dot-drift-two {
-  from {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-
-  to {
-    transform: translate3d(-10vw, 8vh, 0) scale(1.45);
-  }
-}
-
-@keyframes ambient-dot-drift-three {
-  from {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-
-  to {
-    transform: translate3d(8vw, -11vh, 0) scale(1.3);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ambient-background::before,
-  .ambient-background::after,
-  .ambient-plane,
-  .ambient-grid,
-  .ambient-orbit,
-  .ambient-noise {
-    animation: none;
-    transition: none;
-    transform: none;
-  }
-}
-
 @media (max-width: 767px) {
-  .ambient-plane {
-    opacity: 0.34;
-  }
-
-  .ambient-grid {
-    background-size: 64px 64px;
-    opacity: 0.12;
-  }
-
-  .ambient-network {
-    opacity: 0.38;
-  }
-
   .meteor-line {
     height: 1px;
     max-width: 34vw;
