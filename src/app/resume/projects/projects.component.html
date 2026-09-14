@@ -1,14 +1,20 @@
 <section id="works" class="selected-works-section py-5">
-  <div class="container">
+  <div class="works-container">
     <div class="works-header">
       <h2>Selected Works</h2>
       <p>A curated selection of recent full-stack applications, systems, and portfolio projects.</p>
     </div>
 
     <div class="works-grid">
-      <article class="work-card" *ngFor="let item of allProjects">
-        <div class="work-image-wrap">
-          <img [src]="item.imgLink" [alt]="item.title" class="work-image" />
+      <article class="work-card" [class.work-card-large]="item.isLargeCard" *ngFor="let item of allProjects">
+        <div class="work-image-wrap" [class.image-loading]="!loadedImages.has(item.imgLink)">
+          <img
+            [src]="item.imgLink"
+            [alt]="item.title"
+            class="work-image"
+            loading="lazy"
+            decoding="async"
+            (load)="markImageLoaded(item.imgLink)" />
         </div>
 
         <div class="work-content">
@@ -32,9 +38,19 @@
               *ngIf="item.liveLink && item.liveLink !== '#'"
               [href]="item.liveLink"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn-demo"
               (click)="$event.stopPropagation()">
               Live Demo <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a
+              *ngIf="item.githubLink && (!item.liveLink || item.liveLink === '#')"
+              [href]="item.githubLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-demo"
+              (click)="$event.stopPropagation()">
+              GitHub <i class="fab fa-github"></i>
             </a>
             <button class="btn-details" type="button" (click)="openProject(item, $event)">
               Details
@@ -51,8 +67,11 @@
         <i class="fas fa-times"></i>
       </button>
 
-      <div class="modal-hero">
-        <img [src]="selectedProject.imgLink" [alt]="selectedProject.title" />
+      <div class="modal-hero" [class.image-loading]="!loadedImages.has(selectedProject.imgLink)">
+        <img
+          [src]="selectedProject.imgLink"
+          [alt]="selectedProject.title"
+          (load)="markImageLoaded(selectedProject.imgLink)" />
       </div>
 
       <div class="modal-body">
@@ -61,12 +80,26 @@
             <span class="modal-kicker">{{ selectedProject.category }} / {{ selectedProject.date }}</span>
             <h3>{{ selectedProject.title }}</h3>
           </div>
+        </div>
+
+        <div class="modal-actions">
           <a
             *ngIf="selectedProject.liveLink && selectedProject.liveLink !== '#'"
             [href]="selectedProject.liveLink"
             target="_blank"
-            class="modal-live-link">
-            Live Demo <i class="fas fa-external-link-alt"></i>
+            rel="noopener noreferrer"
+            class="modal-link modal-link-primary">
+            <i class="fas fa-external-link-alt"></i>
+            Live Demo
+          </a>
+          <a
+            *ngIf="selectedProject.githubLink"
+            [href]="selectedProject.githubLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="modal-link modal-link-secondary">
+            <i class="fab fa-github"></i>
+            View on GitHub
           </a>
         </div>
 

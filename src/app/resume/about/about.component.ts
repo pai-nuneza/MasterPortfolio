@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.css'],
 })
 export class AboutComponent {
+  imageLoaded = false;
+
   stats = [
     { value: '10+', label: 'years experience' },
     { value: '20+', label: 'systems and projects' },
@@ -29,4 +31,8 @@ export class AboutComponent {
     'Azure DevOps',
     'GitHub Copilot',
   ];
+
+  markImageLoaded(): void {
+    window.setTimeout(() => this.imageLoaded = true, 1000);
+  }
 }

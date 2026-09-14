@@ -7,14 +7,12 @@
     "buttonText": "Go to site",
     "link": "https://sydney-boats.netlify.app/home",
     "tech": "Angular, Bootstrap",
-    "technologies": [
-      "Angular",
-      "Bootstrap"
-    ],
+    "technologies": ["Angular", "Bootstrap"],
     "category": "Web Portal",
     "date": "2025",
     "imgLink": "https://images.unsplash.com/photo-1604737637145-48cc31d160eb?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "featured": true,
+    "isLargeCard": true,
     "status": "MVP Ready",
     "liveLink": "https://sydney-boats.netlify.app/home",
     "coreFeatures": [
@@ -34,61 +32,16 @@
     "buttonText": "Go to site",
     "link": "https://unient.biz",
     "tech": ".NET, Umbraco",
-    "technologies": [
-      ".NET",
-      "Umbraco CMS",
-      "C#"
-    ],
+    "technologies": [".NET", "Umbraco CMS", "C#"],
     "category": "Corporate Website",
     "date": "2023",
-    "imgLink": "https://media.licdn.com/dms/image/D560BAQFDKjohBAGwZQ/company-logo_200_200/0/1682578036360/unient_biz_logo?e=2147483647&v=beta&t=4mcaMsqG0h1ikLllNSt2gcSYqJsAFNawLfpG5TLFzAk",
+    "imgLink": "assets/images/unient-1.png",
     "featured": false,
+    "isLargeCard": false,
     "status": "released",
     "liveLink": "https://unient.biz"
   },
-  {
-    "id": "ppsta",
-    "title": "PPSTA",
-    "text": "Philippine Public School Teachers Association - Insurance System",
-    "description": "A web-based insurance management application for the Philippine Public School Teachers Association (PPSTA), the largest professional organization for public school educators in the Philippines with over 200,000 members nationwide. This system is a modernization of a legacy FoxPro desktop application, redesigned to support scalable, secure, and centralized operations.",
-    "buttonText": "Go to site",
-    "link": "https://dev.ppsta.ubiveloxph.com/dashboard/",
-    "tech": "PHP, CakePHP, Bootstrap, JavaScript, MySQL, jQuery",
-    "technologies": [
-      "CakePHP",
-      "PHP",
-      "Bootstrap",
-      "MySQL",
-      "jQuery"
-    ],
-    "category": "Web Application / Insurance Management System",
-    "date": "2025",
-    "imgLink": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "testCredentials": {
-      "username": "admin",
-      "password": "admin",
-      "otp": "118899",
-      "instructions": "Use the provided credentials to access the admin dashboard. Explore member management, insurance plans, claims processing, and reporting features."
-    },
-    "featured": true,
-    "status": "In progress",
-    "liveLink": "https://dev.ppsta.ubiveloxph.com/dashboard/",
-    "coreFeatures": [
-      "Member management and profiling",
-      "Insurance plan enrollment and tracking",
-      "Premium payment processing and history",
-      "Claims submission and status monitoring",
-      "Administrative dashboard with analytics and reporting",
-      "Role-based access control"
-    ],
-    "projectHighlights": [
-      "Modernized a legacy FoxPro desktop application into a scalable web-based system",
-      "Designed and built a custom FoxPro-to-MySQL data migration tool to ensure data integrity and continuity",
-      "Led and coordinated a team of developers, overseeing architecture decisions, task delegation, and code reviews",
-      "Implemented improved data structures and workflows to support long-term maintainability"
-    ],
-    "role": "Lead Developer / Technical Lead"
-  },
+
   {
     "id": "migration-tool",
     "title": "Foxpro To MySQL Migration Tool",
@@ -97,12 +50,7 @@
     "buttonText": "View on GitHub",
     "link": "https://github.com/pai-nuneza/SemanticSearchAPI",
     "tech": ".NET 8, ML.NET, ONNX Runtime",
-    "technologies": [
-      ".NET 10",
-      "Desktop App",
-      "C#",
-      "WPF"
-    ],
+    "technologies": [".NET 10", "Desktop App", "C#", "WPF"],
     "category": "Web API Development",
     "date": "2025",
     "imgLink": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -117,8 +65,10 @@
       "Production-ready with configurable providers via appsettings.json"
     ],
     "featured": false,
+    "isLargeCard": false,
     "status": "released",
-    "liveLink": "https://github.com/pai-nuneza/FoxProToMySqlMigrator",
+    "liveLink": null,
+    "githubLink": "https://github.com/pai-nuneza/FoxProToMySqlMigrator",
     "isPrivate": false,
     "isPersonal": false,
     "coreFeatures": [
@@ -158,8 +108,10 @@
       "Production-ready with configurable providers via appsettings.json"
     ],
     "featured": false,
+    "isLargeCard": false,
     "status": "released",
     "liveLink": "http://mysemanticsearch.runasp.net/",
+    "githubLink": "https://github.com/pai-nuneza/SemanticSearchAPI",
     "isPrivate": false,
     "isPersonal": true,
     "coreFeatures": [
@@ -171,6 +123,44 @@
     ]
   },
   {
+    "id": "ppsta",
+    "title": "PPSTA",
+    "text": "Philippine Public School Teachers Association - Insurance System",
+    "description": "A web-based insurance management application for the Philippine Public School Teachers Association (PPSTA), the largest professional organization for public school educators in the Philippines with over 200,000 members nationwide. This system is a modernization of a legacy FoxPro desktop application, redesigned to support scalable, secure, and centralized operations.",
+    "buttonText": "Go to site",
+    "link": "https://dev.ppsta.ubiveloxph.com/dashboard/",
+    "tech": "PHP, CakePHP, Bootstrap, JavaScript, MySQL, jQuery",
+    "technologies": ["CakePHP", "PHP", "Bootstrap", "MySQL", "jQuery"],
+    "category": "Web Application / Insurance Management System",
+    "date": "2025",
+    "imgLink": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "testCredentials": {
+      "username": "admin",
+      "password": "admin",
+      "otp": "118899",
+      "instructions": "Use the provided credentials to access the admin dashboard. Explore member management, insurance plans, claims processing, and reporting features."
+    },
+    "featured": true,
+    "isLargeCard": true,
+    "status": "In progress",
+    "liveLink": "https://dev.ppsta.ubiveloxph.com/dashboard/",
+    "coreFeatures": [
+      "Member management and profiling",
+      "Insurance plan enrollment and tracking",
+      "Premium payment processing and history",
+      "Claims submission and status monitoring",
+      "Administrative dashboard with analytics and reporting",
+      "Role-based access control"
+    ],
+    "projectHighlights": [
+      "Modernized a legacy FoxPro desktop application into a scalable web-based system",
+      "Designed and built a custom FoxPro-to-MySQL data migration tool to ensure data integrity and continuity",
+      "Led and coordinated a team of developers, overseeing architecture decisions, task delegation, and code reviews",
+      "Implemented improved data structures and workflows to support long-term maintainability"
+    ],
+    "role": "Lead Developer / Technical Lead"
+  },
+  {
     "id": "bpls",
     "title": "Business Permit Licensing System (LGU)",
     "text": "A digital platform for managing business permits and municipal licensing.",
@@ -178,17 +168,12 @@
     "buttonText": "Go to site",
     "link": "https://hris.mirallesresort.com/bms/public",
     "tech": "Laravel, Vue, Bootstrap",
-    "technologies": [
-      "Laravel",
-      "Vue",
-      "Bootstrap",
-      "MySQL",
-      "jQuery"
-    ],
+    "technologies": ["Laravel", "Vue", "Bootstrap", "MySQL", "jQuery"],
     "category": "Web Portal",
     "date": "2025",
     "imgLink": "assets/images/bpls.png",
     "featured": true,
+    "isLargeCard": false,
     "status": "MVP Ready",
     "liveLink": "https://lgu.jnccglobalsolutionsinc.com/bpls/public/login",
     "testCredentials": {
@@ -212,16 +197,12 @@
     "buttonText": "Visit Angular Hub",
     "link": "https://angular-hub.netlify.app/",
     "tech": "Angular, TypeScript, SCSS",
-    "technologies": [
-      "Angular",
-      "TypeScript",
-      "SCSS",
-      "HTML"
-    ],
+    "technologies": ["Angular", "TypeScript", "SCSS", "HTML"],
     "category": "Educational Resource",
     "date": "2025",
     "imgLink": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "featured": false,
+    "isLargeCard": false,
     "status": "Live",
     "liveLink": "https://angular-hub.netlify.app/",
     "isPersonal": true,

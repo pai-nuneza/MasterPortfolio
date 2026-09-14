@@ -10,6 +10,7 @@ import projectsData from '../../../assets/data/projects-enhanced.json';
 export class ProjectsComponent implements OnInit {
   allProjects: Project[] = [];
   selectedProject?: Project;
+  loadedImages = new Set<string>();
 
   ngOnInit(): void {
     const projects = projectsData as Project[];
@@ -18,7 +19,8 @@ export class ProjectsComponent implements OnInit {
     this.allProjects = projects.map(p => ({
       ...p,
       projectType: (p as any).isPersonal ? 'Personal' : 'Professional',
-      featured: p.featured || false
+      featured: p.featured || false,
+      isLargeCard: p.isLargeCard || false
     }));
 
     this.allProjects.sort((a: Project, b: Project) => {
@@ -44,5 +46,9 @@ export class ProjectsComponent implements OnInit {
 
   extraTechnologyCount(project: Project): number {
     return Math.max((project.technologies?.length || 0) - 4, 0);
+  }
+
+  markImageLoaded(imageUrl: string): void {
+    window.setTimeout(() => this.loadedImages.add(imageUrl), 1000);
   }
 }

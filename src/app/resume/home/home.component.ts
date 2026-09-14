@@ -11,6 +11,8 @@ interface TechStack {
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  loadedTechIcons = new Set<string>();
+
   techStack: TechStack[] = [
     { name: 'C#', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg' },
     { name: '.NET', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg' },
@@ -53,6 +55,10 @@ export class HomeComponent {
       };
       fileReader.readAsDataURL(blob);
     });
+  }
+
+  markTechIconLoaded(iconUrl: string): void {
+    window.setTimeout(() => this.loadedTechIcons.add(iconUrl), 1000);
   }
 
 

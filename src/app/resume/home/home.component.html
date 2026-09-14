@@ -18,7 +18,12 @@
           <div class="tech-stack-inline" data-aos="fade-right" data-aos-delay="300">
             <div class="tech-icons-list">
               <div class="tech-icon-item" *ngFor="let tech of techStack" [title]="tech.name">
-                <img [src]="tech.icon" [alt]="tech.name" />
+                <span class="inline-image-wrap" [class.image-loading]="!loadedTechIcons.has(tech.icon)">
+                  <img
+                    [src]="tech.icon"
+                    [alt]="tech.name"
+                    (load)="markTechIconLoaded(tech.icon)" />
+                </span>
                 <span>{{ tech.name }}</span>
               </div>
             </div>
@@ -62,7 +67,46 @@
   </div>
 </section>
 
-<app-projects></app-projects>
-<app-about></app-about>
-<app-experience></app-experience>
-<app-contact-me></app-contact-me>
+@defer (on viewport) {
+  <app-projects></app-projects>
+} @loading (after 150ms; minimum 600ms) {
+  <div class="deferred-loading" role="status" aria-label="Loading projects">
+    <span class="loading-spinner" aria-hidden="true"></span>
+    <span>Loading projects...</span>
+  </div>
+} @placeholder {
+  <div id="works" class="deferred-section deferred-section-projects" aria-hidden="true"></div>
+}
+
+@defer (on viewport) {
+  <app-about></app-about>
+} @loading (after 150ms; minimum 600ms) {
+  <div class="deferred-loading" role="status" aria-label="Loading about section">
+    <span class="loading-spinner" aria-hidden="true"></span>
+    <span>Loading about section...</span>
+  </div>
+} @placeholder {
+  <div id="about" class="deferred-section deferred-section-about" aria-hidden="true"></div>
+}
+
+@defer (on viewport) {
+  <app-experience></app-experience>
+} @loading (after 150ms; minimum 600ms) {
+  <div class="deferred-loading" role="status" aria-label="Loading experience">
+    <span class="loading-spinner" aria-hidden="true"></span>
+    <span>Loading experience...</span>
+  </div>
+} @placeholder {
+  <div id="experience" class="deferred-section deferred-section-experience" aria-hidden="true"></div>
+}
+
+@defer (on viewport) {
+  <app-contact-me></app-contact-me>
+} @loading (after 150ms; minimum 600ms) {
+  <div class="deferred-loading" role="status" aria-label="Loading contact section">
+    <span class="loading-spinner" aria-hidden="true"></span>
+    <span>Loading contact section...</span>
+  </div>
+} @placeholder {
+  <div id="contact" class="deferred-section deferred-section-contact" aria-hidden="true"></div>
+}

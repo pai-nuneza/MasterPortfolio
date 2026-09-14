@@ -11,10 +11,11 @@ export interface Project {
   date: string;
   imgLink: string;
   featured: boolean;
+  isLargeCard?: boolean;
   status: 'released' | 'in-progress' | 'planned';
   projectType?: 'Professional' | 'Personal';
   githubLink?: string;
-  liveLink?: string;
+  liveLink?: string | null;
   testCredentials?: {
     username: string;
     password: string;

@@ -1,37 +1,48 @@
 .selected-works-section {
   position: relative;
-  background:
-    linear-gradient(180deg, rgba(0, 203, 169, 0.045), rgba(255, 255, 255, 0.015));
+  background: linear-gradient(180deg, rgba(0, 203, 169, 0.055), rgba(255, 255, 255, 0.025));
   border-top: 1px solid rgba(0, 203, 169, 0.12);
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding-right: clamp(1rem, 3vw, 3rem);
+  padding-left: clamp(1rem, 3vw, 3rem);
+}
+
+.works-container {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1480px);
+  margin: 0 auto;
 }
 
 .works-header {
-  max-width: 680px;
-  margin: 0 auto 2rem;
+  max-width: 720px;
+  margin: 0 0 clamp(1.8rem, 4vw, 3.2rem);
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
 }
 
 .works-header h2 {
   color: #ffffff;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
-  line-height: 1.1;
-  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 850;
+  line-height: 1.08;
+  margin: 0;
 }
 
 .works-header p {
-  color: #b0b0b0;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 0 auto;
+  max-width: 38rem;
+  color: #d2dddd;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin: 0.75rem auto 0;
 }
 
 .works-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.65rem;
-  max-width: 1120px;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1rem, 1.6vw, 1.65rem);
   margin: 0 auto;
 }
 
@@ -41,25 +52,60 @@
   min-height: 100%;
   overflow: hidden;
   flex-direction: column;
-  border: 1px solid rgba(0, 203, 169, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.045);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: transform 0.24s ease, border-color 0.24s ease;
+  background: rgba(0, 203, 169, 0.08);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+}
+
+.work-card-large {
+  border-color: rgba(0, 203, 169, 0.46);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+}
+
+.work-card-large::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background: #00cba9;
 }
 
 .work-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(0, 203, 169, 0.5);
+  border-color: rgba(0, 203, 169, 0.42);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.24);
 }
 
 .work-image-wrap {
+  position: relative;
   width: 100%;
   aspect-ratio: 16 / 8.2;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.04);
+}
+
+.image-loading::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid rgba(0, 203, 169, 0.25);
+  border-top-color: #00cba9;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
+.work-image-wrap.image-loading .work-image,
+.modal-hero.image-loading img {
+  opacity: 0;
+}
+
+.work-card-large .work-image-wrap {
+  aspect-ratio: 16 / 8.2;
 }
 
 .work-image {
@@ -73,7 +119,7 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 0.85rem;
+  padding: clamp(0.95rem, 1.3vw, 1.25rem);
 }
 
 .work-meta {
@@ -89,10 +135,15 @@
 
 .work-content h3 {
   color: #ffffff;
-  font-size: 0.98rem;
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
   font-weight: 800;
   line-height: 1.2;
   margin: 0 0 0.45rem;
+}
+
+.work-card-large .work-content h3 {
+  color: #eafffb;
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
 }
 
 .work-content p {
@@ -103,6 +154,11 @@
   line-height: 1.45;
   margin: 0 0 0.75rem;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.work-card-large .work-content p {
+  font-size: 0.78rem;
   -webkit-line-clamp: 2;
 }
 
@@ -192,10 +248,10 @@
   width: min(980px, 100%);
   max-height: min(88vh, 900px);
   overflow: auto;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 18px;
-  background: rgba(8, 12, 12, 0.96);
-  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.62);
+  border: 1px solid rgba(0, 203, 169, 0.34);
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(12, 25, 25, 0.98), rgba(8, 12, 12, 0.98));
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.62), 0 0 0 1px rgba(0, 203, 169, 0.08);
 }
 
 .modal-close {
@@ -215,10 +271,18 @@
 }
 
 .modal-hero {
+  position: relative;
   width: 100%;
-  height: 320px;
+  height: 300px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 3px solid #00cba9;
+  background: rgba(0, 203, 169, 0.08);
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 .modal-hero img {
@@ -229,7 +293,7 @@
 }
 
 .modal-body {
-  padding: 1.6rem;
+  padding: clamp(1.25rem, 3vw, 2.2rem);
 }
 
 .modal-heading {
@@ -256,11 +320,41 @@
   margin: 0.4rem 0 0;
 }
 
-.modal-live-link {
-  flex: 0 0 auto;
-  border: 1px solid #00cba9;
-  color: #ffffff;
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0 0 1.35rem;
+}
+
+.modal-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 38px;
+  border-radius: 7px;
   padding: 0 1rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.modal-link:hover {
+  transform: translateY(-2px);
+}
+
+.modal-link-primary {
+  border: 1px solid #00cba9;
+  background: #00cba9;
+  color: #061312;
+}
+
+.modal-link-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
 }
 
 .modal-description {
@@ -343,26 +437,37 @@
 
 @media (max-width: 1024px) {
   .works-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 900px) {
-  .works-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 768px) {
+  .selected-works-section {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
   .works-grid,
   .credentials-grid {
     grid-template-columns: 1fr;
+  }
+
+  .work-card-large .work-image-wrap {
+    aspect-ratio: 16 / 9;
   }
 
   .work-actions,
   .modal-heading {
     grid-template-columns: 1fr;
     flex-direction: column;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .modal-link {
+    width: 100%;
   }
 
   .modal-hero {
