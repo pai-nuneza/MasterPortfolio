@@ -7,45 +7,72 @@
       </p>
     </div>
 
-    <div class="about-grid about-profile-card" data-aos="fade-up">
-      <div class="about-story">
-        <span class="about-kicker">Full-stack developer</span>
-        <h2>Hi, I'm Pai.</h2>
-        <p>
-          I have been building software for more than 10 years, mostly for business tools,
-          internal systems, and web apps that need to be reliable every day.
-        </p>
-        <p>
-          I like clean screens, clear code, and working closely with teams to turn rough ideas
-          into something people can actually use.
-        </p>
+    <div class="about-profile-card professional-card" data-aos="fade-up">
+      <div class="about-grid">
+        <div class="about-story">
+          <span class="about-kicker">Professional highlights</span>
+          <h2>Full-stack developer focused on reliable web apps.</h2>
+          <p>
+            I have been building software for more than 10 years, mostly for business tools,
+            internal systems, and web apps that need to be reliable every day.
+          </p>
+          <p>
+            I like clean screens, clear code, and working closely with teams to turn rough ideas
+            into something people can actually use.
+          </p>
 
-        <div class="about-actions">
-          <a
-            href="https://drive.google.com/file/d/1VDXAc-70PId4-AtEA9E97e3-TipEBl9H/view?usp=sharing"
-            target="_blank"
-            class="resume-link">
-            View Resume
-          </a>
-          <a href="#contact" class="about-contact-link">Contact Me</a>
+          <div class="about-actions">
+            <a
+              href="https://drive.google.com/file/d/1VDXAc-70PId4-AtEA9E97e3-TipEBl9H/view?usp=sharing"
+              target="_blank"
+              class="resume-link">
+              View Resume
+            </a>
+            <a href="#contact" class="about-contact-link">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="about-side">
+          <div class="about-image-frame" [class.image-loading]="!imageLoaded">
+            <img
+              src="assets/images/pai-image.png"
+              alt="Pai Nuneza"
+              class="about-image"
+              (load)="markImageLoaded()" />
+          </div>
         </div>
       </div>
 
-      <div class="about-side">
-        <div class="about-image-frame" [class.image-loading]="!imageLoaded">
-          <img
-            src="assets/images/pai-image.png"
-            alt="Pai Nuneza"
-            class="about-image"
-            (load)="markImageLoaded()" />
+      <div class="about-card-footer">
+        <div class="about-highlights">
+          <div>
+            <i class="fas fa-comments"></i>
+            <strong>How I work</strong>
+            <span>Clear communication, practical decisions, and steady delivery.</span>
+          </div>
+          <div>
+            <i class="fas fa-project-diagram"></i>
+            <strong>What I enjoy</strong>
+            <span>Turning messy workflows into simple, useful web applications.</span>
+          </div>
+          <div>
+            <i class="fas fa-check-circle"></i>
+            <strong>What I value</strong>
+            <span>Clean UI, maintainable code, and systems people can rely on.</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="about-stats" data-aos="fade-up">
-      <div class="stat-card" *ngFor="let stat of stats">
-        <strong>{{ stat.value }}</strong>
-        <span>{{ stat.label }}</span>
+    <div class="about-profile-card personal-card" data-aos="fade-up">
+      <div>
+        <span class="about-kicker">Personal</span>
+        <h2>Outside work, I stay active.</h2>
+      </div>
+      <div class="outside-work-list">
+        <span><i class="fas fa-dumbbell"></i> Fitness</span>
+        <span><i class="fas fa-running"></i> Workouts</span>
+        <span><i class="fas fa-walking"></i> Walking</span>
       </div>
     </div>
   </div>

@@ -60,6 +60,4 @@ export class HomeComponent {
   markTechIconLoaded(iconUrl: string): void {
     window.setTimeout(() => this.loadedTechIcons.add(iconUrl), 1000);
   }
-
-
 }

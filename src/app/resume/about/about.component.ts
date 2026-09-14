@@ -8,13 +8,6 @@ import { Component } from '@angular/core';
 export class AboutComponent {
   imageLoaded = false;
 
-  stats = [
-    { value: '10+', label: 'years experience' },
-    { value: '20+', label: 'systems and projects' },
-    { value: '12+', label: 'core technologies' },
-    { value: '4+', label: 'industries served' },
-  ];
-
   coreStack = [
     'C#',
     '.NET',

@@ -16,11 +16,19 @@
 }
 
 .experience-hero h1 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
   color: #ffffff;
   font-size: clamp(1.75rem, 3vw, 2.3rem);
   font-weight: 850;
   line-height: 1.1;
   margin: 0;
+}
+
+.experience-hero h1 i {
+  color: #00cba9;
+  font-size: 0.85em;
 }
 
 .experience-hero p {
@@ -63,6 +71,9 @@
 }
 
 .position-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
   color: #ffffff;
   font-size: 1.45rem;
   font-weight: 850;
@@ -70,12 +81,26 @@
   margin: 0 0 0.45rem;
 }
 
+.position-title i,
+.history-card h3 i {
+  color: #00cba9;
+  font-size: 0.82em;
+}
+
 .company-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   color: #00cba9;
   font-size: 0.98rem;
   font-weight: 800;
   line-height: 1.3;
   text-decoration: none;
+}
+
+.company-link i {
+  font-size: 0.78em;
+  opacity: 0.86;
 }
 
 a.company-link:hover {
@@ -84,6 +109,9 @@ a.company-link:hover {
 
 .experience-date {
   flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   border: 1px solid rgba(0, 203, 169, 0.28);
   border-radius: 999px;
   background: rgba(0, 203, 169, 0.1);
@@ -103,12 +131,20 @@ a.company-link:hover {
 }
 
 .achievements h3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 850;
   letter-spacing: 0.08em;
   margin: 0 0 0.9rem;
   text-transform: uppercase;
+}
+
+.achievements h3 i {
+  color: #00cba9;
+  font-size: 0.95em;
 }
 
 .highlight-list {
@@ -138,26 +174,6 @@ a.company-link:hover {
   box-shadow: 0 0 10px rgba(0, 203, 169, 0.5);
 }
 
-.experience-skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
-  padding-top: 1.1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.skill-chip {
-  border: 1px solid rgba(0, 203, 169, 0.25);
-  border-radius: 999px;
-  background: rgba(0, 203, 169, 0.08);
-  color: #dffdf8;
-  font-size: 0.76rem;
-  font-weight: 700;
-  line-height: 1;
-  padding: 0.48rem 0.65rem;
-}
-
 .history-preview {
   max-width: 1120px;
   margin: 1.35rem auto 0;
@@ -173,8 +189,10 @@ a.company-link:hover {
 }
 
 .history-eyebrow {
+  align-items: center;
   color: #00cba9;
-  display: inline-block;
+  display: inline-flex;
+  gap: 0.45rem;
   font-size: 0.72rem;
   font-weight: 850;
   letter-spacing: 0.12em;
@@ -242,6 +260,9 @@ a.company-link:hover {
 }
 
 .history-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   color: #ffffff;
   font-size: 1rem;
   font-weight: 850;
@@ -251,6 +272,10 @@ a.company-link:hover {
 
 .history-date {
   flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
   border: 1px solid rgba(0, 203, 169, 0.2);
   border-radius: 999px;
   background: rgba(0, 203, 169, 0.08);
@@ -269,24 +294,6 @@ a.company-link:hover {
   font-size: 0.9rem;
   line-height: 1.55;
   margin: 0;
-}
-
-.history-skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 0.95rem;
-}
-
-.history-skills span {
-  border: 1px solid rgba(0, 203, 169, 0.18);
-  border-radius: 999px;
-  background: rgba(0, 203, 169, 0.06);
-  color: #dffdf8;
-  font-size: 0.68rem;
-  font-weight: 750;
-  line-height: 1;
-  padding: 0.4rem 0.52rem;
 }
 
 @media (max-width: 768px) {
